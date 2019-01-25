@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

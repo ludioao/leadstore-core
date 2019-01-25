@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\AdminConfiguration;
+namespace LeadStore\Framework\AdminConfiguration;
 
 use Illuminate\Support\Collection;
 
@@ -74,7 +74,7 @@ class AdminConfigurationGroup
      * Add Configuration to the group list
      *
      * @param string $key
-     * @return \AvoRed\Framework\AdminConfiguration\AdminConfiguration $adminConfiguration
+     * @return \LeadStore\Framework\AdminConfiguration\AdminConfiguration $adminConfiguration
      */
     public function addConfiguration($key)
     {

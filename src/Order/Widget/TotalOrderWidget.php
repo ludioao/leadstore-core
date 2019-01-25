@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Order\Widget;
+namespace LeadStore\Framework\Order\Widget;
 
-use AvoRed\Framework\Models\Database\Order;
-use AvoRed\Framework\Widget\Contracts\Widget as WidgetContract;
+use LeadStore\Framework\Models\Database\Order;
+use LeadStore\Framework\Widget\Contracts\Widget as WidgetContract;
 
 class TotalOrderWidget implements WidgetContract
 {

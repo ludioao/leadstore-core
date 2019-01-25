@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Shipping\Traits;
+namespace LeadStore\Framework\Shipping\Traits;
 
 trait ShippingUtils
 {

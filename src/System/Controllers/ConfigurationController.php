@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\Models\Database\Country;
+use LeadStore\Framework\Models\Database\Country;
 use Illuminate\Http\Request;
-use AvoRed\Framework\Models\Database\Page;
-use AvoRed\Framework\Models\Database\Configuration as Model;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Database\Page;
+use LeadStore\Framework\Models\Database\Configuration as Model;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
 
 class ConfigurationController extends Controller
 {
     /**
      * Configuration Respository
-     * @var \AvoRed\Framework\Models\Repository\ConfigurationRepository
+     * @var \LeadStore\Framework\Models\Repository\ConfigurationRepository
      */
     protected $repository;
 

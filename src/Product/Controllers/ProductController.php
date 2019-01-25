@@ -1,33 +1,33 @@
 <?php
 
-namespace AvoRed\Framework\Product\Controllers;
+namespace LeadStore\Framework\Product\Controllers;
 
-use AvoRed\Framework\Models\Database\AttributeDropdownOption;
-use AvoRed\Framework\Models\Database\ProductImage;
-use AvoRed\Framework\Models\Database\Property;
+use LeadStore\Framework\Models\Database\AttributeDropdownOption;
+use LeadStore\Framework\Models\Database\ProductImage;
+use LeadStore\Framework\Models\Database\Property;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Image\Facades\Image;
-use AvoRed\Framework\Product\Requests\ProductRequest;
-use AvoRed\Framework\Product\DataGrid\ProductDataGrid;
-use AvoRed\Framework\Models\Contracts\ProductInterface;
-use AvoRed\Framework\Models\Contracts\ProductDownloadableUrlInterface;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\Product\Requests\ProductRequest;
+use LeadStore\Framework\Product\DataGrid\ProductDataGrid;
+use LeadStore\Framework\Models\Contracts\ProductInterface;
+use LeadStore\Framework\Models\Contracts\ProductDownloadableUrlInterface;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class ProductController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\ProductRepository
+     * @var \LeadStore\Framework\Models\Repository\ProductRepository
      */
     protected $repository;
 
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\ProductDownloadableUrlRepository
+     * @var \LeadStore\Framework\Models\Repository\ProductDownloadableUrlRepository
      */
     protected $downRepository;
 
@@ -85,7 +85,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\Product $product
+     * @param \LeadStore\Framework\Models\Database\Product $product
      *
      * @return \Illuminate\Http\Response
      */
@@ -110,7 +110,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\Product\Requests\ProductRequest $request
+     * @param \LeadStore\Framework\Product\Requests\ProductRequest $request
      * @param int $id
      *
      * @return \Illuminate\Http\RedirectResponse|\Exception
@@ -269,7 +269,7 @@ class ProductController extends Controller
     /**
      * return random string only lower and without digits.
      *
-     * @param \AvoRed\Framework\Models\Database\Product $product
+     * @param \LeadStore\Framework\Models\Database\Product $product
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)

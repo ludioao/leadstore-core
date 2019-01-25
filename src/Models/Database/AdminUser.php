@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 use SMartins\PassportMultiauth\HasMultiAuthApiTokens;
 
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
-use AvoRed\Framework\User\Notifications\ResetPassword;
+use LeadStore\Framework\User\Notifications\ResetPassword;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class AdminUser extends Authenticatable

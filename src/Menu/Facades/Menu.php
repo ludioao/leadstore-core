@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\Menu\Facades;
+namespace LeadStore\Framework\Menu\Facades;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
 /**
- * @method \AvoRed\Framework\Menu\Builer make($key, callable  $callable)
- * @method \AvoRed\Framework\Menu\Builer get($key)
- * @method \AvoRed\Framework\Menu\Builer all()
+ * @method \LeadStore\Framework\Menu\Builer make($key, callable  $callable)
+ * @method \LeadStore\Framework\Menu\Builer get($key)
+ * @method \LeadStore\Framework\Menu\Builer all()
  *
  */class Menu extends LaravelFacade
 {

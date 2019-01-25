@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Models\Contracts\ProductInterface;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Contracts\ProductInterface;
 
-use AvoRed\Framework\Image\Facades\Image;
-use AvoRed\Framework\Models\Database\ProductAttributeIntegerValue;
+use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\Models\Database\ProductAttributeIntegerValue;
 
 class ProductRepository implements ProductInterface
 {
@@ -14,7 +14,7 @@ class ProductRepository implements ProductInterface
      * Find a Product by a given id of a product
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Product
+     * @return \LeadStore\Framework\Models\Database\Product
      */
     public function find($id)
     {
@@ -25,7 +25,7 @@ class ProductRepository implements ProductInterface
      * Find a Product by a given id of a product
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Product
+     * @return \LeadStore\Framework\Models\Database\Product
      */
     public function findBySlug($slug)
     {

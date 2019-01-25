@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 class Property extends BaseModel
 {
@@ -87,7 +87,7 @@ class Property extends BaseModel
     /**
      * Attach  Product to a Property Model.
      *
-     * @param \AvoRed\Framework\Models\Database\Product $model
+     * @param \LeadStore\Framework\Models\Database\Product $model
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function attachProduct($model)

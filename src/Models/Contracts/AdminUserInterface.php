@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface AdminUserInterface
 {
@@ -8,7 +8,7 @@ interface AdminUserInterface
      * Find an Admin User by given Id which returns Admin User
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\AdminUser
+     * @return \LeadStore\Framework\Models\AdminUser
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface AdminUserInterface
      * Create anAdmin User
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\AdminUser
+     * @return \LeadStore\Framework\Models\AdminUser
      */
     public function create($data);
 }

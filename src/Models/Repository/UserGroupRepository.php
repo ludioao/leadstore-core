@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\UserGroupInterface;
-use AvoRed\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Models\Contracts\UserGroupInterface;
+use LeadStore\Framework\Models\Database\UserGroup;
 
 class UserGroupRepository implements UserGroupInterface
 {
@@ -11,7 +11,7 @@ class UserGroupRepository implements UserGroupInterface
      * Find an User Group by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\UserGroup
+     * @return \LeadStore\Framework\Models\UserGroup
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class UserGroupRepository implements UserGroupInterface
     /**
      * Find an User Group Query
      *
-     * @return \AvoRed\Framework\Models\UserGroup
+     * @return \LeadStore\Framework\Models\UserGroup
      */
     public function create($data)
     {

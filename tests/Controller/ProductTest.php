@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Models\Contracts\CategoryInterface;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Contracts\CategoryInterface;
 
 class ProductTest extends BaseTestCase
 {
@@ -34,19 +34,19 @@ class ProductTest extends BaseTestCase
 
 
         $categoryModel =  $this->_getDummyCategory();
-        $data['category_id'] = [$categoryModel->id]; 
-        $data['sku'] = 'test-sku'; 
-        $data['description'] = 'test description'; 
-        $data['price'] = 10; 
-        $data['status'] = 1; 
-        $data['qty'] = 10; 
-        $data['in_stock'] = 1; 
-        $data['track_stock'] = 1; 
-        $data['is_taxable'] = 1; 
-        $data['weight'] = 1; 
-        $data['height'] = 1; 
-        $data['width'] = 1; 
-        $data['length'] = 1; 
+        $data['category_id'] = [$categoryModel->id];
+        $data['sku'] = 'test-sku';
+        $data['description'] = 'test description';
+        $data['price'] = 10;
+        $data['status'] = 1;
+        $data['qty'] = 10;
+        $data['in_stock'] = 1;
+        $data['track_stock'] = 1;
+        $data['is_taxable'] = 1;
+        $data['weight'] = 1;
+        $data['height'] = 1;
+        $data['width'] = 1;
+        $data['length'] = 1;
 
         // Product Update Route
         $response = $this->put(route('admin.product.update', $model->id), $data);
@@ -73,6 +73,6 @@ class ProductTest extends BaseTestCase
         $categoryRep = app()->get(CategoryInterface::class);
 
         return $categoryRep->create($data);
-       
+
     }
 }

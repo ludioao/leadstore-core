@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Cart;
+namespace LeadStore\Framework\Cart;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -25,7 +25,7 @@ class Provider extends ServiceProvider
     public function register()
     {
         $this->registerServices();
-        $this->app->alias('cart', 'AvoRed\Framework\Cart\Manager');
+        $this->app->alias('cart', 'LeadStore\Framework\Cart\Manager');
     }
 
     /**
@@ -47,6 +47,6 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['cart', 'AvoRed\Framework\Cart\Manager'];
+        return ['cart', 'LeadStore\Framework\Cart\Manager'];
     }
 }

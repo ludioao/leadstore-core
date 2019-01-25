@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
-use AvoRed\Framework\Image\LocalFile;
+use LeadStore\Framework\Image\LocalFile;
 
 class ProductImage extends BaseModel
 {
@@ -26,7 +26,7 @@ class ProductImage extends BaseModel
      * Get Path Attribute for the Image
      *
      * @param string $path
-     * @return \AvoRed\Framework\Image\LocalFile $localImage
+     * @return \LeadStore\Framework\Image\LocalFile $localImage
      */
     public function getPathAttribute($path)
     {

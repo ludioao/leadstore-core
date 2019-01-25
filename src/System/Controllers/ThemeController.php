@@ -1,14 +1,14 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use AvoRed\Framework\Models\Database\Configuration;
-use AvoRed\Framework\Theme\Facade as Theme;
-use AvoRed\Framework\System\DataGrid\ThemeDataGrid;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Theme\Facade as Theme;
+use LeadStore\Framework\System\DataGrid\ThemeDataGrid;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
 use ZipArchive;
 
 class ThemeController extends Controller
@@ -16,14 +16,14 @@ class ThemeController extends Controller
     /**
      * Configuration Repository
      *
-     * @var \AvoRed\Framework\Models\Repository\ConfigurationRepository $configurationRepository
+     * @var \LeadStore\Framework\Models\Repository\ConfigurationRepository $configurationRepository
      */
     protected $configurationRepository;
 
     /**
      * Set the Configuration Repository for Theme Controller
      *
-     * @param \AvoRed\Framework\Models\Repository\ConfigurationRepository $configurationRepository
+     * @param \LeadStore\Framework\Models\Repository\ConfigurationRepository $configurationRepository
      */
     public function __construct(ConfigurationInterface $configurationRepository)
     {

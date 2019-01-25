@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Product\Widget;
+namespace LeadStore\Framework\Product\Widget;
 
-use AvoRed\Framework\Widget\Contracts\Widget as WidgetContract;
-use AvoRed\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\Widget\Contracts\Widget as WidgetContract;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
 use Carbon\Carbon;
 
 class MonthlyRevenueWidget implements WidgetContract

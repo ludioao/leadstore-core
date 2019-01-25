@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Tabs;
+namespace LeadStore\Framework\Tests\Tabs;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Tabs\TabsMaker;
-use AvoRed\Framework\Tabs\Tab;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Tabs\TabsMaker;
+use LeadStore\Framework\Tabs\Tab;
 
 class TabTest extends BaseTestCase
 {

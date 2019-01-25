@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid\Columns;
+namespace LeadStore\Framework\DataGrid\Columns;
 
-use AvoRed\Framework\DataGrid\Contracts\Column as ColumnContract;
+use LeadStore\Framework\DataGrid\Contracts\Column as ColumnContract;
 
 abstract class AbstractColumn implements ColumnContract
 {

@@ -1,20 +1,20 @@
 <?php
 
-namespace AvoRed\Framework\Product\Controllers;
+namespace LeadStore\Framework\Product\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Product\DataGrid\AttributeDataGrid;
-use AvoRed\Framework\Models\Database\Attribute;
-use AvoRed\Framework\Product\Requests\AttributeRequest;
-use AvoRed\Framework\Models\Contracts\AttributeInterface;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Product\DataGrid\AttributeDataGrid;
+use LeadStore\Framework\Models\Database\Attribute;
+use LeadStore\Framework\Product\Requests\AttributeRequest;
+use LeadStore\Framework\Models\Contracts\AttributeInterface;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class AttributeController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\AttributeRepository
+     * @var \LeadStore\Framework\Models\Repository\AttributeRepository
      */
     protected $repository;
 
@@ -49,7 +49,7 @@ class AttributeController extends Controller
     /**
      * Store an Atttibute into Database and Redirect to List Route
      *
-     * @param \AvoRed\Framework\Product\Requests\AttributeRequest $request
+     * @param \LeadStore\Framework\Product\Requests\AttributeRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(AttributeRequest $request)
@@ -62,7 +62,7 @@ class AttributeController extends Controller
     }
 
     /**
-     * @param \AvoRed\Framework\Models\Database\Attribute $attribute
+     * @param \LeadStore\Framework\Models\Database\Attribute $attribute
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -81,7 +81,7 @@ class AttributeController extends Controller
     }
 
     /**
-     * @param \AvoRed\Framework\Models\Database\Attribute $attribute
+     * @param \LeadStore\Framework\Models\Database\Attribute $attribute
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Attribute $attribute)
@@ -126,8 +126,8 @@ class AttributeController extends Controller
     /**
      * Save Attribute Drop down Options.
      *
-     * @param \AvoRed\Framework\Models\Database\Attribute $attribute
-     * @param \AvoRed\Framework\Product\Requests\AttributeRequest $request
+     * @param \LeadStore\Framework\Models\Database\Attribute $attribute
+     * @param \LeadStore\Framework\Product\Requests\AttributeRequest $request
      * @return void
      */
     private function saveDropdownOptions($attribute, $request)
@@ -151,7 +151,7 @@ class AttributeController extends Controller
     /**
      * Find a Record and Returns a Json Resrouce for that Record
      *
-     * @param \AvoRed\Framework\Models\Database\Attribute $attribute
+     * @param \LeadStore\Framework\Models\Database\Attribute $attribute
      * @return \Illuminate\Http\Resources\Json\JsonResource
      */
     public function show(Attribute $attribute)

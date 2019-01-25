@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\User\Widget;
+namespace LeadStore\Framework\User\Widget;
 
-use AvoRed\Framework\Models\Database\User;
-use AvoRed\Framework\Widget\Contracts\Widget as WidgetContract;
+use LeadStore\Framework\Models\Database\User;
+use LeadStore\Framework\Widget\Contracts\Widget as WidgetContract;
 
 class TotalUserWidget implements WidgetContract
 {

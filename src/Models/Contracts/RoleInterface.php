@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface RoleInterface
 {
@@ -8,7 +8,7 @@ interface RoleInterface
      * Find an Role by given Id which returns Role
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Role
+     * @return \LeadStore\Framework\Models\Role
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface RoleInterface
      * Create a Role
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Role
+     * @return \LeadStore\Framework\Models\Role
      */
     public function create($data);
 }

@@ -1,9 +1,9 @@
 <?php
-namespace AvoRed\Framework\Tests;
+namespace LeadStore\Framework\Tests;
 
-use AvoRed\Framework\Provider;
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\AdminUser;
+use LeadStore\Framework\Provider;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\AdminUser;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Faker\Generator as FakerGenerator;
@@ -11,22 +11,22 @@ use Faker\Generator as FakerGenerator;
 abstract class BaseTestCase extends OrchestraTestCase
 {
     /**
-     * Admin User 
-     * @var \AvoRed\Framework\Models\Database\AdminUser $user
+     * Admin User
+     * @var \LeadStore\Framework\Models\Database\AdminUser $user
      */
-    protected $user; 
+    protected $user;
 
     public function setUp()
     {
         parent::setUp();
         $this->app['config']->set('app.key', 'base64:UTyp33UhGolgzCK5CJmT+hNHcA+dJyp3+oINtX+VoPI=');
-      
+
         $this->app->singleton(EloquentFactory::class, function ($app) {
             $faker = $app->make(FakerGenerator::class);
             return EloquentFactory::construct($faker, __DIR__.('/../database/factories'));
         });
         $this->setUpDatabase();
-       
+
     }
     private function resetDatabase()
     {
@@ -53,7 +53,7 @@ abstract class BaseTestCase extends OrchestraTestCase
             'database' => ':memory:',
             'prefix' => '',
         ));
-       
+
     }
     protected function setUpDatabase()
     {
@@ -83,7 +83,7 @@ abstract class BaseTestCase extends OrchestraTestCase
     /**
      * Get Admin User Object for unit test
      *
-     * @return \AvoRed\Framework\Models\Database\AdminUser
+     * @return \LeadStore\Framework\Models\Database\AdminUser
      */
     protected function _getAdminUser()
     {

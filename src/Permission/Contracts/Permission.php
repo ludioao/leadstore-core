@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Permission\Contracts;
+namespace LeadStore\Framework\Permission\Contracts;
 
 interface Permission
 {

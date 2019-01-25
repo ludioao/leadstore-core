@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\CountryInterface;
-use AvoRed\Framework\Models\Database\Country;
+use LeadStore\Framework\Models\Contracts\CountryInterface;
+use LeadStore\Framework\Models\Database\Country;
 use Illuminate\Support\Collection;
 
 class CountryRepository implements CountryInterface
@@ -12,7 +12,7 @@ class CountryRepository implements CountryInterface
      * Find a Country by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Country
+     * @return \LeadStore\Framework\Models\Country
      */
     public function find($id)
     {
@@ -52,7 +52,7 @@ class CountryRepository implements CountryInterface
     /**
      * Create a Country Record
      *
-     * @return \AvoRed\Framework\Models\Country
+     * @return \LeadStore\Framework\Models\Country
      */
     public function create($data)
     {

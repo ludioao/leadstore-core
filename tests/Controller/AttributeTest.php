@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Attribute;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Attribute;
 
 class AttributeTest extends BaseTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\AdminMenu;
+namespace LeadStore\Framework\AdminMenu;
 
 use Illuminate\Support\Collection;
 
@@ -23,7 +23,7 @@ class Builder
      *
      * @param string
      * @param callable $callable
-     * @return \AvoRed\Framework\AdminMenu\Builder
+     * @return \LeadStore\Framework\AdminMenu\Builder
      */
     public function add($key, $callable)
     {
@@ -38,7 +38,7 @@ class Builder
      * Return Admin Menu Object.
      *
      * @var string
-     * @return \AvoRed\Framework\AdminMenu\AdminMenu
+     * @return \LeadStore\Framework\AdminMenu\AdminMenu
      */
     public function get($key)
     {

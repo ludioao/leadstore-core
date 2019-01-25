@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\Modules\Facade as Module;
-use AvoRed\Framework\System\Requests\UploadModuleRequest;
+use LeadStore\Framework\Modules\Facade as Module;
+use LeadStore\Framework\System\Requests\UploadModuleRequest;
 use ZipArchive;
-use AvoRed\Framework\System\DataGrid\ModuleDataGrid;
+use LeadStore\Framework\System\DataGrid\ModuleDataGrid;
 
 class ModuleController extends Controller
 {
@@ -37,7 +37,7 @@ class ModuleController extends Controller
     /**
      * Store and Extract upload module zip files
      *
-     * @param \AvoRed\Framework\Http\Requests\UploadModuleRequest $request
+     * @param \LeadStore\Framework\Http\Requests\UploadModuleRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UploadModuleRequest $request)

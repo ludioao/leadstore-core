@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Tabs;
+namespace LeadStore\Framework\Tabs;
 
 use Illuminate\Support\Collection;
 
@@ -38,7 +38,7 @@ class TabsMaker
      * Get Tab from Tabs Collection.
      *
      * @var string
-     * @return \AvoRed\Framework\Tabs\Tab
+     * @return \LeadStore\Framework\Tabs\Tab
      */
     public function get($key)
     {

@@ -1,28 +1,28 @@
 <?php
 
-namespace AvoRed\Framework\Order\Controllers;
+namespace LeadStore\Framework\Order\Controllers;
 
-use AvoRed\Framework\Order\Services\OrderService;
+use LeadStore\Framework\Order\Services\OrderService;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
-use AvoRed\Framework\Models\Database\User;
-use AvoRed\Framework\Models\Database\Order as Model;
-use AvoRed\Framework\Models\Database\OrderStatus;
-use AvoRed\Framework\Mail\OrderInvoicedMail;
-use AvoRed\Framework\Mail\UpdateOrderStatusMail;
-use AvoRed\Framework\Order\DataGrid\OrderDataGrid;
-use AvoRed\Framework\Order\Requests\UpdateOrderStatusRequest;
-use AvoRed\Framework\Order\Requests\UpdateTrackCodeRequest;
-use AvoRed\Framework\Models\Contracts\OrderInterface;
-use AvoRed\Framework\Models\Contracts\OrderHistoryInterface;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Database\User;
+use LeadStore\Framework\Models\Database\Order as Model;
+use LeadStore\Framework\Models\Database\OrderStatus;
+use LeadStore\Framework\Mail\OrderInvoicedMail;
+use LeadStore\Framework\Mail\UpdateOrderStatusMail;
+use LeadStore\Framework\Order\DataGrid\OrderDataGrid;
+use LeadStore\Framework\Order\Requests\UpdateOrderStatusRequest;
+use LeadStore\Framework\Order\Requests\UpdateTrackCodeRequest;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\Models\Contracts\OrderHistoryInterface;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class OrderController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\OrderRepository
+     * @var \LeadStore\Framework\Models\Repository\OrderRepository
      */
     protected $repository;
 
@@ -46,7 +46,7 @@ class OrderController extends Controller
 
     /**
      * View an Order Details
-     * @param \AvoRed\Framework\Models\Database\Order $order
+     * @param \LeadStore\Framework\Models\Database\Order $order
      *
      * @return \Illuminate\Http\Response
      */
@@ -59,7 +59,7 @@ class OrderController extends Controller
     /**
      * Send an Order Invioced PDF to User
      *
-     * @param \AvoRed\Framework\Models\Database\Order $order
+     * @param \LeadStore\Framework\Models\Database\Order $order
      * @return \Illuminate\Http\RedirectResponse
      */
     public function sendEmailInvoice(Model $order)
@@ -74,7 +74,7 @@ class OrderController extends Controller
     /**
      * Edit the Order Status View
      *
-     * @param \AvoRed\Framework\Models\Database\Order $order
+     * @param \LeadStore\Framework\Models\Database\Order $order
      * @return \Illuminate\Http\Response
      */
     public function editStatus(Model $order)
@@ -92,7 +92,7 @@ class OrderController extends Controller
     /**
      * Change the Order Status
      *
-     * @param \AvoRed\Framework\Models\Database\Order $order
+     * @param \LeadStore\Framework\Models\Database\Order $order
      * @return \Illuminate\Http\RedirectResponse
      */
     public function updateStatus(Model $order, UpdateOrderStatusRequest $request)
@@ -114,8 +114,8 @@ class OrderController extends Controller
     /**
      * Change the Order Status
      *
-     * @param \AvoRed\Framework\Models\Database\Order $order
-     * @param \AvoRed\Framework\Order\Request\UpdateTrackCodeRequest $request
+     * @param \LeadStore\Framework\Models\Database\Order $order
+     * @param \LeadStore\Framework\Order\Request\UpdateTrackCodeRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */

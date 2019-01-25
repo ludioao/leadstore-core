@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\Page;
-use AvoRed\Framework\Models\Contracts\PageInterface;
+use LeadStore\Framework\Models\Database\Page;
+use LeadStore\Framework\Models\Contracts\PageInterface;
 
 class PageRepository implements PageInterface
 {
@@ -11,7 +11,7 @@ class PageRepository implements PageInterface
      * Find a Page by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Page
+     * @return \LeadStore\Framework\Models\Page
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class PageRepository implements PageInterface
     /**
      * Create a Page Query
      *
-     * @return \AvoRed\Framework\Models\Menu
+     * @return \LeadStore\Framework\Models\Menu
      */
     public function create($data)
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Support\Console;
+namespace LeadStore\Framework\Support\Console;
 
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\AdminUser;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\AdminUser;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Laravel\Passport\ClientRepository;

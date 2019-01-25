@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Tests\AdminConfiguration;
+namespace LeadStore\Framework\Tests\AdminConfiguration;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\AdminConfiguration\AdminConfigurationGroup;
-use AvoRed\Framework\AdminConfiguration\AdminConfiguration;
-use AvoRed\Framework\AdminConfiguration\Manager;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\AdminConfiguration\AdminConfigurationGroup;
+use LeadStore\Framework\AdminConfiguration\AdminConfiguration;
+use LeadStore\Framework\AdminConfiguration\Manager;
 
 class AdminConfigurationTest extends BaseTestCase
 {
@@ -15,7 +15,7 @@ class AdminConfigurationTest extends BaseTestCase
      * @return void
      */
     public function test_admin_configuration_group_key()
-    { 
+    {
         $group = new AdminConfigurationGroup();
         $group->key('test');
 

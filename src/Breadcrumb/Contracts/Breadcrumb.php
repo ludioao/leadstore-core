@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Breadcrumb\Contracts;
+namespace LeadStore\Framework\Breadcrumb\Contracts;
 
 interface Breadcrumb
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Menu;
+namespace LeadStore\Framework\Tests\Menu;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Menu\Builder;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Menu\Builder;
 
 class MenuTest extends BaseTestCase
 {
-   
+
     /** @test */
     public function test_menu_builder_make()
     {

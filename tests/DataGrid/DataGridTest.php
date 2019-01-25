@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\DataGrid;
+namespace LeadStore\Framework\Tests\DataGrid;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\DataGrid\Manager;
-use AvoRed\Framework\DataGrid\DataGrid;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\DataGrid\Manager;
+use LeadStore\Framework\DataGrid\DataGrid;
 
 class DataGridTest extends BaseTestCase
 {

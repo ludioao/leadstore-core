@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface ProductAttributeIntegerValueInterface
 {
@@ -8,7 +8,7 @@ interface ProductAttributeIntegerValueInterface
      * Create an Attribute
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\ProductAttributeIntegerValue
+     * @return \LeadStore\Framework\Models\Database\ProductAttributeIntegerValue
      */
     public function create($data);
 }

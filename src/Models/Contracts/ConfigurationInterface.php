@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface ConfigurationInterface
 {
@@ -8,7 +8,7 @@ interface ConfigurationInterface
      * Find an Configuration by given Id which returns Configuration Model
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function find($id);
 
@@ -16,7 +16,7 @@ interface ConfigurationInterface
      * Find an Configuration by given Id which returns Configuration Model
      *
      * @param string $key
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function findByKey($key);
 
@@ -33,7 +33,7 @@ interface ConfigurationInterface
      *
      * @param string $key
      * @param string $value
-     * @return \AvoRed\Framework\Models\Database\Configuration $configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration $configuration
      */
     public function setValueByKey($key, $value);
 
@@ -48,7 +48,7 @@ interface ConfigurationInterface
      * Create an Configuration
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function create($data);
 }

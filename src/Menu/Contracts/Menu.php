@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Menu\Contracts;
+namespace LeadStore\Framework\Menu\Contracts;
 
 interface Menu
 {

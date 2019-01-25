@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\UserGroup;
 
  /**
  * Test the Customer Group Routes
@@ -16,7 +16,7 @@ class UserGroupTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.user-group.index'));
-        
+
         $response->assertStatus(200);
     }
 
@@ -25,7 +25,7 @@ class UserGroupTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.user-group.create'));
-        
+
         $response->assertStatus(200);
     }
     /**
@@ -40,10 +40,10 @@ class UserGroupTest extends BaseTestCase
                             'name' => 'test group name',
                             //'is_default' => 0 we should not return checkbox value if not checked
                         ]));
-        
+
         $response->assertStatus(302)
                 ->assertRedirect(route('admin.user-group.index'));
-                
+
         $this->assertDatabaseHas('user_groups', [
                     'name' => 'test group name'
                 ]);
@@ -53,41 +53,41 @@ class UserGroupTest extends BaseTestCase
     public function test_user_group_edit_route()
     {
         $userGroup = factory(UserGroup::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->get(route('admin.user-group.edit', $userGroup->id));
-        
+
         $response->assertStatus(200)
                 ->assertSee($userGroup->name);
     }
-    
+
     /*** @test */
     public function test_user_group_update_route()
     {
         $userGroup = factory(UserGroup::class)->create();
         $userGroup->name = "test new name";
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->put(route('admin.user-group.update', $userGroup->id), $userGroup->toArray());
-        
+
         $response->assertStatus(302)
                     ->assertRedirect(route('admin.user-group.index'));
         $this->assertDatabaseHas('user_groups', [
                     'name' => 'test new name'
                 ]);
     }
-   
+
     /*** @test */
     public function test_user_group_destroy_route()
     {
         $userGroup = factory(UserGroup::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->delete(route('admin.user-group.destroy', $userGroup->id));
-        
+
         $response->assertStatus(302)
                     ->assertRedirect(route('admin.user-group.index'));
         $this->assertDatabaseMissing('user_groups', [

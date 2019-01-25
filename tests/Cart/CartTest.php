@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\AdminMenu;
+namespace LeadStore\Framework\Tests\AdminMenu;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\AdminMenu\Builder;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\AdminMenu\Builder;
 
 class CartTest extends BaseTestCase
 {

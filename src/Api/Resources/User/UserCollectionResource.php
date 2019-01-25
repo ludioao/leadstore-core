@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\User;
+namespace LeadStore\Framework\Api\Resources\User;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 

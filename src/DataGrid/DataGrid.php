@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid;
+namespace LeadStore\Framework\DataGrid;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use AvoRed\Framework\DataGrid\Columns\LinkColumn;
-use AvoRed\Framework\DataGrid\Columns\TextColumn;
+use LeadStore\Framework\DataGrid\Columns\LinkColumn;
+use LeadStore\Framework\DataGrid\Columns\TextColumn;
 
 class DataGrid
 {
@@ -44,7 +44,7 @@ class DataGrid
      * Set the DataGrid Database Model.
      *
      * @param mixed $model
-     * @return \AvoRed\Framework\DataGrid\DataGrid $this;
+     * @return \LeadStore\Framework\DataGrid\DataGrid $this;
      */
     public function model($model):self
     {
@@ -58,7 +58,7 @@ class DataGrid
      *
      * @param string $identifier
      * @param array $options
-     * @return \AvoRed\Framework\DataGrid\DataGrid $this;
+     * @return \LeadStore\Framework\DataGrid\DataGrid $this;
      */
     public function column($identifier, $options = []):self
     {
@@ -79,7 +79,7 @@ class DataGrid
      * @param string $identifier
      * @param array $options
      * @param callable $callback
-     * @return \AvoRed\Framework\DataGrid\DataGrid $this;
+     * @return \LeadStore\Framework\DataGrid\DataGrid $this;
      */
     public function linkColumn($identifier, $options, $callback):self
     {

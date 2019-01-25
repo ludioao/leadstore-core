@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\ShippingZone;
+namespace LeadStore\Framework\ShippingZone;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -32,7 +32,7 @@ class Provider extends ServiceProvider
     {
         $this->registerShipping();
 
-        $this->app->alias('shippingzone', 'AvoRed\Framework\ShippingZone\Manager');
+        $this->app->alias('shippingzone', 'LeadStore\Framework\ShippingZone\Manager');
     }
 
     /**
@@ -57,7 +57,7 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['shippingzone', 'AvoRed\Framework\ShippingZone\Manager'];
+        return ['shippingzone', 'LeadStore\Framework\ShippingZone\Manager'];
     }
 
 }

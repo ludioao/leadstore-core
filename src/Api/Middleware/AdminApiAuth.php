@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Api\Middleware;
+namespace LeadStore\Framework\Api\Middleware;
 
 use Closure;
 use Illuminate\Http\JsonResponse;

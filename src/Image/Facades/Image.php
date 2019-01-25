@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Image\Facades;
+namespace LeadStore\Framework\Image\Facades;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 

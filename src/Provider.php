@@ -1,48 +1,48 @@
 <?php
 
-namespace AvoRed\Framework;
+namespace LeadStore\Framework;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Api\Middleware\AdminApiAuth;
-use AvoRed\Framework\User\Middleware\AdminAuth;
-use AvoRed\Framework\User\Middleware\RedirectIfAdminAuth;
-use AvoRed\Framework\User\Middleware\Permission;
-use AvoRed\Framework\System\Middleware\SiteCurrencyMiddleware;
-use AvoRed\Framework\User\ViewComposers\AdminUserFieldsComposer;
-use AvoRed\Framework\System\ViewComposers\AdminNavComposer;
-use AvoRed\Framework\Product\ViewComposers\CategoryFieldsComposer;
-use AvoRed\Framework\Product\ViewComposers\ProductFieldsComposer;
-use AvoRed\Framework\Cms\ViewComposers\PageFieldsComposer;
-use AvoRed\Framework\User\ViewComposers\UserFieldsComposer;
+use LeadStore\Framework\Api\Middleware\AdminApiAuth;
+use LeadStore\Framework\User\Middleware\AdminAuth;
+use LeadStore\Framework\User\Middleware\RedirectIfAdminAuth;
+use LeadStore\Framework\User\Middleware\Permission;
+use LeadStore\Framework\System\Middleware\SiteCurrencyMiddleware;
+use LeadStore\Framework\User\ViewComposers\AdminUserFieldsComposer;
+use LeadStore\Framework\System\ViewComposers\AdminNavComposer;
+use LeadStore\Framework\Product\ViewComposers\CategoryFieldsComposer;
+use LeadStore\Framework\Product\ViewComposers\ProductFieldsComposer;
+use LeadStore\Framework\Cms\ViewComposers\PageFieldsComposer;
+use LeadStore\Framework\User\ViewComposers\UserFieldsComposer;
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Console\InstallCommand;
 use Laravel\Passport\Console\ClientCommand;
 use Laravel\Passport\Console\KeysCommand;
-use AvoRed\Framework\User\ViewComposers\SiteCurrencyFieldsComposer;
-use AvoRed\Framework\Cms\ViewComposers\MenuComposer;
+use LeadStore\Framework\User\ViewComposers\SiteCurrencyFieldsComposer;
+use LeadStore\Framework\Cms\ViewComposers\MenuComposer;
 
 class Provider extends ServiceProvider
 {
     protected $providers = [
-        \AvoRed\Framework\AdminConfiguration\Provider::class,
-        \AvoRed\Framework\AdminMenu\AdminMenuProvider::class,
-        \AvoRed\Framework\Breadcrumb\BreadcrumbProvider::class,
-        \AvoRed\Framework\Cart\Provider::class,
-        \AvoRed\Framework\DataGrid\Provider::class,
-        \AvoRed\Framework\Image\ImageProvider::class,
-        \AvoRed\Framework\Menu\MenuProvider::class,
-        \AvoRed\Framework\Models\ModelProvider::class,
-        \AvoRed\Framework\Modules\Provider::class,
-        \AvoRed\Framework\Payment\Provider::class,
-        \AvoRed\Framework\Permission\PermissionProvider::class,
-        \AvoRed\Framework\Shipping\Provider::class,
-        \AvoRed\Framework\ShippingZone\Provider::class,
-        \AvoRed\Framework\Tabs\Provider::class,
-        \AvoRed\Framework\Theme\Provider::class,
-        \AvoRed\Framework\Widget\WidgetProvider::class,
+        \LeadStore\Framework\AdminConfiguration\Provider::class,
+        \LeadStore\Framework\AdminMenu\AdminMenuProvider::class,
+        \LeadStore\Framework\Breadcrumb\BreadcrumbProvider::class,
+        \LeadStore\Framework\Cart\Provider::class,
+        \LeadStore\Framework\DataGrid\Provider::class,
+        \LeadStore\Framework\Image\ImageProvider::class,
+        \LeadStore\Framework\Menu\MenuProvider::class,
+        \LeadStore\Framework\Models\ModelProvider::class,
+        \LeadStore\Framework\Modules\Provider::class,
+        \LeadStore\Framework\Payment\Provider::class,
+        \LeadStore\Framework\Permission\PermissionProvider::class,
+        \LeadStore\Framework\Shipping\Provider::class,
+        \LeadStore\Framework\ShippingZone\Provider::class,
+        \LeadStore\Framework\Tabs\Provider::class,
+        \LeadStore\Framework\Theme\Provider::class,
+        \LeadStore\Framework\Widget\WidgetProvider::class,
     ];
 
     /**

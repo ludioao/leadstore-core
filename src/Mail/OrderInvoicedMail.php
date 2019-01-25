@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Mail;
+namespace LeadStore\Framework\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use AvoRed\Framework\Models\Database\Order;
+use LeadStore\Framework\Models\Database\Order;
 
 class OrderInvoicedMail extends Mailable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Breadcrumb;
+namespace LeadStore\Framework\Breadcrumb;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Breadcrumb\Facade as BreadcrumbFacade;
+use LeadStore\Framework\Breadcrumb\Facade as BreadcrumbFacade;
 
 class BreadcrumbProvider extends ServiceProvider
 {
@@ -27,7 +27,7 @@ class BreadcrumbProvider extends ServiceProvider
     public function register()
     {
         $this->registerServices();
-        $this->app->alias('breadcrumb', 'AvoRed\Framework\Breadcrumb\Builder');
+        $this->app->alias('breadcrumb', 'LeadStore\Framework\Breadcrumb\Builder');
     }
 
     /**
@@ -49,7 +49,7 @@ class BreadcrumbProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['breadcrumb', 'AvoRed\Framework\Breadcrumb\Builder'];
+        return ['breadcrumb', 'LeadStore\Framework\Breadcrumb\Builder'];
     }
 
     /**

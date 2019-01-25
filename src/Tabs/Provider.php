@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Tabs;
+namespace LeadStore\Framework\Tabs;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +21,7 @@ class Provider extends ServiceProvider
     public function register()
     {
         $this->registerTabs();
-        $this->app->alias('tabs', 'AvoRed\Framework\Tabs\TabsMaker');
+        $this->app->alias('tabs', 'LeadStore\Framework\Tabs\TabsMaker');
     }
 
     /**
@@ -43,6 +43,6 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['tabs', 'AvoRed\Framework\Tabs\TabsMaker'];
+        return ['tabs', 'LeadStore\Framework\Tabs\TabsMaker'];
     }
 }

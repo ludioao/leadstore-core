@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Breadcrumb;
+namespace LeadStore\Framework\Breadcrumb;
 
 use Illuminate\Support\Collection;
-use AvoRed\Framework\Breadcrumb\Facade as BreadcrumbFacade;
-use AvoRed\Framework\Breadcrumb\Contracts\Breadcrumb as BreadcrumbContracts;
+use LeadStore\Framework\Breadcrumb\Facade as BreadcrumbFacade;
+use LeadStore\Framework\Breadcrumb\Contracts\Breadcrumb as BreadcrumbContracts;
 
 class Breadcrumb implements BreadcrumbContracts
 {
@@ -48,7 +48,7 @@ class Breadcrumb implements BreadcrumbContracts
      *  Get/Set AvoRed BreakCrumb Label.
      *
      * @var string|null
-     * @return \AvoRed\Framework\Breadcrumb\Breadcrumb|string
+     * @return \LeadStore\Framework\Breadcrumb\Breadcrumb|string
      */
     public function label($label = null)
     {
@@ -64,7 +64,7 @@ class Breadcrumb implements BreadcrumbContracts
      *  Get/Set AvoRed BreakCrumb Route.
      *
      * @var string|null
-     * @return \AvoRed\Framework\Breadcrumb\Breadcrumb|string
+     * @return \LeadStore\Framework\Breadcrumb\Breadcrumb|string
      */
     public function route($route = null)
     {
@@ -80,7 +80,7 @@ class Breadcrumb implements BreadcrumbContracts
      *  Set AvoRed BreakCrumb Parents.
      *
      * @var string
-     * @return \AvoRed\Framework\Breadcrumb\Breadcrumb
+     * @return \LeadStore\Framework\Breadcrumb\Breadcrumb
      */
     public function parent($key):self
     {

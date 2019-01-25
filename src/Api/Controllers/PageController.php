@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Page;
-use AvoRed\Framework\Api\Resources\Page\PageResource;
-use AvoRed\Framework\Api\Resources\Page\PageCollectionResource;
-use AvoRed\Framework\Cms\Requests\PageRequest;
+use LeadStore\Framework\Models\Database\Page;
+use LeadStore\Framework\Api\Resources\Page\PageResource;
+use LeadStore\Framework\Api\Resources\Page\PageCollectionResource;
+use LeadStore\Framework\Cms\Requests\PageRequest;
 
 class PageController extends Controller
 {

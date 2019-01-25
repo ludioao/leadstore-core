@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Payment\Contracts;
+namespace LeadStore\Framework\Payment\Contracts;
 
 interface Payment
 {

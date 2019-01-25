@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Property;
-use AvoRed\Framework\Api\Resources\Property\PropertyResource;
-use AvoRed\Framework\Api\Resources\Property\PropertyCollectionResource;
-use AvoRed\Framework\Product\Requests\PropertyRequest;
+use LeadStore\Framework\Models\Database\Property;
+use LeadStore\Framework\Api\Resources\Property\PropertyResource;
+use LeadStore\Framework\Api\Resources\Property\PropertyCollectionResource;
+use LeadStore\Framework\Product\Requests\PropertyRequest;
 
 class PropertyController extends Controller
 {

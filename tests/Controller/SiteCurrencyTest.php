@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\UserGroup;
-use AvoRed\Framework\Models\Database\SiteCurrency;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Models\Database\SiteCurrency;
 
  /**
  * Test the Site Currency Routes
@@ -20,7 +20,7 @@ class SiteCurrencyTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.site-currency.index'));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.site-currency.title'));
     }
@@ -32,7 +32,7 @@ class SiteCurrencyTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.site-currency.create'));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.site-currency.create'));
     }
@@ -51,10 +51,10 @@ class SiteCurrencyTest extends BaseTestCase
                             'conversion_rate' => 1.00,
                             'status' => 'ENABLED'
                         ]));
-        
+
         $response->assertStatus(302)
                 ->assertRedirect(route('admin.site-currency.index'));
-                
+
         $this->assertDatabaseHas('site_currencies', [
                     'name' => 'currency name'
                 ]);
@@ -66,11 +66,11 @@ class SiteCurrencyTest extends BaseTestCase
     public function test_site_currency_edit_route()
     {
         $siteCurrency = factory(SiteCurrency::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->get(route('admin.site-currency.edit', $siteCurrency->id));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.site-currency.update'))
             ->assertSee($siteCurrency->name);
@@ -83,15 +83,15 @@ class SiteCurrencyTest extends BaseTestCase
     {
         $siteCurrency = factory(SiteCurrency::class)->create();
         $siteCurrency->name = "test new name";
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
             ->put(route('admin.site-currency.update', $siteCurrency->id), $siteCurrency->toArray());
-        
+
         $response->assertStatus(302)
             ->assertRedirect(route('admin.site-currency.index'));
         $this->assertDatabaseHas(
-            'site_currencies', 
+            'site_currencies',
             ['name' => 'test new name']
         );
     }
@@ -102,16 +102,16 @@ class SiteCurrencyTest extends BaseTestCase
     public function test_site_currency_destroy_route()
     {
         $siteCurrency = factory(SiteCurrency::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
             ->delete(route('admin.site-currency.destroy', $siteCurrency->id));
-        
+
         $response->assertStatus(302)
             ->assertRedirect(route('admin.site-currency.index'));
-            
+
         $this->assertDatabaseMissing(
-            'site_currencies', 
+            'site_currencies',
             ['id' => $siteCurrency->id]
         );
     }

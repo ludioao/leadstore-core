@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
-use AvoRed\Framework\Models\Database\Order;
-use AvoRed\Framework\Api\Resources\Order\OrderCollectionResource;
-use AvoRed\Framework\Api\Resources\Order\OrderResource;
+use LeadStore\Framework\Models\Database\Order;
+use LeadStore\Framework\Api\Resources\Order\OrderCollectionResource;
+use LeadStore\Framework\Api\Resources\Order\OrderResource;
 
 class OrderController extends Controller
 {

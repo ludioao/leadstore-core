@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Shipping;
+namespace LeadStore\Framework\Shipping;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Shipping\Facade as ShippingFacade;
+use LeadStore\Framework\Shipping\Facade as ShippingFacade;
 
 class Provider extends ServiceProvider
 {
@@ -33,7 +33,7 @@ class Provider extends ServiceProvider
     {
         $this->registerShipping();
 
-        $this->app->alias('shipping', 'AvoRed\Framework\Shipping\Manager');
+        $this->app->alias('shipping', 'LeadStore\Framework\Shipping\Manager');
     }
 
     /**
@@ -44,7 +44,7 @@ class Provider extends ServiceProvider
     protected function registerShipping()
     {
         $this->app->singleton(
-            'shipping', 
+            'shipping',
             function ($app) {
                 return new Manager();
             }
@@ -58,7 +58,7 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['shipping', 'AvoRed\Framework\Shipping\Manager'];
+        return ['shipping', 'LeadStore\Framework\Shipping\Manager'];
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Shipping;
+namespace LeadStore\Framework\Shipping;
 
 use Illuminate\Support\Collection;
 

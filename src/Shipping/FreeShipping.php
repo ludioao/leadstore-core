@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Shipping;
+namespace LeadStore\Framework\Shipping;
 
-use AvoRed\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Models\Database\Configuration;
 use Illuminate\Support\Facades\Session;
-use AvoRed\Framework\Shipping\Shipping as AbstractShipping;
-use AvoRed\Framework\Shipping\Contracts\Shipping as ShippingContract;
+use LeadStore\Framework\Shipping\Shipping as AbstractShipping;
+use LeadStore\Framework\Shipping\Contracts\Shipping as ShippingContract;
 
 class FreeShipping extends AbstractShipping implements ShippingContract
 {

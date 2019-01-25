@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Theme;
+namespace LeadStore\Framework\Theme;
 
 use RecursiveIteratorIterator;
 use Symfony\Component\Yaml\Yaml;

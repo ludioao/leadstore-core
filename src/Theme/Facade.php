@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Theme;
+namespace LeadStore\Framework\Theme;
 
 use Illuminate\Support\Facades\Facade as LaraveFacade;
 
 /**
- * @method \AvoRed\Framework\Theme all()
+ * @method \LeadStore\Framework\Theme all()
  *
  *
  */

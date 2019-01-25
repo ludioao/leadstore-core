@@ -1,5 +1,5 @@
 <?php
-namespace AvoRed\Framework\Permission;
+namespace LeadStore\Framework\Permission;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
@@ -12,6 +12,6 @@ class Facade extends LaravelFacade
      */
     protected static function getFacadeAccessor()
     {
-        return 'AvoRed\Framework\Permission\Manager';
+        return 'LeadStore\Framework\Permission\Manager';
     }
 }

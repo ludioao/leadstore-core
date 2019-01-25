@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Modules\Console;
+namespace LeadStore\Framework\Modules\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 use Illuminate\Filesystem\Filesystem;
-use AvoRed\Framework\Modules\Facade as Module;
+use LeadStore\Framework\Modules\Facade as Module;
 use Symfony\Component\Console\Input\InputArgument;
 
 class ControllerMakeCommand extends Command

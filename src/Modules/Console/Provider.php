@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Modules\Console;
+namespace LeadStore\Framework\Modules\Console;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Support\Console\InstallCommand;
-use AvoRed\Framework\Support\Console\AdminMakeCommand;
+use LeadStore\Framework\Support\Console\InstallCommand;
+use LeadStore\Framework\Support\Console\AdminMakeCommand;
 
 class Provider extends ServiceProvider
 {

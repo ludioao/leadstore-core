@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 class Permission extends BaseModel
 {
@@ -9,7 +9,7 @@ class Permission extends BaseModel
     /**
      * Permission belongs to many role.
      *
-     * @return \AvoRed\Framework\Models\Database\\Role
+     * @return \LeadStore\Framework\Models\Database\\Role
      */
     public function roles()
     {

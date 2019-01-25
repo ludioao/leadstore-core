@@ -1,15 +1,15 @@
 <?php
 
-namespace AvoRed\Framework\Image;
+namespace LeadStore\Framework\Image;
 
 use Illuminate\Support\Facades\File;
-use AvoRed\Framework\Image\Driver\Gd;
+use LeadStore\Framework\Image\Driver\Gd;
 
 class Manager
 {
     /**
      * Image Driver Class
-     * @var \AvoRed\Framework\Image\Driver\Gd
+     * @var \LeadStore\Framework\Image\Driver\Gd
      */
     protected $driver;
 
@@ -42,7 +42,7 @@ class Manager
 
     /**
      * Get the Local File Object for the uploaded image
-     * @return \AvoRed\Framework\Image\LocalFile $localFile
+     * @return \LeadStore\Framework\Image\LocalFile $localFile
      */
     public function get()
     {

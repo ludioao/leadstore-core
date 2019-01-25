@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface CountryInterface
 {
@@ -8,7 +8,7 @@ interface CountryInterface
      * Find a Country by given Id which returns Country Model
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Country
+     * @return \LeadStore\Framework\Models\Country
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface CountryInterface
      * Create a Country
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Country
+     * @return \LeadStore\Framework\Models\Country
      */
     public function create($data);
 

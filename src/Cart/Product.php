@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Cart;
+namespace LeadStore\Framework\Cart;
 
-use AvoRed\Framework\Cart\Contracts\Cart as CartContracts;
+use LeadStore\Framework\Cart\Contracts\Cart as CartContracts;
 
 class Product implements CartContracts
 {

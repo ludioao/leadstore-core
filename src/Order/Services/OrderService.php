@@ -6,29 +6,29 @@
  * Time: 13:30
  */
 
-namespace AvoRed\Framework\Order\Services;
+namespace LeadStore\Framework\Order\Services;
 
 
 use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
-use AvoRed\Framework\Mail\OrderInvoicedMail;
-use AvoRed\Framework\Models\Database\Order as Model;
-use AvoRed\Framework\Cart\Facade as Cart;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
-use AvoRed\Framework\Models\Contracts\OrderHistoryInterface;
-use AvoRed\Framework\Models\Contracts\OrderReturnProductInterface;
-use AvoRed\Framework\Models\Contracts\OrderReturnRequestInterface;
-use AvoRed\Framework\Models\Contracts\ProductInterface;
-use AvoRed\Framework\Models\Database\Address;
-use AvoRed\Framework\Models\Database\Order;
-use AvoRed\Framework\Models\Database\OrderProductVariation;
-use AvoRed\Framework\Models\Database\OrderStatus;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Models\Database\User;
-use AvoRed\Framework\Payment\Facade as Payment;
-use AvoRed\Framework\Shipping\Facade as Shipping;
+use LeadStore\Framework\Mail\OrderInvoicedMail;
+use LeadStore\Framework\Models\Database\Order as Model;
+use LeadStore\Framework\Cart\Facade as Cart;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Contracts\OrderHistoryInterface;
+use LeadStore\Framework\Models\Contracts\OrderReturnProductInterface;
+use LeadStore\Framework\Models\Contracts\OrderReturnRequestInterface;
+use LeadStore\Framework\Models\Contracts\ProductInterface;
+use LeadStore\Framework\Models\Database\Address;
+use LeadStore\Framework\Models\Database\Order;
+use LeadStore\Framework\Models\Database\OrderProductVariation;
+use LeadStore\Framework\Models\Database\OrderStatus;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Database\User;
+use LeadStore\Framework\Payment\Facade as Payment;
+use LeadStore\Framework\Shipping\Facade as Shipping;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Shipping;
+namespace LeadStore\Framework\Shipping;
 
-use AvoRed\Framework\Shipping\Traits\ShippingUtils;
+use LeadStore\Framework\Shipping\Traits\ShippingUtils;
 
 abstract class Shipping
 {

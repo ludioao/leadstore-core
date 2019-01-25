@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Product\Requests;
+namespace LeadStore\Framework\Product\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Modules;
+namespace LeadStore\Framework\Modules;
 
 use Illuminate\Support\Facades\Facade as LaraveFacade;
 

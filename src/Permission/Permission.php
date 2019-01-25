@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Permission;
+namespace LeadStore\Framework\Permission;
 
-use AvoRed\Framework\Permission\Contracts\Permission as PermissionContracts;
+use LeadStore\Framework\Permission\Contracts\Permission as PermissionContracts;
 
 class Permission implements PermissionContracts
 {
@@ -23,7 +23,7 @@ class Permission implements PermissionContracts
 
     /**
      * Construct for a permission group
-     * @param callable $callable 
+     * @param callable $callable
      * @return void
      */
     public function __construct($callable = null)
@@ -35,7 +35,7 @@ class Permission implements PermissionContracts
 
     /**
      * Set/Get Label for permission
-     * 
+     *
      * @param string $label
      * @return mixed $label|$this
      */

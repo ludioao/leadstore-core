@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Menu;
+namespace LeadStore\Framework\Menu;
 
 use Illuminate\Support\Collection;
 
@@ -39,7 +39,7 @@ class Builder
      * Return Menu Object.
      *
      * @var string
-     * @return \AvoRed\Framework\Menu\Menu
+     * @return \LeadStore\Framework\Menu\Menu
      */
     public function get($key)
     {

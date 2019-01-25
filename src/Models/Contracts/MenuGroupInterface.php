@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface MenuGroupInterface
 {
@@ -8,7 +8,7 @@ interface MenuGroupInterface
      * Find an Menu Group by given Id which returns MenuGroup
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\MenuGroup
+     * @return \LeadStore\Framework\Models\MenuGroup
      */
     public function find($id);
 
@@ -30,7 +30,7 @@ interface MenuGroupInterface
      * Create a MenuGroup
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\MenuGroup
+     * @return \LeadStore\Framework\Models\MenuGroup
      */
     public function create($data);
 }

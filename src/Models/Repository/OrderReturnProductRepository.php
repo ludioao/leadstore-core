@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\OrderReturnProductInterface;
-use AvoRed\Framework\Models\Database\OrderReturnProduct;
+use LeadStore\Framework\Models\Contracts\OrderReturnProductInterface;
+use LeadStore\Framework\Models\Database\OrderReturnProduct;
 
 class OrderReturnProductRepository implements OrderReturnProductInterface
 {
@@ -11,7 +11,7 @@ class OrderReturnProductRepository implements OrderReturnProductInterface
      * Find an Order Return Product by a given id of a Order
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\OrderReturnProduct
+     * @return \LeadStore\Framework\Models\Database\OrderReturnProduct
      */
     public function find($id)
     {
@@ -22,7 +22,7 @@ class OrderReturnProductRepository implements OrderReturnProductInterface
      * Create an Order Return Product by a given id of a Order
      *
      * @param array $id
-     * @return \AvoRed\Framework\Models\Database\OrderReturnProduct
+     * @return \LeadStore\Framework\Models\Database\OrderReturnProduct
      */
     public function create($data)
     {

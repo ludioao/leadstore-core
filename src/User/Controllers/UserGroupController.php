@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\User\Controllers;
+namespace LeadStore\Framework\User\Controllers;
 
-use AvoRed\Framework\Models\Database\UserGroup;
-use AvoRed\Framework\Models\Contracts\UserGroupInterface;
-use AvoRed\Framework\System\Controllers\Controller;
-use AvoRed\Framework\User\DataGrid\UserGroupDataGrid;
-use AvoRed\Framework\User\Requests\UserGroupRequest;
+use LeadStore\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Models\Contracts\UserGroupInterface;
+use LeadStore\Framework\System\Controllers\Controller;
+use LeadStore\Framework\User\DataGrid\UserGroupDataGrid;
+use LeadStore\Framework\User\Requests\UserGroupRequest;
 
 class UserGroupController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\UserGroupRepository
+     * @var \LeadStore\Framework\Models\Repository\UserGroupRepository
      */
     protected $repository;
 
@@ -46,7 +46,7 @@ class UserGroupController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\Http\Requests\AdminUserRequest $request
+     * @param \LeadStore\Framework\Http\Requests\AdminUserRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -61,7 +61,7 @@ class UserGroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\UserGroup $id
+     * @param \LeadStore\Framework\Models\Database\UserGroup $id
      *
      * @return \Illuminate\Http\Response
      */
@@ -74,7 +74,7 @@ class UserGroupController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\Http\Requests\AdminUserRequest $request
+     * @param \LeadStore\Framework\Http\Requests\AdminUserRequest $request
      * @param int $id
      *
      * @return \Illuminate\Http\Response

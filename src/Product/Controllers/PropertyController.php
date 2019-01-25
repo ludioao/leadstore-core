@@ -1,20 +1,20 @@
 <?php
 
-namespace AvoRed\Framework\Product\Controllers;
+namespace LeadStore\Framework\Product\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Property;
-use AvoRed\Framework\Product\DataGrid\PropertyDataGrid;
-use AvoRed\Framework\Product\Requests\PropertyRequest;
-use AvoRed\Framework\System\Controllers\Controller;
-use AvoRed\Framework\Models\Contracts\PropertyInterface;
+use LeadStore\Framework\Models\Database\Property;
+use LeadStore\Framework\Product\DataGrid\PropertyDataGrid;
+use LeadStore\Framework\Product\Requests\PropertyRequest;
+use LeadStore\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Contracts\PropertyInterface;
 
 class PropertyController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\PropertyRepository
+     * @var \LeadStore\Framework\Models\Repository\PropertyRepository
      */
     protected $repository;
 
@@ -49,7 +49,7 @@ class PropertyController extends Controller
     /**
      * Store a newly created property in database.
      *
-     * @param \AvoRed\Framework\Product\Requests\PropertyRequest $request
+     * @param \LeadStore\Framework\Product\Requests\PropertyRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -65,7 +65,7 @@ class PropertyController extends Controller
     /**
      * Show the form for editing the specified property.
      *
-     * @param \AvoRed\Framework\Models\Database\Property $property
+     * @param \LeadStore\Framework\Models\Database\Property $property
      *
      * @return \Illuminate\Http\Response
      */
@@ -77,8 +77,8 @@ class PropertyController extends Controller
     /**
      * Update the specified property in database.
      *
-     * @param \AvoRed\Framework\Product\Requests\PropertyRequest $request
-     * @param \AvoRed\Framework\Models\Database\Property $property
+     * @param \LeadStore\Framework\Product\Requests\PropertyRequest $request
+     * @param \LeadStore\Framework\Models\Database\Property $property
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -94,7 +94,7 @@ class PropertyController extends Controller
     /**
      * Remove the specified property from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\Property $property
+     * @param \LeadStore\Framework\Models\Database\Property $property
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -120,7 +120,7 @@ class PropertyController extends Controller
                         ->with('properties', $properties)
                         ->with('tmpString', $tmpString);
 
-                      
+
         $json = new JsonResponse(['success' => true, 'content' => $view->render()]);
 
         return $json;
@@ -129,8 +129,8 @@ class PropertyController extends Controller
     /**
      * Save Property Dropdown Field options
      *
-     * @param \AvoRed\Framework\Models\Database\Property $proerty
-     * @param \AvoRed\Framework\Product\Request\PropertyRequest $request
+     * @param \LeadStore\Framework\Models\Database\Property $proerty
+     * @param \LeadStore\Framework\Product\Request\PropertyRequest $request
      *
      * @return void
      */

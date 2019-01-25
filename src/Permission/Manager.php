@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Permission;
+namespace LeadStore\Framework\Permission;
 
 use Illuminate\Support\Collection;
 
@@ -33,7 +33,7 @@ class Manager
      *
      * @param string $key
      * @param callable $callable
-     * @return \AvoRed\Framework\Permission\Manager
+     * @return \LeadStore\Framework\Permission\Manager
      */
     public function add($key, $callable = null)
     {

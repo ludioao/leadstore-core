@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\UserInterface;
-use AvoRed\Framework\Models\Database\User;
+use LeadStore\Framework\Models\Contracts\UserInterface;
+use LeadStore\Framework\Models\Database\User;
 
 class UserRepository implements UserInterface
 {
@@ -11,7 +11,7 @@ class UserRepository implements UserInterface
      * Find an User by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\User
+     * @return \LeadStore\Framework\Models\User
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class UserRepository implements UserInterface
     /**
      * Find an User Query
      *
-     * @return \AvoRed\Framework\Models\User
+     * @return \LeadStore\Framework\Models\User
      */
     public function create($data)
     {

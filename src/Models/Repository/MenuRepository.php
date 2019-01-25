@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\Menu;
-use AvoRed\Framework\Models\Contracts\MenuInterface;
+use LeadStore\Framework\Models\Database\Menu;
+use LeadStore\Framework\Models\Contracts\MenuInterface;
 
 class MenuRepository implements MenuInterface
 {
@@ -11,7 +11,7 @@ class MenuRepository implements MenuInterface
      * Find an Menu by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Menu
+     * @return \LeadStore\Framework\Models\Menu
      */
     public function find($id)
     {
@@ -61,7 +61,7 @@ class MenuRepository implements MenuInterface
     /**
      * Find an Menu Query
      *
-     * @return \AvoRed\Framework\Models\Menu
+     * @return \LeadStore\Framework\Models\Menu
      */
     public function create($data)
     {
@@ -71,8 +71,8 @@ class MenuRepository implements MenuInterface
     /**
      *
      * @param array $menus
-     * @param \AvoRed\Framework\Models\Database\MenuGroup $menuGroup
-     * @return \AvoRed\Framework\Models\Repository\MenuRepository
+     * @param \LeadStore\Framework\Models\Database\MenuGroup $menuGroup
+     * @return \LeadStore\Framework\Models\Repository\MenuRepository
      */
     public function truncateAndCreateMenus($menuGroup, $menus)
     {

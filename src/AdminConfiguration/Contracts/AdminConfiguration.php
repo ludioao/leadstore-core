@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\AdminConfiguration\Contracts;
+namespace LeadStore\Framework\AdminConfiguration\Contracts;
 
 interface AdminConfiguration
 {

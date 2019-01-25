@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Support\Console;
+namespace LeadStore\Framework\Support\Console;
 
-use AvoRed\Framework\Models\Database\Configuration;
-use AvoRed\Framework\Theme\Facade as Theme;
+use LeadStore\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Theme\Facade as Theme;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
 
 class InstallCommand extends Command
 {
@@ -76,7 +76,7 @@ class InstallCommand extends Command
             $this->call('passport:keys');
 
             $configurationRepository = app(ConfigurationInterface::class);
-            
+
             Configuration::create(
                 ['configuration_key' => 'active_theme_identifier',
                 'configuration_value' => 'avored-default']

@@ -1,22 +1,10 @@
 {
-	"name" : "avored/framework",
-	"description" : "AvoRed Laravel E commerce Framework",
-	"keywords" : [
-		"framework",
-		"cart",
-		"laravel",
-		"e commerce",
-		"laravel5",
-		"shop",
-		"shopping-cart",
-		"e-commerce",
-		"shopping cart",
-		"e commerce"
-	],
+	"name" : "leadstore/framework",
+	"description" : "LeadStore Laravel E commerce Framework",
 	"license" : "MIT",
 	"authors" : [{
-			"name" : "Purvesh  ",
-			"email" : "ind.purvesh@gmail.com"
+			"name" : "Ludio Oliveira",
+			"email" : "ludio.ao@gmail.com"
 		}
 	],
 	"type" : "library",
@@ -41,43 +29,35 @@
             "database/factories"
         ],
 		"psr-4" : {
-			"AvoRed\\Framework\\" : "src/"
+			"LeadStore\\Framework\\" : "src/"
 
 		}
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"AvoRed\\Framework\\Tests\\" : "tests/"
+			"LeadStore\\Framework\\Tests\\" : "tests/"
 		}
 	},
 	"extra" : {
 		"laravel" : {
 			"providers" : [
-				"AvoRed\\Framework\\Provider"
+				"LeadStore\\Framework\\Provider"
 			],
 			"aliases" : {
-				"AdminMenu" : "AvoRed\\Framework\\AdminMenu\\Facade",
-				"AdminConfiguration" : "AvoRed\\Framework\\AdminConfiguration\\Facade",
-				"Breadcrumb" : "AvoRed\\Framework\\Breadcrumb\\Facade",
-				"Cart" : "AvoRed\\Framework\\Cart\\Facade",
-				"DataGrid" : "AvoRed\\Framework\\DataGrid\\Facade",
-				"Image" : "AvoRed\\Framework\\Image\\Facade",
-				"Menu" : "AvoRed\\Framework\\Menu\\Facades\\Menu",
-				"Payment" : "AvoRed\\Framework\\Payment\\Facade",
-				"Permission" : "AvoRed\\Framework\\Permission\\Facade",
-				"Shipping" : "AvoRed\\Framework\\Shipping\\Facade",
-				"Tabs" : "AvoRed\\Framework\\Tabs\\Facade",
-				"Theme" : "AvoRed\\Framework\\Theme\\Facade",
-				"Widget" : "AvoRed\\Framework\\Widget\\Facade"
+				"AdminMenu" : "LeadStore\\Framework\\AdminMenu\\Facade",
+				"AdminConfiguration" : "LeadStore\\Framework\\AdminConfiguration\\Facade",
+				"Breadcrumb" : "LeadStore\\Framework\\Breadcrumb\\Facade",
+				"Cart" : "LeadStore\\Framework\\Cart\\Facade",
+				"DataGrid" : "LeadStore\\Framework\\DataGrid\\Facade",
+				"Image" : "LeadStore\\Framework\\Image\\Facade",
+				"Menu" : "LeadStore\\Framework\\Menu\\Facades\\Menu",
+				"Payment" : "LeadStore\\Framework\\Payment\\Facade",
+				"Permission" : "LeadStore\\Framework\\Permission\\Facade",
+				"Shipping" : "LeadStore\\Framework\\Shipping\\Facade",
+				"Tabs" : "LeadStore\\Framework\\Tabs\\Facade",
+				"Theme" : "LeadStore\\Framework\\Theme\\Facade",
+				"Widget" : "LeadStore\\Framework\\Widget\\Facade"
 			}
 		}
-	},
-	"homepage" : "https://www.avored.com",
-	"support" : {
-		"email" : "ind.purvesh@gmail.com",
-		"issues" : "https://www.avored.com/discussion",
-		"forum" : "https://www.avored.com/discussion",
-		"wiki" : "https://www.avored.com/docs",
-		"source" : "https://www.github.com/avored/framework"
 	}
 }

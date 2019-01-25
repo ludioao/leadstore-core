@@ -1,15 +1,15 @@
 <?php
 
-namespace AvoRed\Framework\Product\ViewComposers;
+namespace LeadStore\Framework\Product\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\Models\Contracts\CategoryInterface;
+use LeadStore\Framework\Models\Contracts\CategoryInterface;
 
 class CategoryFieldsComposer
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\CategoryRepository
+     * @var \LeadStore\Framework\Models\Repository\CategoryRepository
      */
     protected $repository;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Product\DataGrid;
+namespace LeadStore\Framework\Product\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
-use AvoRed\Framework\DataGrid\Columns\TextColumn;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Columns\TextColumn;
 
 class OrderStatusDataGrid
 {

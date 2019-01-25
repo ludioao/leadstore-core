@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\Widget;
+namespace LeadStore\Framework\Widget;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\User\Widget\TotalUserWidget;
-use AvoRed\Framework\Order\Widget\TotalOrderWidget;
-use AvoRed\Framework\Order\Widget\RecentOrderWidget;
-use AvoRed\Framework\Product\Widget\MonthlyRevenueWidget;
-use AvoRed\Framework\Widget\Facade as WidgetFacade;
+use LeadStore\Framework\User\Widget\TotalUserWidget;
+use LeadStore\Framework\Order\Widget\TotalOrderWidget;
+use LeadStore\Framework\Order\Widget\RecentOrderWidget;
+use LeadStore\Framework\Product\Widget\MonthlyRevenueWidget;
+use LeadStore\Framework\Widget\Facade as WidgetFacade;
 
 class WidgetProvider extends ServiceProvider
 {
@@ -31,7 +31,7 @@ class WidgetProvider extends ServiceProvider
     public function register()
     {
         $this->registerServices();
-        $this->app->alias('widget', 'AvoRed\Framework\Widget\Manager');
+        $this->app->alias('widget', 'LeadStore\Framework\Widget\Manager');
     }
 
     /**
@@ -53,7 +53,7 @@ class WidgetProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['widget', 'AvoRed\Framework\Widget\Manager'];
+        return ['widget', 'LeadStore\Framework\Widget\Manager'];
     }
 
     /**

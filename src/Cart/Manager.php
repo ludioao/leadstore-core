@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Cart;
+namespace LeadStore\Framework\Cart;
 
-use AvoRed\Framework\Cart\Product as CartFacadeProduct;
-use AvoRed\Framework\Models\Database\Attribute;
-use AvoRed\Framework\Models\Database\ProductAttributeIntegerValue;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Models\Repository\ProductRepository;
+use LeadStore\Framework\Cart\Product as CartFacadeProduct;
+use LeadStore\Framework\Models\Database\Attribute;
+use LeadStore\Framework\Models\Database\ProductAttributeIntegerValue;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Repository\ProductRepository;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
@@ -39,7 +39,7 @@ class Manager
      * @param string  $slug
      * @param int $qty
      * @param array $attributes
-     * @return \AvoRed\Framework\Cart\Manager $this
+     * @return \LeadStore\Framework\Cart\Manager $this
      */
     public function add($slug, $qty, $attribute = null): Manager
     {
@@ -115,7 +115,7 @@ class Manager
      *
      * @param string  $slug
      * @param int $qty
-     * @return \AvoRed\Framework\Cart\Manager $this
+     * @return \LeadStore\Framework\Cart\Manager $this
      */
     public function update($slug, $qty): Manager
     {
@@ -143,7 +143,7 @@ class Manager
      *
      * @param string    $slug
      * @param float     $taxAmount
-     * @return \AvoRed\Framework\Cart\Manager $this
+     * @return \LeadStore\Framework\Cart\Manager $this
      */
     public function updateProductTax($slug, $taxAmount): Manager
     {

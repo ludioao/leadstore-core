@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\User;
+namespace LeadStore\Framework\Api\Resources\User;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\User\UserAddressResource
+ * Class \LeadStore\Framework\Api\Resources\User\UserAddressResource
  * @property int id
  * @property int user_id
  * @property string first_name
@@ -16,7 +16,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * @property string postcode
  * @property string city
  * @property string state
- * @property \AvoRed\Framework\Models\Database\Country country
+ * @property \LeadStore\Framework\Models\Database\Country country
  * @property string phone
  * @property string created_at
  * @property string updated_at

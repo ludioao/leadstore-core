@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\Attribute;
-use AvoRed\Framework\Models\Contracts\AttributeInterface;
+use LeadStore\Framework\Models\Database\Attribute;
+use LeadStore\Framework\Models\Contracts\AttributeInterface;
 
 class AttributeRepository implements AttributeInterface
 {
@@ -11,7 +11,7 @@ class AttributeRepository implements AttributeInterface
      * Find an Attributeby given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function find($id)
     {
@@ -22,7 +22,7 @@ class AttributeRepository implements AttributeInterface
      * Find an Attributeby given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function findMany($ids)
     {
@@ -62,7 +62,7 @@ class AttributeRepository implements AttributeInterface
     /**
      * Find an Attribute Query
      *
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function create($data)
     {

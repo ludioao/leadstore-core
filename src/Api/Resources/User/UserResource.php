@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\User;
+namespace LeadStore\Framework\Api\Resources\User;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\User\UserResource
+ * Class \LeadStore\Framework\Api\Resources\User\UserResource
  * @property int id
  * @property string first_name
  * @property string last_name

@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\User\Controllers;
+namespace LeadStore\Framework\User\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class LoginController extends Controller
 {

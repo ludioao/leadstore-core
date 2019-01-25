@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
 
 class Address extends BaseModel
 {

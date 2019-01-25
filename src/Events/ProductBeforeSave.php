@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Events;
+namespace LeadStore\Framework\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;

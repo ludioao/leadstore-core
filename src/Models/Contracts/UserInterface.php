@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface UserInterface
 {
@@ -8,7 +8,7 @@ interface UserInterface
      * Find an  User by given Id which returns  User
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\User
+     * @return \LeadStore\Framework\Models\User
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface UserInterface
      * Create an User
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\User
+     * @return \LeadStore\Framework\Models\User
      */
     public function create($data);
 }

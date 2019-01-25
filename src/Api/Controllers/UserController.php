@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
-use AvoRed\Framework\Models\Database\User;
-use AvoRed\Framework\Api\Resources\User\UserCollectionResource;
-use AvoRed\Framework\Api\Resources\User\UserResource;
+use LeadStore\Framework\Models\Database\User;
+use LeadStore\Framework\Api\Resources\User\UserCollectionResource;
+use LeadStore\Framework\Api\Resources\User\UserResource;
 
 class UserController extends Controller
 {

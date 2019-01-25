@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\AdminConfiguration;
+namespace LeadStore\Framework\AdminConfiguration;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\AdminConfiguration\Facade as AdminConfigurationFacade;
-use AvoRed\Framework\Models\Repository\SiteCurrencyRepository;
-use AvoRed\Framework\Models\Database\Page;
-use AvoRed\Framework\Models\Database\Country;
+use LeadStore\Framework\AdminConfiguration\Facade as AdminConfigurationFacade;
+use LeadStore\Framework\Models\Repository\SiteCurrencyRepository;
+use LeadStore\Framework\Models\Database\Page;
+use LeadStore\Framework\Models\Database\Country;
 
 class Provider extends ServiceProvider
 {
@@ -35,7 +35,7 @@ class Provider extends ServiceProvider
     public function register()
     {
         $this->registerManager();
-        $this->app->singleton('adminconfiguration', \AvoRed\Framework\AdminConfiguration\Manager::class);
+        $this->app->singleton('adminconfiguration', \LeadStore\Framework\AdminConfiguration\Manager::class);
     }
 
     /**
@@ -57,7 +57,7 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['adminconfiguration', 'AvoRed\Framework\AdminConfiguration\Manager'];
+        return ['adminconfiguration', 'LeadStore\Framework\AdminConfiguration\Manager'];
     }
 
     /**

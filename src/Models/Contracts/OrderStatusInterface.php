@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface OrderStatusInterface
 {
@@ -8,7 +8,7 @@ interface OrderStatusInterface
      * Find a Order Status by given Id which returns Order Status Model
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\OrderStatus
+     * @return \LeadStore\Framework\Models\OrderStatus
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface OrderStatusInterface
      * Create a Order Status
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\OrderStatus
+     * @return \LeadStore\Framework\Models\OrderStatus
      */
     public function create($data);
 }

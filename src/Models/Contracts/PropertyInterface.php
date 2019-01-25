@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface PropertyInterface
 {
@@ -8,7 +8,7 @@ interface PropertyInterface
      * Find a Product Property Model of a given Id
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Property
+     * @return \LeadStore\Framework\Models\Database\Property
      */
     public function find($id);
 
@@ -31,7 +31,7 @@ interface PropertyInterface
      * Product Property Query Builder
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Property
+     * @return \LeadStore\Framework\Models\Database\Property
      */
     public function create($data);
 }

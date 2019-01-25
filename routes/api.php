@@ -3,7 +3,7 @@
 
 Route::prefix('public/api/v1')
     ->middleware(['api'])
-    ->namespace("AvoRed\Framework\Api\Controllers")
+    ->namespace("LeadStore\Framework\Api\Controllers")
     ->group(function() {
         Route::post('authenticate', 'AuthController@login');
     });
@@ -11,7 +11,7 @@ Route::prefix('public/api/v1')
 
 Route::prefix('api')
     ->middleware(['api', 'multiauth:adminapi'])
-    ->namespace("AvoRed\Framework\Api\Controllers")
+    ->namespace("LeadStore\Framework\Api\Controllers")
     ->group(function() {
 
         Route::get('v1/category', 'CategoryController@index');

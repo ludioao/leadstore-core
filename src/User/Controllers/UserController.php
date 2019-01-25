@@ -1,23 +1,23 @@
 <?php
 
-namespace AvoRed\Framework\User\Controllers;
+namespace LeadStore\Framework\User\Controllers;
 
-use AvoRed\Framework\Models\Database\User;
-use AvoRed\Framework\System\Controllers\Controller;
-use AvoRed\Framework\Models\Contracts\UserInterface;
-use AvoRed\Framework\User\DataGrid\UserDataGrid;
-use AvoRed\Framework\User\Requests\UserRequest;
-use AvoRed\Framework\Models\Contracts\OrderInterface;
-use AvoRed\Framework\User\DataGrid\UserOrderDataGrid;
-use AvoRed\Framework\User\Requests\ChangePasswordRequest;
+use LeadStore\Framework\Models\Database\User;
+use LeadStore\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Contracts\UserInterface;
+use LeadStore\Framework\User\DataGrid\UserDataGrid;
+use LeadStore\Framework\User\Requests\UserRequest;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\User\DataGrid\UserOrderDataGrid;
+use LeadStore\Framework\User\Requests\ChangePasswordRequest;
 use Illuminate\Support\Facades\Mail;
-use AvoRed\Framework\User\Mail\ChangePasswordMail;
+use LeadStore\Framework\User\Mail\ChangePasswordMail;
 
 class UserController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\UserRepository
+     * @var \LeadStore\Framework\Models\Repository\UserRepository
      */
     protected $repository;
 
@@ -51,7 +51,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\Http\Requests\AdminUserRequest $request
+     * @param \LeadStore\Framework\Http\Requests\AdminUserRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -65,7 +65,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\Models\Database\User $user
      *
      * @return \Illuminate\View\View
      */
@@ -78,8 +78,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\User\Requests\UserRequest $request
-     * @param AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\User\Requests\UserRequest $request
+     * @param LeadStore\Framework\Models\Database\User $user
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -93,7 +93,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \AvoRed\Framework\Models\Database\User $user
+     * @param  \LeadStore\Framework\Models\Database\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(User $user)
@@ -105,7 +105,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param \AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\Models\Database\User $user
      * @return \Illuminate\View\View
      */
     public function show(User $user)
@@ -122,7 +122,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param \AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\Models\Database\User $user
      * @return \Illuminate\View\View
      */
     public function changePasswordGet(User $user)
@@ -134,8 +134,8 @@ class UserController extends Controller
     /**
      * Update the specified User Password in storage.
      *
-     * @param \AvoRed\Framework\User\Requests\ChnagePasswordRequest $request
-     * @param \AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\User\Requests\ChnagePasswordRequest $request
+     * @param \LeadStore\Framework\Models\Database\User $user
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -151,7 +151,7 @@ class UserController extends Controller
     /**
      * User Group Sync with User Model
      *
-     * @param \AvoRed\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\Models\Database\User $user
      * @param array $userGroupIds
      * @return void
      */

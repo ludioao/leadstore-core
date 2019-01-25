@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\RoleInterface;
-use AvoRed\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Contracts\RoleInterface;
+use LeadStore\Framework\Models\Database\Role;
 
 class RoleRepository implements RoleInterface
 {
@@ -11,7 +11,7 @@ class RoleRepository implements RoleInterface
      * Find a Role by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Role
+     * @return \LeadStore\Framework\Models\Role
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class RoleRepository implements RoleInterface
     /**
      * Create a Role Query
      *
-     * @return \AvoRed\Framework\Models\Role
+     * @return \LeadStore\Framework\Models\Role
      */
     public function create($data)
     {

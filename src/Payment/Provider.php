@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Payment;
+namespace LeadStore\Framework\Payment;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Payment\Facade as PaymentFacade;
-use AvoRed\Framework\Payment\Stripe\Payment as StripePayment;
+use LeadStore\Framework\Payment\Facade as PaymentFacade;
+use LeadStore\Framework\Payment\Stripe\Payment as StripePayment;
 
 class Provider extends ServiceProvider
 {
@@ -34,7 +34,7 @@ class Provider extends ServiceProvider
     {
         $this->registerPayment();
 
-        $this->app->alias('payment', 'AvoRed\Framework\Payment\Manager');
+        $this->app->alias('payment', 'LeadStore\Framework\Payment\Manager');
     }
 
     /**
@@ -56,7 +56,7 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['payment', 'AvoRed\Framework\Payment\Manager'];
+        return ['payment', 'LeadStore\Framework\Payment\Manager'];
     }
 
     /**

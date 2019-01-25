@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Tabs;
+namespace LeadStore\Framework\Tabs;
 
 class Tab
 {

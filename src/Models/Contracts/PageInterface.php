@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface PageInterface
 {
@@ -8,7 +8,7 @@ interface PageInterface
      * Find an Page by given Id which returns Page
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Page
+     * @return \LeadStore\Framework\Models\Page
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface PageInterface
      * Create a Page
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Page
+     * @return \LeadStore\Framework\Models\Page
      */
     public function create($data);
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Permission;
+namespace LeadStore\Framework\Permission;
 
 use Illuminate\Support\Collection;
-use AvoRed\Framework\Permission\Contracts\Permission as PermissionContracts;
+use LeadStore\Framework\Permission\Contracts\Permission as PermissionContracts;
 
 class PermissionGroup implements PermissionContracts
 {
@@ -74,7 +74,7 @@ class PermissionGroup implements PermissionContracts
      *
      * @param string $key
      * @param callable $callable
-     * @return \AvoRed\Framework\Permission\Permission $permission
+     * @return \LeadStore\Framework\Permission\Permission $permission
      *
      */
     public function addPermission($key, $callable = null)

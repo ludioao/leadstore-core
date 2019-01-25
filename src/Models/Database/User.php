@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
-use AvoRed\Framework\Image\LocalFile;
+use LeadStore\Framework\Image\LocalFile;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 

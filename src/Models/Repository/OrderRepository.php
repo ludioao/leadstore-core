@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\OrderInterface;
-use AvoRed\Framework\Models\Database\Order;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\Models\Database\Order;
 
 class OrderRepository implements OrderInterface
 {
@@ -11,7 +11,7 @@ class OrderRepository implements OrderInterface
      * Find an Order by a given id of a Order
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Order
+     * @return \LeadStore\Framework\Models\Database\Order
      */
     public function find($id)
     {

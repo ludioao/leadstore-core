@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Theme;
+namespace LeadStore\Framework\Theme;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Theme\Facade as Theme;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Theme\Facade as Theme;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
@@ -49,7 +49,7 @@ class Provider extends ServiceProvider
     public function register()
     {
         $this->registerTheme();
-        $this->app->alias('theme', 'AvoRed\Framework\Theme\Manager');
+        $this->app->alias('theme', 'LeadStore\Framework\Theme\Manager');
         $this->registerThemeConsoleProvider();
         $themes = Theme::all();
     }
@@ -78,7 +78,7 @@ class Provider extends ServiceProvider
      */
     public function registerThemeConsoleProvider()
     {
-        $this->app->register('AvoRed\Framework\Theme\Console\Provider');
+        $this->app->register('LeadStore\Framework\Theme\Console\Provider');
     }
 
     /**
@@ -88,6 +88,6 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['theme', 'AvoRed\Framework\Theme\Manager'];
+        return ['theme', 'LeadStore\Framework\Theme\Manager'];
     }
 }

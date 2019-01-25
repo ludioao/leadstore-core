@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Modules;
+namespace LeadStore\Framework\Modules;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Modules\Facade as Module;
+use LeadStore\Framework\Modules\Facade as Module;
 
 class Provider extends ServiceProvider
 {
@@ -28,7 +28,7 @@ class Provider extends ServiceProvider
     {
         $this->registerModuleConsoleProvider();
         $this->registerModule();
-        $this->app->alias('module', 'AvoRed\Framework\Modules\Manager');
+        $this->app->alias('module', 'LeadStore\Framework\Modules\Manager');
     }
 
     /**
@@ -50,7 +50,7 @@ class Provider extends ServiceProvider
      */
     public function registerModuleConsoleProvider()
     {
-        $this->app->register('AvoRed\Framework\Modules\Console\Provider');
+        $this->app->register('LeadStore\Framework\Modules\Console\Provider');
     }
 
     /**
@@ -60,6 +60,6 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['module', 'AvoRed\Framework\Modules\Manager'];
+        return ['module', 'LeadStore\Framework\Modules\Manager'];
     }
 }

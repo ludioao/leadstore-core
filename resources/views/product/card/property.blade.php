@@ -38,7 +38,7 @@
                 @foreach($productProperties as $productVarcharPropertyValue)
 
                     @php
-                    if(!$productVarcharPropertyValue instanceof \AvoRed\Framework\Models\Database\Property) {
+                    if(!$productVarcharPropertyValue instanceof \LeadStore\Framework\Models\Database\Property) {
                         $property = $productVarcharPropertyValue->property;
                     } else {
                         $property = $productVarcharPropertyValue;

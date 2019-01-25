@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Image;
+namespace LeadStore\Framework\Image;
 
 use Illuminate\Support\Facades\File;
 
@@ -56,7 +56,7 @@ class LocalFile
      * return Relative path for the image.
      *
      * @var void
-     * @return \AvoRed\Framework\Image\LocalFile
+     * @return \LeadStore\Framework\Image\LocalFile
      */
     public function destroy()
     {

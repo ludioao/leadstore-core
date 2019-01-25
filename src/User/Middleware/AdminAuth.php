@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\User\Middleware;
+namespace LeadStore\Framework\User\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\App;

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Rpository;
+namespace LeadStore\Framework\Tests\Rpository;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Repository\AttributeRepository;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Repository\AttributeRepository;
 
 class AttributeRepositoryTest extends BaseTestCase
 {
@@ -15,6 +15,6 @@ class AttributeRepositoryTest extends BaseTestCase
     {
         $this->assertTrue(true);
 
-        
+
     }
 }

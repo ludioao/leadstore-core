@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\MenuGroup;
-use AvoRed\Framework\Models\Contracts\MenuGroupInterface;
+use LeadStore\Framework\Models\Database\MenuGroup;
+use LeadStore\Framework\Models\Contracts\MenuGroupInterface;
 
 class MenuGroupRepository implements MenuGroupInterface
 {
@@ -11,7 +11,7 @@ class MenuGroupRepository implements MenuGroupInterface
      * Find an MenuGroup by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\MenuGroup
+     * @return \LeadStore\Framework\Models\MenuGroup
      */
     public function find($id)
     {
@@ -41,7 +41,7 @@ class MenuGroupRepository implements MenuGroupInterface
     /**
      * Find an MenuGroup Query
      *
-     * @return \AvoRed\Framework\Models\MenuGroup
+     * @return \LeadStore\Framework\Models\MenuGroup
      */
     public function create($data)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
-use AvoRed\Framework\Models\Database\Traits\OrderProduct;
+use LeadStore\Framework\Models\Database\Traits\OrderProduct;
 
 class Order extends BaseModel
 {

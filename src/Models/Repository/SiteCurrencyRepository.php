@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\SiteCurrencyInterface;
-use AvoRed\Framework\Models\Database\SiteCurrency;
-use AvoRed\Framework\AdminConfiguration\Contracts\DropdownFieldContract;
+use LeadStore\Framework\Models\Contracts\SiteCurrencyInterface;
+use LeadStore\Framework\Models\Database\SiteCurrency;
+use LeadStore\Framework\AdminConfiguration\Contracts\DropdownFieldContract;
 
 class SiteCurrencyRepository implements SiteCurrencyInterface, DropdownFieldContract
 {
@@ -12,7 +12,7 @@ class SiteCurrencyRepository implements SiteCurrencyInterface, DropdownFieldCont
      * Find an Site Currency by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\SiteCurrency
+     * @return \LeadStore\Framework\Models\SiteCurrency
      */
     public function find($id)
     {
@@ -23,7 +23,7 @@ class SiteCurrencyRepository implements SiteCurrencyInterface, DropdownFieldCont
      * Find an Site Currency by given code
      *
      * @param string $code
-     * @return \AvoRed\Framework\Models\SiteCurrency
+     * @return \LeadStore\Framework\Models\SiteCurrency
      */
     public function findByCode($code)
     {
@@ -63,7 +63,7 @@ class SiteCurrencyRepository implements SiteCurrencyInterface, DropdownFieldCont
     /**
      * Find an Site Currency Query
      *
-     * @return \AvoRed\Framework\Models\SiteCurrency
+     * @return \LeadStore\Framework\Models\SiteCurrency
      */
     public function create($data)
     {

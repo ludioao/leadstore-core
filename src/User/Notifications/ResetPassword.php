@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\User\Notifications;
+namespace LeadStore\Framework\User\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;

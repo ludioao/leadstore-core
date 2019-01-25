@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Breadcrumb;
+namespace LeadStore\Framework\Tests\Breadcrumb;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Breadcrumb\Builder;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Breadcrumb\Builder;
 
 class BreadcrumbTest extends BaseTestCase
 {
@@ -17,7 +17,7 @@ class BreadcrumbTest extends BaseTestCase
         $builder = new Builder();
 
         $builder->make('test.route', function($breadcrumb){
-            $breadcrumb->route('test.route');     
+            $breadcrumb->route('test.route');
         });
         $testRoute = $builder->get('test.route');
 
@@ -31,15 +31,15 @@ class BreadcrumbTest extends BaseTestCase
     public function test_breadcrumb_label()
     {
         $builder = new Builder();
-        
+
         $builder->make('test.route', function($breadcrumb){
             $breadcrumb->label('My Test Label');
-        });    
+        });
         $testRoute = $builder->get('test.route');
-        
+
         $this->assertEquals($testRoute->label(), 'My Test Label');
     }
- 
+
 }
 
 

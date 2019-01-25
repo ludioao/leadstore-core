@@ -1,31 +1,31 @@
 <?php
 
-namespace AvoRed\Framework\System\Middleware;
+namespace LeadStore\Framework\System\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Session;
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
-use AvoRed\Framework\Models\Contracts\SiteCurrencyInterface;
-use AvoRed\Framework\Cart\Facade as Cart;
-use AvoRed\Framework\Models\Contracts\ProductInterface;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Contracts\SiteCurrencyInterface;
+use LeadStore\Framework\Cart\Facade as Cart;
+use LeadStore\Framework\Models\Contracts\ProductInterface;
 
 class SiteCurrencyMiddleware
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\ConfigurationRepository
+     * @var \LeadStore\Framework\Models\Repository\ConfigurationRepository
      */
     protected $repository;
 
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\SiteCurrencyRepository $curRep
+     * @var \LeadStore\Framework\Models\Repository\SiteCurrencyRepository $curRep
      */
     protected $curRep;
 
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\ProductRepository $productRepository
+     * @var \LeadStore\Framework\Models\Repository\ProductRepository $productRepository
      */
     protected $productRepository;
 

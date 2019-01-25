@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface SiteCurrencyInterface
 {
@@ -8,7 +8,7 @@ interface SiteCurrencyInterface
      * Find an Site currency by given Id which returns Site currency
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\SiteCurrency
+     * @return \LeadStore\Framework\Models\SiteCurrency
      */
     public function find($id);
 
@@ -16,7 +16,7 @@ interface SiteCurrencyInterface
      * Find an Site currency by given currency code which returns Site currency
      *
      * @param string $code
-     * @return \AvoRed\Framework\Models\SiteCurrency
+     * @return \LeadStore\Framework\Models\SiteCurrency
      */
     public function findByCode($code);
 
@@ -45,7 +45,7 @@ interface SiteCurrencyInterface
      * Create an Site currency
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\AdminUser
+     * @return \LeadStore\Framework\Models\AdminUser
      */
     public function create($data);
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Product\Requests\ProductRequest;
-use AvoRed\Framework\Api\Resources\Product\ProductResource;
-use AvoRed\Framework\Api\Resources\Product\ProductCollectionResource;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Product\Requests\ProductRequest;
+use LeadStore\Framework\Api\Resources\Product\ProductResource;
+use LeadStore\Framework\Api\Resources\Product\ProductCollectionResource;
 
 class ProductController extends Controller
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\Cms\Controllers;
+namespace LeadStore\Framework\Cms\Controllers;
 
-use AvoRed\Framework\Models\Database\Page;
-use AvoRed\Framework\Cms\DataGrid\PageDataGrid;
-use AvoRed\Framework\Cms\Requests\PageRequest;
-use AvoRed\Framework\Models\Contracts\PageInterface;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Database\Page;
+use LeadStore\Framework\Cms\DataGrid\PageDataGrid;
+use LeadStore\Framework\Cms\Requests\PageRequest;
+use LeadStore\Framework\Models\Contracts\PageInterface;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class PageController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\PageRepository
+     * @var \LeadStore\Framework\Models\Repository\PageRepository
      */
     protected $repository;
 
@@ -60,7 +60,7 @@ class PageController extends Controller
     /**
      * Show the form for editing the specified page.
      *
-     * @param \AvoRed\Framework\Models\Database\Page $page
+     * @param \LeadStore\Framework\Models\Database\Page $page
      *
      * @return \Illuminate\View\View
      */
@@ -73,8 +73,8 @@ class PageController extends Controller
     /**
      * Update the specified page in database.
      *
-     * @param \AvoRed\Framework\Cms\Requests\PageRequest $request
-     * @param \AvoRed\Framework\Models\Database\Page $page
+     * @param \LeadStore\Framework\Cms\Requests\PageRequest $request
+     * @param \LeadStore\Framework\Models\Database\Page $page
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -100,7 +100,7 @@ class PageController extends Controller
     /**
      * Find a Record and Returns a Json Resrouce for that Record
      *
-     * @param \AvoRed\Framework\Models\Database\Page $page
+     * @param \LeadStore\Framework\Models\Database\Page $page
      * @return \Illuminate\View\View
      */
     public function show(Page $page)

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
-use AvoRed\Framework\Widget\Facade as Widget;
+use LeadStore\Framework\Widget\Facade as Widget;
 
 class Page extends BaseModel
 {

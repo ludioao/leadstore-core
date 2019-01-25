@@ -1,14 +1,14 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid;
+namespace LeadStore\Framework\DataGrid;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
 /**
  *
- * @method \AvoRed\Framework\DataGrid\Manager make($name)
- * @method \AvoRed\Framework\DataGrid\Manager setPagination($item = 10)
- * @method \AvoRed\Framework\DataGrid\Manager render($dataGrid)
+ * @method \LeadStore\Framework\DataGrid\Manager make($name)
+ * @method \LeadStore\Framework\DataGrid\Manager setPagination($item = 10)
+ * @method \LeadStore\Framework\DataGrid\Manager render($dataGrid)
  *
  */
 class Facade extends LaravelFacade

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Widget;
+namespace LeadStore\Framework\Widget;
 
-use AvoRed\Framework\Widget\Contracts\Widget as WidgetContracts;
+use LeadStore\Framework\Widget\Contracts\Widget as WidgetContracts;
 
 class Widget implements WidgetContracts
 {

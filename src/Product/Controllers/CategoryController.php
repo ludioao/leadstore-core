@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\Product\Controllers;
+namespace LeadStore\Framework\Product\Controllers;
 
-use AvoRed\Framework\Models\Database\Category;
-use AvoRed\Framework\Product\Requests\CategoryRequest;
-use AvoRed\Framework\Models\Contracts\CategoryInterface;
-use AvoRed\Framework\Product\DataGrid\CategoryDataGrid;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Database\Category;
+use LeadStore\Framework\Product\Requests\CategoryRequest;
+use LeadStore\Framework\Models\Contracts\CategoryInterface;
+use LeadStore\Framework\Product\DataGrid\CategoryDataGrid;
+use LeadStore\Framework\System\Controllers\Controller;
 
 class CategoryController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\CategoryRepository
+     * @var \LeadStore\Framework\Models\Repository\CategoryRepository
      */
     protected $repository;
 
@@ -53,7 +53,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\Product\Requests\CategoryRequest $request
+     * @param \LeadStore\Framework\Product\Requests\CategoryRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -67,7 +67,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\Category $category
+     * @param \LeadStore\Framework\Models\Database\Category $category
      * @return \Illuminate\Http\Response
      */
     public function edit(Category $category)
@@ -78,8 +78,8 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\Product\Requests\CategoryRequest $request
-     * @param \AvoRed\Framework\Models\Database\Category $category
+     * @param \LeadStore\Framework\Product\Requests\CategoryRequest $request
+     * @param \LeadStore\Framework\Models\Database\Category $category
      * @return \Illuminate\Http\Response
      */
     public function update(CategoryRequest $request, Category $category)
@@ -92,7 +92,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\Category $category
+     * @param \LeadStore\Framework\Models\Database\Category $category
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Category $category)

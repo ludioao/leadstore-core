@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid;
+namespace LeadStore\Framework\DataGrid;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use AvoRed\Framework\DataGrid\Columns\LinkColumn;
-use AvoRed\Framework\DataGrid\Columns\TextColumn;
+use LeadStore\Framework\DataGrid\Columns\LinkColumn;
+use LeadStore\Framework\DataGrid\Columns\TextColumn;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 
@@ -92,7 +92,7 @@ class Manager
     /**
      * Render the Datagrid by given datagrid object
      *
-     * @param \AvoRed\Framework\DataGrid\DataGrid
+     * @param \LeadStore\Framework\DataGrid\DataGrid
      * @return \Illuminate\View\View $response
      */
     public function render($dataGrid)

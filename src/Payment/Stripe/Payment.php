@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Payment\Stripe;
+namespace LeadStore\Framework\Payment\Stripe;
 
 use Stripe\Charge;
 use Stripe\Stripe;
-use AvoRed\Framework\Models\Database\Configuration;
-use AvoRed\Framework\Payment\Payment as PaymentEcommerce;
-use AvoRed\Framework\Payment\Contracts\Payment as PaymentContracts;
+use LeadStore\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Payment\Payment as PaymentEcommerce;
+use LeadStore\Framework\Payment\Contracts\Payment as PaymentContracts;
 
 class Payment extends PaymentEcommerce implements PaymentContracts
 {

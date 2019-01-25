@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Menu;
+namespace LeadStore\Framework\Menu;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -25,7 +25,7 @@ class MenuProvider extends ServiceProvider
     public function register()
     {
         $this->registerServices();
-        $this->app->alias('menu', 'AvoRed\Framework\Menu\Builder');
+        $this->app->alias('menu', 'LeadStore\Framework\Menu\Builder');
     }
 
     /**
@@ -47,6 +47,6 @@ class MenuProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['menu', 'AvoRed\Framework\Menu\Builder'];
+        return ['menu', 'LeadStore\Framework\Menu\Builder'];
     }
 }

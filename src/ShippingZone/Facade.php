@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\ShippingZone;
+namespace LeadStore\Framework\ShippingZone;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 

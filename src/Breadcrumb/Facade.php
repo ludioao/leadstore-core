@@ -1,14 +1,14 @@
 <?php
 
-namespace AvoRed\Framework\Breadcrumb;
+namespace LeadStore\Framework\Breadcrumb;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
 /**
  *
- * @method \AvoRed\Framework\Breadcrumb\Builer make($name, callable  $callable)
- * @method \AvoRed\Framework\Breadcrumb\Builer render($routeName)
- * @method \AvoRed\Framework\Breadcrumb\Builer get($key)
+ * @method \LeadStore\Framework\Breadcrumb\Builer make($name, callable  $callable)
+ * @method \LeadStore\Framework\Breadcrumb\Builer render($routeName)
+ * @method \LeadStore\Framework\Breadcrumb\Builer get($key)
  */
 class Facade extends LaravelFacade
 {

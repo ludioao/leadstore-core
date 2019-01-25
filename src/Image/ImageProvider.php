@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Image;
+namespace LeadStore\Framework\Image;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class ImageProvider extends ServiceProvider
     {
         $this->registerImageService();
 
-        $this->app->alias('image', 'AvoRed\Framework\Image\Manager');
+        $this->app->alias('image', 'LeadStore\Framework\Image\Manager');
     }
 
     /**
@@ -44,6 +44,6 @@ class ImageProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['image', 'AvoRed\Framework\Image\Manager'];
+        return ['image', 'LeadStore\Framework\Image\Manager'];
     }
 }

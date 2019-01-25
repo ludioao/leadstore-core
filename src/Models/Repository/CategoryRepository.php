@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\CategoryInterface;
-use AvoRed\Framework\Models\Database\Category;
-use AvoRed\Framework\Models\Database\Product;
-use AvoRed\Framework\Models\Database\Property;
+use LeadStore\Framework\Models\Contracts\CategoryInterface;
+use LeadStore\Framework\Models\Database\Category;
+use LeadStore\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Database\Property;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
@@ -18,7 +18,7 @@ class CategoryRepository implements CategoryInterface
      *
      * @param $id
      *
-     * @return \AvoRed\Framework\Models\Database\Category
+     * @return \LeadStore\Framework\Models\Database\Category
      */
     public function find($id)
     {
@@ -30,7 +30,7 @@ class CategoryRepository implements CategoryInterface
      *
      * @param string $key
      *
-     * @return \AvoRed\Framework\Models\Database\Category
+     * @return \LeadStore\Framework\Models\Database\Category
      */
     public function findByKey($key)
     {
@@ -70,7 +70,7 @@ class CategoryRepository implements CategoryInterface
     /**
      * Find an Category Query
      *
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function create($data)
     {

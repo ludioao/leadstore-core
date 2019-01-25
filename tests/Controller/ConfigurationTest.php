@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\UserGroup;
 
  /**
  * Test the Configuration Routes
@@ -19,7 +19,7 @@ class ConfigurationTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.configuration'));
-        
+
         $response->assertStatus(200)
                     ->assertSee('Configuration');
     }
@@ -32,13 +32,13 @@ class ConfigurationTest extends BaseTestCase
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->post(
-                            route('admin.configuration.store'), 
+                            route('admin.configuration.store'),
                             ['general_site_title' => 'New Site Title']
                         );
         $response->assertStatus(302)
                 ->assertRedirect(route('admin.configuration'))
                 ->assertSessionHas('notificationText', 'All Configuration saved!');
-                
+
         $this->assertDatabaseHas(
             'configurations',
             ['configuration_key' => 'general_site_title',

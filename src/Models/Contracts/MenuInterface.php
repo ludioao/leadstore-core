@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface MenuInterface
 {
@@ -8,7 +8,7 @@ interface MenuInterface
      * Find an Menu by given Id which returns Menu
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Menu
+     * @return \LeadStore\Framework\Models\Menu
      */
     public function find($id);
 
@@ -52,7 +52,7 @@ interface MenuInterface
      * Create a Menu
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Menu
+     * @return \LeadStore\Framework\Models\Menu
      */
     public function create($data);
 }

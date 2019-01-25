@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface StateInterface
 {
@@ -8,7 +8,7 @@ interface StateInterface
      * Find a State by given Id which returns State Model
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\State
+     * @return \LeadStore\Framework\Models\State
      */
     public function find($id);
 
@@ -37,7 +37,7 @@ interface StateInterface
      * Create a State
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\State
+     * @return \LeadStore\Framework\Models\State
      */
     public function create($data);
 }

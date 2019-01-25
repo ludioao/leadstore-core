@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Payment;
+namespace LeadStore\Framework\Payment;
 
 abstract class Payment
 {

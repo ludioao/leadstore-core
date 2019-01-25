@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\Category;
+namespace LeadStore\Framework\Api\Resources\Category;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\Category\CategoryResource
+ * Class \LeadStore\Framework\Api\Resources\Category\CategoryResource
  * @property int id
  * @property int parent_id
  * @property string name

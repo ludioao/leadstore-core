@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\StateInterface;
-use AvoRed\Framework\Models\Database\State;
+use LeadStore\Framework\Models\Contracts\StateInterface;
+use LeadStore\Framework\Models\Database\State;
 
 class StateRepository implements StateInterface
 {
@@ -11,7 +11,7 @@ class StateRepository implements StateInterface
      * Find a State by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\State
+     * @return \LeadStore\Framework\Models\State
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class StateRepository implements StateInterface
     /**
      * Create a State Record
      *
-     * @return \AvoRed\Framework\Models\State
+     * @return \LeadStore\Framework\Models\State
      */
     public function create($data)
     {

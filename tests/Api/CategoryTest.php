@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Api;
+namespace LeadStore\Framework\Tests\Api;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Category;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Category;
 
 class CategoryTest extends BaseTestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Product\ViewComposers;
+namespace LeadStore\Framework\Product\ViewComposers;
 
-use AvoRed\Framework\Models\Database\Category;
+use LeadStore\Framework\Models\Database\Category;
 use Illuminate\View\View;
 
 class ProductFieldsComposer

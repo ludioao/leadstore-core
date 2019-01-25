@@ -1,10 +1,10 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Widget;
+namespace LeadStore\Framework\Tests\Widget;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Widget\Manager;
-use AvoRed\Framework\Widget\Widget;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Widget\Manager;
+use LeadStore\Framework\Widget\Widget;
 
 class WidgetTest extends BaseTestCase
 {

@@ -6,7 +6,7 @@
  * Time: 22:30
  */
 
-namespace AvoRed\Framework\Shipping\Model;
+namespace LeadStore\Framework\Shipping\Model;
 
 
 class ShippingData

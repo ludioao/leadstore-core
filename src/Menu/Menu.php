@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Menu;
+namespace LeadStore\Framework\Menu;
 
-use AvoRed\Framework\Menu\Contracts\Menu as MenuContracts;
+use LeadStore\Framework\Menu\Contracts\Menu as MenuContracts;
 
 class Menu implements MenuContracts
 {
@@ -50,7 +50,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Label.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function label($label = null)
     {
@@ -66,7 +66,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Identifier.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function key($key = null)
     {
@@ -82,7 +82,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Route Name.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function route($routeName = null)
     {
@@ -98,7 +98,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Route Params Name.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function params($params = null)
     {
@@ -114,7 +114,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Icon.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function icon($icon = null)
     {
@@ -130,7 +130,7 @@ class Menu implements MenuContracts
     /**
      * Get/Set Admin Menu Icon.
      *
-     * @return \AvoRed\Framework\Menu\Menu|string
+     * @return \LeadStore\Framework\Menu\Menu|string
      */
     public function attributes($attributes = null)
     {

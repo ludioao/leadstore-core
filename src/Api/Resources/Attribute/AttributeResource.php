@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\Attribute;
+namespace LeadStore\Framework\Api\Resources\Attribute;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\AttributeAttributeResource
+ * Class \LeadStore\Framework\Api\Resources\AttributeAttributeResource
  * @property int id
  * @property string name
  * @property string identifier

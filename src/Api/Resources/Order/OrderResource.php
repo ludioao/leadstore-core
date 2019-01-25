@@ -1,21 +1,21 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\Order;
+namespace LeadStore\Framework\Api\Resources\Order;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use AvoRed\Framework\Api\Resources\User\UserResource;
-use AvoRed\Framework\Api\Resources\User\UserAddressResource;
+use LeadStore\Framework\Api\Resources\User\UserResource;
+use LeadStore\Framework\Api\Resources\User\UserAddressResource;
 use Illuminate\Database\Eloquent\Collection;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\Order\OrderResource
+ * Class \LeadStore\Framework\Api\Resources\Order\OrderResource
  * @property int id
  * @property string shipping_option
  * @property string payment_option
- * @property \AvoRed\Framework\Models\Database\Address shipping_address
- * @property \AvoRed\Framework\Models\Database\Address billing_address
- * @property \AvoRed\Framework\Models\Database\User user
+ * @property \LeadStore\Framework\Models\Database\Address shipping_address
+ * @property \LeadStore\Framework\Models\Database\Address billing_address
+ * @property \LeadStore\Framework\Models\Database\User user
  * @property string created_at
  * @property string updated_at
  */

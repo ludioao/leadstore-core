@@ -1,17 +1,17 @@
 <?php
 
-namespace AvoRed\Framework\Order\Controllers;
+namespace LeadStore\Framework\Order\Controllers;
 
-use AvoRed\Framework\System\Controllers\Controller;
-use AvoRed\Framework\Models\Contracts\OrderReturnRequestInterface;
-use AvoRed\Framework\Models\Database\OrderReturnRequest;
-use AvoRed\Framework\Order\DataGrid\OrderReturnRequestDataGrid;
+use LeadStore\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Contracts\OrderReturnRequestInterface;
+use LeadStore\Framework\Models\Database\OrderReturnRequest;
+use LeadStore\Framework\Order\DataGrid\OrderReturnRequestDataGrid;
 
 class OrderReturnRequestController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\OrderReturnRequestRepository
+     * @var \LeadStore\Framework\Models\Repository\OrderReturnRequestRepository
      */
     protected $repository;
 
@@ -35,7 +35,7 @@ class OrderReturnRequestController extends Controller
 
     /**
      * View an Order Details
-     * @param \AvoRed\Framework\Models\Database\OrderReturnRequest $returnRequest
+     * @param \LeadStore\Framework\Models\Database\OrderReturnRequest $returnRequest
      *
      * @return \Illuminate\Http\Response
      */
@@ -47,7 +47,7 @@ class OrderReturnRequestController extends Controller
 
     /**
      * Update an Order Return Request Details
-     * @param \AvoRed\Framework\Models\Database\OrderReturnRequest $returnRequest
+     * @param \LeadStore\Framework\Models\Database\OrderReturnRequest $returnRequest
      * @param string $status
      *
      * @return \Illuminate\Http\Response

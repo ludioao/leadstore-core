@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Cms\ViewComposers;
+namespace LeadStore\Framework\Cms\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\Widget\Facade as Widget;
+use LeadStore\Framework\Widget\Facade as Widget;
 
 class PageFieldsComposer
 {

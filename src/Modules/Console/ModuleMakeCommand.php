@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Modules\Console;
+namespace LeadStore\Framework\Modules\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

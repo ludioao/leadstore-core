@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\User\Mail;
+namespace LeadStore\Framework\User\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -13,7 +13,7 @@ class ChangePasswordMail extends Mailable
     /**
      * User Model Object whose password has change.
      *
-     * @param \Avored\Framework\Models\Database\User $user
+     * @param \LeadStore\Framework\Models\Database\User $user
      */
     public $user;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Product\DataGrid;
+namespace LeadStore\Framework\Product\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
 
 class AttributeDataGrid
 {

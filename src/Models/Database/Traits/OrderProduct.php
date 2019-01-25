@@ -6,7 +6,7 @@
  * Time: 19:08
  */
 
-namespace AvoRed\Framework\Models\Database\Traits;
+namespace LeadStore\Framework\Models\Database\Traits;
 
 
 trait OrderProduct

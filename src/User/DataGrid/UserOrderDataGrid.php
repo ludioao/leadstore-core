@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\User\DataGrid;
+namespace LeadStore\Framework\User\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
 
 class UserOrderDataGrid
 {

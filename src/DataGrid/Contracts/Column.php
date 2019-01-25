@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid\Contracts;
+namespace LeadStore\Framework\DataGrid\Contracts;
 
 interface Column
 {

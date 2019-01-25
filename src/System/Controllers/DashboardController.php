@@ -1,15 +1,15 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\Models\Contracts\OrderInterface;
-use AvoRed\Framework\Models\Contracts\UserInterface;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\Models\Contracts\UserInterface;
 
 class DashboardController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\OrderRepository
+     * @var \LeadStore\Framework\Models\Repository\OrderRepository
      */
     protected $repository;
 

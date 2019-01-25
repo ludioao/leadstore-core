@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Permission;
+namespace LeadStore\Framework\Permission;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\Permission\Facade as PermissionFacade;
+use LeadStore\Framework\Permission\Facade as PermissionFacade;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +29,7 @@ class PermissionProvider extends ServiceProvider
     public function register()
     {
         $this->registerManager();
-        $this->app->singleton('permission', 'AvoRed\Framework\Permission\Manager');
+        $this->app->singleton('permission', 'LeadStore\Framework\Permission\Manager');
     }
 
     /**
@@ -49,7 +49,7 @@ class PermissionProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['permission', 'AvoRed\Framework\Permission\Manager'];
+        return ['permission', 'LeadStore\Framework\Permission\Manager'];
     }
 
     /**

@@ -1,19 +1,19 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\System\DataGrid\RoleDataGrid;
-use AvoRed\Framework\Models\Database\Role as Model;
-use AvoRed\Framework\User\Requests\RoleRequst;
-use AvoRed\Framework\Models\Database\Permission;
-use AvoRed\Framework\Models\Contracts\RoleInterface;
-use AvoRed\Framework\Models\Database\Role;
+use LeadStore\Framework\System\DataGrid\RoleDataGrid;
+use LeadStore\Framework\Models\Database\Role as Model;
+use LeadStore\Framework\User\Requests\RoleRequst;
+use LeadStore\Framework\Models\Database\Permission;
+use LeadStore\Framework\Models\Contracts\RoleInterface;
+use LeadStore\Framework\Models\Database\Role;
 
 class RoleController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\RoleRepository
+     * @var \LeadStore\Framework\Models\Repository\RoleRepository
      */
     protected $repository;
 
@@ -47,7 +47,7 @@ class RoleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\User\Requests\RoleRequst $request
+     * @param \LeadStore\Framework\User\Requests\RoleRequst $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -66,7 +66,7 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\Role $role
+     * @param \LeadStore\Framework\Models\Database\Role $role
      *
      * @return \Illuminate\Http\Response
      */
@@ -79,8 +79,8 @@ class RoleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\User\Requests\RoleRequst $request
-     * @param \AvoRed\Framework\Models\Database\Role $role
+     * @param \LeadStore\Framework\User\Requests\RoleRequst $request
+     * @param \LeadStore\Framework\Models\Database\Role $role
      *
      * @return \Illuminate\Http\Response
      */
@@ -99,7 +99,7 @@ class RoleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\Role $role
+     * @param \LeadStore\Framework\Models\Database\Role $role
      *
      * @return \Illuminate\Http\Response
      */
@@ -112,8 +112,8 @@ class RoleController extends Controller
     /**
      * Save Role Permission for the Users
      *
-     * @param \AvoRed\Framework\User\Requests\RoleRequst $request
-     * @param \AvoRed\Framework\Models\Database\Role $rolet
+     * @param \LeadStore\Framework\User\Requests\RoleRequst $request
+     * @param \LeadStore\Framework\Models\Database\Role $rolet
      *
      * @return void
      */

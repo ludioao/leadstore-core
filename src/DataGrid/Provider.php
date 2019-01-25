@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid;
+namespace LeadStore\Framework\DataGrid;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +21,7 @@ class Provider extends ServiceProvider
     public function register()
     {
         $this->registerDataGrid();
-        $this->app->alias('datagrid', 'AvoRed\Framework\DataGrid\Manager');
+        $this->app->alias('datagrid', 'LeadStore\Framework\DataGrid\Manager');
     }
 
     /**
@@ -45,6 +45,6 @@ class Provider extends ServiceProvider
      */
     public function provides()
     {
-        return ['datagrid', 'AvoRed\Framework\DataGrid\Manager'];
+        return ['datagrid', 'LeadStore\Framework\DataGrid\Manager'];
     }
 }

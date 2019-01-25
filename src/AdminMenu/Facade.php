@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\AdminMenu;
+namespace LeadStore\Framework\AdminMenu;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
 /**
- * @method \AvoRed\Framework\AdminMenu\Builer add($key, $callable)
- * @method \AvoRed\Framework\AdminMenu\Builer get($key)
- * @method \AvoRed\Framework\AdminMenu\Builer getMenuItems()
+ * @method \LeadStore\Framework\AdminMenu\Builer add($key, $callable)
+ * @method \LeadStore\Framework\AdminMenu\Builer get($key)
+ * @method \LeadStore\Framework\AdminMenu\Builer getMenuItems()
  *
  */
 class Facade extends LaravelFacade

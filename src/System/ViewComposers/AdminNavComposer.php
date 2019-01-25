@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\System\ViewComposers;
+namespace LeadStore\Framework\System\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\AdminMenu\Facade as AdminMenu;
+use LeadStore\Framework\AdminMenu\Facade as AdminMenu;
 
 class AdminNavComposer
 {

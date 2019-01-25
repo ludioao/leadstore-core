@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\Page;
+namespace LeadStore\Framework\Api\Resources\Page;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\Page\PageResource
+ * Class \LeadStore\Framework\Api\Resources\Page\PageResource
  * @property int id
  * @property string name
  * @property string slug

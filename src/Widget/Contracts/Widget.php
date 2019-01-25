@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Widget\Contracts;
+namespace LeadStore\Framework\Widget\Contracts;
 
 interface Widget
 {

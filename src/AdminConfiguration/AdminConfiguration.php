@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\AdminConfiguration;
+namespace LeadStore\Framework\AdminConfiguration;
 
-use AvoRed\Framework\AdminConfiguration\Contracts\AdminConfiguration as AdminConfigurationContracts;
-use AvoRed\Framework\AdminConfiguration\Contracts\DropdownFieldContract;
+use LeadStore\Framework\AdminConfiguration\Contracts\AdminConfiguration as AdminConfigurationContracts;
+use LeadStore\Framework\AdminConfiguration\Contracts\DropdownFieldContract;
 
 class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldContract
 {
@@ -36,7 +36,7 @@ class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldCo
     /**
      * Get/Set Label for admin configuration
      *
-     * @return mixed $label|\AvoRed\Framework\AdminConfiguration\AdminConfiguration
+     * @return mixed $label|\LeadStore\Framework\AdminConfiguration\AdminConfiguration
      */
     public function label($label = null)
     {
@@ -52,7 +52,7 @@ class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldCo
     /**
      * Get/Set Key for admin configuration
      *
-     * @return mixed $key|\AvoRed\Framework\AdminConfiguration\AdminConfiguration
+     * @return mixed $key|\LeadStore\Framework\AdminConfiguration\AdminConfiguration
      */
     public function key($key = null)
     {
@@ -68,7 +68,7 @@ class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldCo
     /**
      * Get/Set name for admin configuration
      *
-     * @return mixed $name|\AvoRed\Framework\AdminConfiguration\AdminConfiguration
+     * @return mixed $name|\LeadStore\Framework\AdminConfiguration\AdminConfiguration
      */
     public function name($name = null)
     {
@@ -84,7 +84,7 @@ class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldCo
     /**
      * Get/Set type for admin configuration
      *
-     * @return mixed $type|\AvoRed\Framework\AdminConfiguration\AdminConfiguration
+     * @return mixed $type|\LeadStore\Framework\AdminConfiguration\AdminConfiguration
      */
     public function type($type = null)
     {
@@ -100,7 +100,7 @@ class AdminConfiguration implements AdminConfigurationContracts, DropdownFieldCo
     /**
      * Get/Set option for admin configuration
      *
-     * @return mixed $options|\AvoRed\Framework\AdminConfiguration\AdminConfiguration
+     * @return mixed $options|\LeadStore\Framework\AdminConfiguration\AdminConfiguration
      */
     public function options($callable = null)
     {

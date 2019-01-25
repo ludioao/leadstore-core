@@ -1,15 +1,15 @@
 <?php
 
-namespace AvoRed\Framework\System\DataGrid;
+namespace LeadStore\Framework\System\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
 
 class ThemeDataGrid
 {
     /**
      * Theme DataGrid Manager
      *
-     * @var \AvoRed\Framework\DataGrid\Manager $dataGrid
+     * @var \LeadStore\Framework\DataGrid\Manager $dataGrid
      */
     public $dataGrid;
 

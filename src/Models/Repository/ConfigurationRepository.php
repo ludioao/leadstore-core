@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\ConfigurationInterface;
-use AvoRed\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Models\Contracts\ConfigurationInterface;
+use LeadStore\Framework\Models\Database\Configuration;
 
 class ConfigurationRepository implements ConfigurationInterface
 {
@@ -11,7 +11,7 @@ class ConfigurationRepository implements ConfigurationInterface
      * Find an Configuration by  given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function find($id)
     {
@@ -22,7 +22,7 @@ class ConfigurationRepository implements ConfigurationInterface
      * Find an Configuration by  given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function findByKey($key)
     {
@@ -77,7 +77,7 @@ class ConfigurationRepository implements ConfigurationInterface
     /**
      * Find an Attribute Query
      *
-     * @return \AvoRed\Framework\Models\Database\Configuration
+     * @return \LeadStore\Framework\Models\Database\Configuration
      */
     public function create($data)
     {

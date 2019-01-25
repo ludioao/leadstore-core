@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Events;
+namespace LeadStore\Framework\Events;
 
 use Illuminate\Queue\SerializesModels;
-use AvoRed\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Database\Product;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 
@@ -14,7 +14,7 @@ class ProductAfterSave
     /**
      * Product Model Object
      *
-     * @var \AvoRed\Framework\Models\Database\Product|Product $product
+     * @var \LeadStore\Framework\Models\Database\Product|Product $product
      */
     public $product = null;
 
@@ -28,7 +28,7 @@ class ProductAfterSave
     /**
      * Create a new event instance.
      *
-     * @param \AvoRed\Framework\Models\Database\Product $product
+     * @param \LeadStore\Framework\Models\Database\Product $product
      * @param array $data
      * @return void
      */

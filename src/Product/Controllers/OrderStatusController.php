@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Product\Controllers;
+namespace LeadStore\Framework\Product\Controllers;
 
-use AvoRed\Framework\Models\Database\OrderStatus;
-use AvoRed\Framework\Product\Requests\OrderStatusRequest;
-use AvoRed\Framework\Models\Contracts\OrderStatusInterface;
-use AvoRed\Framework\Product\DataGrid\OrderStatusDataGrid;
-use AvoRed\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Database\OrderStatus;
+use LeadStore\Framework\Product\Requests\OrderStatusRequest;
+use LeadStore\Framework\Models\Contracts\OrderStatusInterface;
+use LeadStore\Framework\Product\DataGrid\OrderStatusDataGrid;
+use LeadStore\Framework\System\Controllers\Controller;
 use Illuminate\Support\Collection;
 
 class OrderStatusController extends Controller
@@ -14,7 +14,7 @@ class OrderStatusController extends Controller
     protected $isDefaultOptins;
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\OrderStatusRepository
+     * @var \LeadStore\Framework\Models\Repository\OrderStatusRepository
      */
     protected $repository;
 
@@ -53,7 +53,7 @@ class OrderStatusController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\Product\Requests\OrderStatusRequest $request
+     * @param \LeadStore\Framework\Product\Requests\OrderStatusRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -71,7 +71,7 @@ class OrderStatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\OrderStatus $order-status
+     * @param \LeadStore\Framework\Models\Database\OrderStatus $order-status
      * @return \Illuminate\Http\Response
      */
     public function edit(OrderStatus $orderStatus)
@@ -84,8 +84,8 @@ class OrderStatusController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\Product\Requests\OrderStatusRequest $request
-     * @param \AvoRed\Framework\Models\Database\OrderStatus $order-status
+     * @param \LeadStore\Framework\Product\Requests\OrderStatusRequest $request
+     * @param \LeadStore\Framework\Models\Database\OrderStatus $order-status
      * @return \Illuminate\Http\Response
      */
     public function update(OrderStatusRequest $request, OrderStatus $orderStatus)
@@ -101,7 +101,7 @@ class OrderStatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\OrderStatus $order-status
+     * @param \LeadStore\Framework\Models\Database\OrderStatus $order-status
      * @return \Illuminate\Http\Response
      */
     public function destroy(OrderStatus $orderStatus)

@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\ProductDownloadableUrlInterface;
-use AvoRed\Framework\Models\Database\ProductDownloadableUrl;
+use LeadStore\Framework\Models\Contracts\ProductDownloadableUrlInterface;
+use LeadStore\Framework\Models\Database\ProductDownloadableUrl;
 
 class ProductDownloadableUrlRepository implements ProductDownloadableUrlInterface
 {
@@ -11,7 +11,7 @@ class ProductDownloadableUrlRepository implements ProductDownloadableUrlInterfac
      * Find an Downloadable Product by given Id which returns ProductDownloadableUrl Model
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function find($id)
     {
@@ -22,7 +22,7 @@ class ProductDownloadableUrlRepository implements ProductDownloadableUrlInterfac
      * Find an Category by given token which returns Category Model
      *
      * @param string $token
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function findByToken($token)
     {
@@ -64,7 +64,7 @@ class ProductDownloadableUrlRepository implements ProductDownloadableUrlInterfac
      * Create an Product Downloadable Url
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function create($data)
     {

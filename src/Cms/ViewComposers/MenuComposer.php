@@ -1,22 +1,22 @@
 <?php
 
-namespace AvoRed\Framework\Cms\ViewComposers;
+namespace LeadStore\Framework\Cms\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\Menu\Facades\Menu as MenuFacade;
-use AvoRed\Framework\Models\Contracts\MenuInterface;
-use AvoRed\Framework\Models\Contracts\CategoryInterface;
+use LeadStore\Framework\Menu\Facades\Menu as MenuFacade;
+use LeadStore\Framework\Models\Contracts\MenuInterface;
+use LeadStore\Framework\Models\Contracts\CategoryInterface;
 
 class MenuComposer
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\MenuRepository
+     * @var \LeadStore\Framework\Models\Repository\MenuRepository
      */
     protected $menuRepository;
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\CategoryRepository
+     * @var \LeadStore\Framework\Models\Repository\CategoryRepository
      */
     protected $categoryRepository;
 

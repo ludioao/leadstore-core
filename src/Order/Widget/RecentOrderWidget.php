@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Order\Widget;
+namespace LeadStore\Framework\Order\Widget;
 
-use AvoRed\Framework\Widget\Contracts\Widget as WidgetContract;
-use AvoRed\Framework\Models\Contracts\OrderInterface;
+use LeadStore\Framework\Widget\Contracts\Widget as WidgetContract;
+use LeadStore\Framework\Models\Contracts\OrderInterface;
 
 class RecentOrderWidget implements WidgetContract
 {

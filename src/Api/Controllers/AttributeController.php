@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Attribute;
-use AvoRed\Framework\Api\Resources\Attribute\AttributeResource;
-use AvoRed\Framework\Api\Resources\Attribute\AttributeCollectionResource;
-use AvoRed\Framework\Product\Requests\AttributeRequest;
+use LeadStore\Framework\Models\Database\Attribute;
+use LeadStore\Framework\Api\Resources\Attribute\AttributeResource;
+use LeadStore\Framework\Api\Resources\Attribute\AttributeCollectionResource;
+use LeadStore\Framework\Product\Requests\AttributeRequest;
 
 class AttributeController extends Controller
 {

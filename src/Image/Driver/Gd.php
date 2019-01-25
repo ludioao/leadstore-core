@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Image\Driver;
+namespace LeadStore\Framework\Image\Driver;
 
-use AvoRed\Framework\Image\ImageNotFoundException;
+use LeadStore\Framework\Image\ImageNotFoundException;
 
 class Gd
 {

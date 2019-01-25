@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface OrderHistoryInterface
 {
@@ -8,7 +8,7 @@ interface OrderHistoryInterface
      * Create an Order History
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Order History
+     * @return \LeadStore\Framework\Models\Database\Order History
      */
     public function create($data);
 }

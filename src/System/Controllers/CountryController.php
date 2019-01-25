@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\System\DataGrid\CountryDataGrid;
-use AvoRed\Framework\Models\Database\Country;
-use AvoRed\Framework\System\Requests\CountryRequest;
-use AvoRed\Framework\Models\Contracts\CountryInterface;
+use LeadStore\Framework\System\DataGrid\CountryDataGrid;
+use LeadStore\Framework\Models\Database\Country;
+use LeadStore\Framework\System\Requests\CountryRequest;
+use LeadStore\Framework\Models\Contracts\CountryInterface;
 use Illuminate\Support\Collection;
 
 class CountryController extends Controller
@@ -17,7 +17,7 @@ class CountryController extends Controller
     protected $isActiveOptions;
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\CountryRepository
+     * @var \LeadStore\Framework\Models\Repository\CountryRepository
      */
     protected $repository;
 
@@ -53,7 +53,7 @@ class CountryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\CountryRequest $request
+     * @param \LeadStore\Framework\System\Requests\CountryRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -67,7 +67,7 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\Country $country
+     * @param \LeadStore\Framework\Models\Database\Country $country
      * @return \Illuminate\Http\Response
      */
     public function edit(Country $country)
@@ -80,8 +80,8 @@ class CountryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\CountryRequest $request
-     * @param \AvoRed\Framework\Models\Database\Country $country
+     * @param \LeadStore\Framework\System\Requests\CountryRequest $request
+     * @param \LeadStore\Framework\Models\Database\Country $country
      * @return \Illuminate\Http\Response
      */
     public function update(CountryRequest $request, Country $country)
@@ -94,7 +94,7 @@ class CountryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\Country $country
+     * @param \LeadStore\Framework\Models\Database\Country $country
      * @return \Illuminate\Http\Response
      */
     public function destroy(Country $country)
@@ -106,7 +106,7 @@ class CountryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param \AvoRed\Framework\Models\Database\Country $country
+     * @param \LeadStore\Framework\Models\Database\Country $country
      * @return \Illuminate\Http\Response
      */
     public function show(Country $country)

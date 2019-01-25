@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface AttributeInterface
 {
@@ -8,7 +8,7 @@ interface AttributeInterface
      * Find an Attribute by given Id which returns Attribute Model
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function find($id);
 
@@ -46,7 +46,7 @@ interface AttributeInterface
      * Create an Attribute
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function create($data);
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Breadcrumb;
+namespace LeadStore\Framework\Breadcrumb;
 
 use Illuminate\Support\Collection;
 
@@ -8,7 +8,7 @@ class Builder
 {
     /**
      * Breadcrumb Label.
-     *  @var \AvoRed\Framework\Breadcrumb\Breadcrumb
+     *  @var \LeadStore\Framework\Breadcrumb\Breadcrumb
      */
     protected $breadcrumb;
 

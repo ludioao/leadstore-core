@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\OrderStatusInterface;
-use AvoRed\Framework\Models\Database\OrderStatus;
+use LeadStore\Framework\Models\Contracts\OrderStatusInterface;
+use LeadStore\Framework\Models\Database\OrderStatus;
 
 class OrderStatusRepository implements OrderStatusInterface
 {
@@ -11,7 +11,7 @@ class OrderStatusRepository implements OrderStatusInterface
      * Find a Order Status by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\OrderStatus
+     * @return \LeadStore\Framework\Models\OrderStatus
      */
     public function find($id)
     {
@@ -51,7 +51,7 @@ class OrderStatusRepository implements OrderStatusInterface
     /**
      * Create a Order Status Record
      *
-     * @return \AvoRed\Framework\Models\OrderStatus
+     * @return \LeadStore\Framework\Models\OrderStatus
      */
     public function create($data)
     {

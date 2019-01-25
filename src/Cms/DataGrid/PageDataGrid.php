@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Cms\DataGrid;
+namespace LeadStore\Framework\Cms\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
 
 class PageDataGrid
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Permission;
+namespace LeadStore\Framework\Tests\Permission;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Permission\Manager;
-use AvoRed\Framework\Permission\PermissionGroup;
-use AvoRed\Framework\Permission\Permission;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Permission\Manager;
+use LeadStore\Framework\Permission\PermissionGroup;
+use LeadStore\Framework\Permission\Permission;
 
 class PermissionTest extends BaseTestCase
 {

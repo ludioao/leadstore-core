@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\User\ViewComposers;
+namespace LeadStore\Framework\User\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\Models\Contracts\UserGroupInterface;
+use LeadStore\Framework\Models\Contracts\UserGroupInterface;
 
 class UserFieldsComposer
 {

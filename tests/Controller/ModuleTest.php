@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Tests\BaseTestCase;
 
  /**
  * Test the module Routes
@@ -17,9 +17,9 @@ class ModuleTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.module.index'));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.module-list'));
     }
-   
+
 }

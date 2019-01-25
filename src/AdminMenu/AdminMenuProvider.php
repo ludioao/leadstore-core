@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\AdminMenu;
+namespace LeadStore\Framework\AdminMenu;
 
 use Illuminate\Support\ServiceProvider;
-use AvoRed\Framework\AdminMenu\Facade as AdminMenuFacade;
+use LeadStore\Framework\AdminMenu\Facade as AdminMenuFacade;
 
 class AdminMenuProvider extends ServiceProvider
 {
@@ -27,7 +27,7 @@ class AdminMenuProvider extends ServiceProvider
     public function register()
     {
         $this->registerServices();
-        $this->app->alias('adminmenu', 'AvoRed\Framework\AdminMenu\Builder');
+        $this->app->alias('adminmenu', 'LeadStore\Framework\AdminMenu\Builder');
     }
 
     /**
@@ -49,7 +49,7 @@ class AdminMenuProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['adminmenu', 'AvoRed\Framework\AdminMenu\Builder'];
+        return ['adminmenu', 'LeadStore\Framework\AdminMenu\Builder'];
     }
 
     /**

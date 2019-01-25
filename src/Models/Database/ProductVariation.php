@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 class ProductVariation extends BaseModel
 {

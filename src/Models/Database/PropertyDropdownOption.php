@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 class PropertyDropdownOption extends BaseModel
 {
@@ -9,7 +9,7 @@ class PropertyDropdownOption extends BaseModel
     /**
      * Proerty Dropdown Options belongs to one Product Property.
      *
-     * @return \AvoRed\Framework\Models\Database\Property
+     * @return \LeadStore\Framework\Models\Database\Property
      */
     public function property()
     {

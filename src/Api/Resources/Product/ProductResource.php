@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\Api\Resources\Product;
+namespace LeadStore\Framework\Api\Resources\Product;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use AvoRed\Framework\Api\Resources\Property\PropertyCollectionResource;
+use LeadStore\Framework\Api\Resources\Property\PropertyCollectionResource;
 
 /**
  *
- * Class \AvoRed\Framework\Api\Resources\Product\ProductResource
+ * Class \LeadStore\Framework\Api\Resources\Product\ProductResource
  * @property int id
  * @property string type
  * @property string name
@@ -30,7 +30,7 @@ use AvoRed\Framework\Api\Resources\Property\PropertyCollectionResource;
  * @property array properties
  * @property string created_at
  * @property string updated_at
- * @method \AvoRed\Framework\Models\Database\Product getPropertiesAll
+ * @method \LeadStore\Framework\Models\Database\Product getPropertiesAll
  */
 class ProductResource extends JsonResource
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Shipping\Contracts;
+namespace LeadStore\Framework\Shipping\Contracts;
 
 interface Shipping
 {

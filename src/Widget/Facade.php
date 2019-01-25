@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Widget;
+namespace LeadStore\Framework\Widget;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 

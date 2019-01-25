@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(AvoRed\Framework\Models\Database\Country::class, function (Faker $faker) {
+$factory->define(LeadStore\Framework\Models\Database\Country::class, function (Faker $faker) {
     return [
         'name' => 'new zealand',
         'code' => 'nzd',

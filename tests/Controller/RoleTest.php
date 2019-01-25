@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Role;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Role;
 
 class RoleTest extends BaseTestCase
 {
@@ -15,7 +15,7 @@ class RoleTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.role.index'));
-        
+
         $response->assertStatus(200);
     }
     /**
@@ -26,7 +26,7 @@ class RoleTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.role.create'));
-        
+
         $response->assertStatus(200);
     }
     /**
@@ -44,10 +44,10 @@ class RoleTest extends BaseTestCase
                                 'admin.page.create,admin.page.store'
                             ]
                         ]));
-        
+
         $response->assertStatus(302)
                 ->assertRedirect(route('admin.role.index'));
-                
+
         $this->assertDatabaseHas('roles', [
                     'name' => 'test role name'
                 ]);
@@ -59,11 +59,11 @@ class RoleTest extends BaseTestCase
     public function test_role_edit_route()
     {
         $role = factory(Role::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->get(route('admin.role.edit', $role->id));
-        
+
         $response->assertStatus(200)
                 ->assertSee($role->name);
     }
@@ -75,14 +75,14 @@ class RoleTest extends BaseTestCase
     {
         $role = factory(Role::class)->create();
         $role->name = "test new name";
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->put(
-                            route('admin.role.update', $role->id), 
+                            route('admin.role.update', $role->id),
                             array_merge($role->toArray(), ['permissions' => ['admin.page.index']])
                         );
-        
+
         $response->assertStatus(302)
                     ->assertRedirect(route('admin.role.index'));
         $this->assertDatabaseHas('roles', [
@@ -96,11 +96,11 @@ class RoleTest extends BaseTestCase
     public function test_role_destroy_route()
     {
         $role = factory(Role::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->delete(route('admin.role.destroy', $role->id));
-        
+
         $response->assertStatus(302)
                     ->assertRedirect(route('admin.role.index'));
         $this->assertDatabaseMissing('roles', [
@@ -108,5 +108,5 @@ class RoleTest extends BaseTestCase
                 ]);
     }
 
-   
+
 }

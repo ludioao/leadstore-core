@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface CategoryInterface
 {
@@ -8,7 +8,7 @@ interface CategoryInterface
      * Find an Category by given Id which returns Category Model
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\Category
+     * @return \LeadStore\Framework\Models\Database\Category
      */
     public function find($id);
 
@@ -16,7 +16,7 @@ interface CategoryInterface
      * Find an Category by given key which returns Category Model
      *
      * @param string $key
-     * @return \AvoRed\Framework\Models\Database\Category
+     * @return \LeadStore\Framework\Models\Database\Category
      */
     public function findByKey($key);
 
@@ -46,7 +46,7 @@ interface CategoryInterface
      * Create an Category
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Category
+     * @return \LeadStore\Framework\Models\Database\Category
      */
     public function create($data);
 

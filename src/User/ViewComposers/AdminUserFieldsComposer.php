@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\User\ViewComposers;
+namespace LeadStore\Framework\User\ViewComposers;
 
-use AvoRed\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\Role;
 use Illuminate\View\View;
 
 class AdminUserFieldsComposer

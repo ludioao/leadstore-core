@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\User\ViewComposers;
+namespace LeadStore\Framework\User\ViewComposers;
 
 use Illuminate\View\View;
-use AvoRed\Framework\Models\Database\Country;
+use LeadStore\Framework\Models\Database\Country;
 use Illuminate\Support\Collection;
 
 class SiteCurrencyFieldsComposer

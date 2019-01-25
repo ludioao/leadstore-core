@@ -1,21 +1,21 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
 use Laravel\Passport\Client;
 use Illuminate\Support\Facades\Auth;
-use AvoRed\Framework\Models\Database\AdminUser as Model;
-use AvoRed\Framework\System\DataGrid\AdminUserDataGrid;
-use AvoRed\Framework\Image\Facades\Image;
-use AvoRed\Framework\User\Requests\AdminUserRequest;
-use AvoRed\Framework\Models\Contracts\AdminUserInterface;
-use AvoRed\Framework\Models\Database\AdminUser;
+use LeadStore\Framework\Models\Database\AdminUser as Model;
+use LeadStore\Framework\System\DataGrid\AdminUserDataGrid;
+use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\User\Requests\AdminUserRequest;
+use LeadStore\Framework\Models\Contracts\AdminUserInterface;
+use LeadStore\Framework\Models\Database\AdminUser;
 
 class AdminUserController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\AdminUserRepository
+     * @var \LeadStore\Framework\Models\Repository\AdminUserRepository
      */
     protected $repository;
 
@@ -49,7 +49,7 @@ class AdminUserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\Http\Requests\AdminUserRequest $request
+     * @param \LeadStore\Framework\Http\Requests\AdminUserRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -65,7 +65,7 @@ class AdminUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\AdminUser $id
+     * @param \LeadStore\Framework\Models\Database\AdminUser $id
      *
      * @return \Illuminate\Http\Response
      */
@@ -78,7 +78,7 @@ class AdminUserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\Http\Requests\AdminUserRequest $request
+     * @param \LeadStore\Framework\Http\Requests\AdminUserRequest $request
      * @param int $id
      *
      * @return \Illuminate\Http\Response

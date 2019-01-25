@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid\Columns;
+namespace LeadStore\Framework\DataGrid\Columns;
 
 class LinkColumn extends AbstractColumn
 {

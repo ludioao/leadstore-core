@@ -1,16 +1,16 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Database\OrderHistory;
-use AvoRed\Framework\Models\Contracts\OrderHistoryInterface;
+use LeadStore\Framework\Models\Database\OrderHistory;
+use LeadStore\Framework\Models\Contracts\OrderHistoryInterface;
 
 class OrderHistoryRepository implements OrderHistoryInterface
 {
     /**
      * Create an Order History Record
      *
-     * @return \AvoRed\Framework\Models\Database\OrderHistory
+     * @return \LeadStore\Framework\Models\Database\OrderHistory
      */
     public function create($data)
     {

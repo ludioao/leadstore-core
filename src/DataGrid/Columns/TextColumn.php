@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\DataGrid\Columns;
+namespace LeadStore\Framework\DataGrid\Columns;
 
 use Illuminate\Support\Facades\Route;
 

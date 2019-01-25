@@ -1,25 +1,25 @@
 <?php
 
-namespace AvoRed\Framework\Cms\Controllers;
+namespace LeadStore\Framework\Cms\Controllers;
 
 use Illuminate\Http\Request;
-use AvoRed\Framework\Models\Contracts\MenuInterface;
-use AvoRed\Framework\System\Controllers\Controller;
-use AvoRed\Framework\Models\Contracts\MenuGroupInterface;
-use AvoRed\Framework\Models\Database\MenuGroup;
-use AvoRed\Framework\Cms\Requests\MenuRequest;
+use LeadStore\Framework\Models\Contracts\MenuInterface;
+use LeadStore\Framework\System\Controllers\Controller;
+use LeadStore\Framework\Models\Contracts\MenuGroupInterface;
+use LeadStore\Framework\Models\Database\MenuGroup;
+use LeadStore\Framework\Cms\Requests\MenuRequest;
 
 class MenuController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\MenuRepository
+     * @var \LeadStore\Framework\Models\Repository\MenuRepository
      */
     protected $repository;
 
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\MenuGroupRepository
+     * @var \LeadStore\Framework\Models\Repository\MenuGroupRepository
      */
     protected $menuGroupRepository;
 
@@ -61,7 +61,7 @@ class MenuController extends Controller
     /**
      * Display a listing of the resource.
      * 
-     * @param \AvoRed\Framework\Cms\Requests\MenuRequest $request
+     * @param \LeadStore\Framework\Cms\Requests\MenuRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(MenuRequest $request)

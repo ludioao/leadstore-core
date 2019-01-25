@@ -15,12 +15,12 @@ return [
     'cart' => ['session_key' => 'cart_products'],
 
     'model' => [
-        'user' => AvoRed\Framework\Models\Database\User::class,
-        'address' => AvoRed\Framework\Models\Database\Address::class,
+        'user' => LeadStore\Framework\Models\Database\User::class,
+        'address' => LeadStore\Framework\Models\Database\Address::class,
     ],
 
-   
-    'filesystems' => [    
+
+    'filesystems' => [
         'disks' => [
             'avored' => [
                 'driver' => 'local',
@@ -43,14 +43,14 @@ return [
                 'provider' => 'admin-users',
             ],
         ],
-    
+
         'providers' => [
             'admin-users' => [
                 'driver' => 'eloquent',
-                'model' => AvoRed\Framework\Models\Database\AdminUser::class,
+                'model' => LeadStore\Framework\Models\Database\AdminUser::class,
             ],
         ],
-    
+
         'passwords' => [
             'adminusers' => [
                 'provider' => 'admin-users',

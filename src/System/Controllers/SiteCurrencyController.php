@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\Models\Contracts\SiteCurrencyInterface;
-use AvoRed\Framework\System\DataGrid\SiteCurrencyDataGrid;
-use AvoRed\Framework\System\Requests\SiteCurrencyRequest;
-use AvoRed\Framework\Models\Database\SiteCurrency;
-use AvoRed\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Models\Contracts\SiteCurrencyInterface;
+use LeadStore\Framework\System\DataGrid\SiteCurrencyDataGrid;
+use LeadStore\Framework\System\Requests\SiteCurrencyRequest;
+use LeadStore\Framework\Models\Database\SiteCurrency;
+use LeadStore\Framework\Models\Database\Configuration;
 
 class SiteCurrencyController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\SiteCurrencyRepository
+     * @var \LeadStore\Framework\Models\Repository\SiteCurrencyRepository
      */
     protected $repository;
 
@@ -47,7 +47,7 @@ class SiteCurrencyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\SiteCurrencyRequest $request
+     * @param \LeadStore\Framework\System\Requests\SiteCurrencyRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -61,7 +61,7 @@ class SiteCurrencyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\SiteCurrency $id
+     * @param \LeadStore\Framework\Models\Database\SiteCurrency $id
      *
      * @return \Illuminate\Http\Response
      */
@@ -75,7 +75,7 @@ class SiteCurrencyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\SiteCurrencyRequest $request
+     * @param \LeadStore\Framework\System\Requests\SiteCurrencyRequest $request
      * @param int $id
      *
      * @return \Illuminate\Http\Response

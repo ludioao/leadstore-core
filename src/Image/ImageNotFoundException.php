@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Image;
+namespace LeadStore\Framework\Image;
 
 class ImageNotFoundException extends \Exception
 {

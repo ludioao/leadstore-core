@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Contracts;
+namespace LeadStore\Framework\Models\Contracts;
 
 interface ProductDownloadableUrlInterface
 {
@@ -8,7 +8,7 @@ interface ProductDownloadableUrlInterface
      * Find an Downloadable Product by given Id which returns ProductDownloadableUrl Model
      *
      * @param integer $id
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function find($id);
 
@@ -16,7 +16,7 @@ interface ProductDownloadableUrlInterface
      * Find an Category by given token which returns Category Model
      *
      * @param string $token
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function findByToken($token);
 
@@ -46,7 +46,7 @@ interface ProductDownloadableUrlInterface
      * Create an Product Downloadable Url
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\ProductDownloadableUrl
+     * @return \LeadStore\Framework\Models\Database\ProductDownloadableUrl
      */
     public function create($data);
 }

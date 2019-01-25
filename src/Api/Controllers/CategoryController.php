@@ -1,12 +1,12 @@
 <?php
 
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use AvoRed\Framework\Models\Database\Category;
-use AvoRed\Framework\Product\Requests\CategoryRequest;
-use AvoRed\Framework\Api\Resources\Category\CategoryResource;
-use AvoRed\Framework\Api\Resources\Category\CategoryCollectionResource;
+use LeadStore\Framework\Models\Database\Category;
+use LeadStore\Framework\Product\Requests\CategoryRequest;
+use LeadStore\Framework\Api\Resources\Category\CategoryResource;
+use LeadStore\Framework\Api\Resources\Category\CategoryCollectionResource;
 
 class CategoryController extends Controller
 {

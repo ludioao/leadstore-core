@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\AdminConfiguration;
+namespace LeadStore\Framework\AdminConfiguration;
 
 use Illuminate\Support\Collection;
 
@@ -32,7 +32,7 @@ class Manager
      * Add Admin Configuration into Collection.
      *
      * @param string $key
-     * @return \AvoRed\Framework\AdminConfiguration\AdminConfigurationGroup
+     * @return \LeadStore\Framework\AdminConfiguration\AdminConfigurationGroup
      */
     public function add($key)
     {
@@ -48,7 +48,7 @@ class Manager
      * Get Admin Configuration Collection if exists or Return Empty Collection.
      *
      * @param array $item
-     * @return mixed \AvoRed\Framework\AdminConfiguration\AdminConfigurationGroup|\Illuminate\Support\Collection
+     * @return mixed \LeadStore\Framework\AdminConfiguration\AdminConfigurationGroup|\Illuminate\Support\Collection
      */
     public function get($key)
     {
@@ -63,7 +63,7 @@ class Manager
      * Set the Configuration collection and return self
      *
      * @param array $item
-     * @return \AvoRed\Framework\AdminConfiguration\Manager
+     * @return \LeadStore\Framework\AdminConfiguration\Manager
      */
     public function set($key, $configurationCollection)
     {

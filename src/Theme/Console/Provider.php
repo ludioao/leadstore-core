@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Theme\Console;
+namespace LeadStore\Framework\Theme\Console;
 
 use Illuminate\Support\ServiceProvider;
 

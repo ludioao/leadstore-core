@@ -1,13 +1,13 @@
 <?php
 
-namespace AvoRed\Framework\Tests\Controller;
+namespace LeadStore\Framework\Tests\Controller;
 
-use AvoRed\Framework\Tests\BaseTestCase;
-use AvoRed\Framework\Models\Database\Role;
-use AvoRed\Framework\Models\Database\UserGroup;
-use AvoRed\Framework\Models\Database\SiteCurrency;
-use AvoRed\Framework\Models\Database\State;
-use AvoRed\Framework\Models\Database\Country;
+use LeadStore\Framework\Tests\BaseTestCase;
+use LeadStore\Framework\Models\Database\Role;
+use LeadStore\Framework\Models\Database\UserGroup;
+use LeadStore\Framework\Models\Database\SiteCurrency;
+use LeadStore\Framework\Models\Database\State;
+use LeadStore\Framework\Models\Database\Country;
 
  /**
  * Test the state Routes
@@ -22,7 +22,7 @@ class StateTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.state.index'));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.state-list'));
     }
@@ -34,7 +34,7 @@ class StateTest extends BaseTestCase
     {
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')->get(route('admin.state.create'));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.state-create'));
     }
@@ -52,10 +52,10 @@ class StateTest extends BaseTestCase
                             'code' => 'state_code',
                             'country_id' => $country->id,
                         ]));
-        
+
         $response->assertStatus(302)
                 ->assertRedirect(route('admin.state.index'));
-                
+
         $this->assertDatabaseHas('states', [
                     'name' => 'state for new zealand'
                 ]);
@@ -67,11 +67,11 @@ class StateTest extends BaseTestCase
     public function test_state_edit_route()
     {
         $state = factory(state::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
                         ->get(route('admin.state.edit', $state->id));
-        
+
         $response->assertStatus(200)
             ->assertSee(__('avored-framework::system.state-update'))
             ->assertSee($state->name);
@@ -84,15 +84,15 @@ class StateTest extends BaseTestCase
     {
         $state = factory(state::class)->create();
         $state->name = "test new name";
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
             ->put(route('admin.state.update', $state->id), $state->toArray());
-        
+
         $response->assertStatus(302)
             ->assertRedirect(route('admin.state.index'));
         $this->assertDatabaseHas(
-            'states', 
+            'states',
             ['name' => 'test new name']
         );
     }
@@ -103,16 +103,16 @@ class StateTest extends BaseTestCase
     public function test_state_destroy_route()
     {
         $state = factory(state::class)->create();
-        
+
         $user = $this->_getAdminUser();
         $response = $this->actingAs($user, 'admin')
             ->delete(route('admin.state.destroy', $state->id));
-        
+
         $response->assertStatus(302)
             ->assertRedirect(route('admin.state.index'));
-            
+
         $this->assertDatabaseMissing(
-            'states', 
+            'states',
             ['id' => $state->id]
         );
     }

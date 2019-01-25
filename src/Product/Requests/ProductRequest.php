@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\Product\Requests;
+namespace LeadStore\Framework\Product\Requests;
 
-use AvoRed\Framework\Models\Database\Product;
+use LeadStore\Framework\Models\Database\Product;
 use Illuminate\Foundation\Http\FormRequest as Request;
 
 class ProductRequest extends Request

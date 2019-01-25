@@ -1,8 +1,8 @@
 <?php
-namespace AvoRed\Framework\Api\Controllers;
+namespace LeadStore\Framework\Api\Controllers;
 
 
-use AvoRed\Framework\Models\Database\User;
+use LeadStore\Framework\Models\Database\User;
 
 class AuthController extends Controller
 {

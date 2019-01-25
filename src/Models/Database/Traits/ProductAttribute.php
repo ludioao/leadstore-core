@@ -6,7 +6,7 @@
  * Time: 15:59
  */
 
-namespace AvoRed\Framework\Models\Database\Traits;
+namespace LeadStore\Framework\Models\Database\Traits;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Collection;
@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
-use AvoRed\Framework\Image\LocalFile;
-use AvoRed\Framework\Models\Contracts\SiteCurrencyInterface;
-use AvoRed\Framework\Models\Database\ProductImage;
-use AvoRed\Framework\Events\ProductBeforeSave;
-use AvoRed\Framework\Events\ProductAfterSave;
-use AvoRed\Framework\Models\Contracts\ProductDownloadableUrlInterface;
-use AvoRed\Framework\Models\Database\ProductDownloadableUrl;
-use AvoRed\Framework\Models\Database\AttributeDropdownOption;
-use AvoRed\Framework\Models\Database\ProductVariation;
-use AvoRed\Framework\Models\Contracts\CategoryFilterInterface;
-use AvoRed\Framework\Models\Database\Property;
-use AvoRed\Framework\Models\Database\ProductAttributeIntegerValue;
+use LeadStore\Framework\Image\LocalFile;
+use LeadStore\Framework\Models\Contracts\SiteCurrencyInterface;
+use LeadStore\Framework\Models\Database\ProductImage;
+use LeadStore\Framework\Events\ProductBeforeSave;
+use LeadStore\Framework\Events\ProductAfterSave;
+use LeadStore\Framework\Models\Contracts\ProductDownloadableUrlInterface;
+use LeadStore\Framework\Models\Database\ProductDownloadableUrl;
+use LeadStore\Framework\Models\Database\AttributeDropdownOption;
+use LeadStore\Framework\Models\Database\ProductVariation;
+use LeadStore\Framework\Models\Contracts\CategoryFilterInterface;
+use LeadStore\Framework\Models\Database\Property;
+use LeadStore\Framework\Models\Database\ProductAttributeIntegerValue;
 
 
 trait ProductAttribute
@@ -58,7 +58,7 @@ trait ProductAttribute
      * Save Product Images.
      *
      * @param array $$data
-     * @return \AvoRed\Framework\Models\Database\Product $this
+     * @return \LeadStore\Framework\Models\Database\Product $this
      */
     public function saveProductImages(array $data): self
     {
@@ -336,7 +336,7 @@ trait ProductAttribute
     /**
      * return default Image or LocalFile Object.
      *
-     * @return \AvoRed\Framework\Image\LocalFile
+     * @return \LeadStore\Framework\Image\LocalFile
      */
     public function getImageAttribute()
     {
@@ -456,8 +456,8 @@ trait ProductAttribute
     /**
      * Get Variable Product by Attribute Drop down Option.
      *
-     * @param \AvoRed\Framework\Models\Database\AttributeDropdownOption
-     * @return \AvoRed\Framework\Models\Database\ProductVariation
+     * @param \LeadStore\Framework\Models\Database\AttributeDropdownOption
+     * @return \LeadStore\Framework\Models\Database\ProductVariation
      */
     public function getVariableProduct($attributeDropdownOption)
     {

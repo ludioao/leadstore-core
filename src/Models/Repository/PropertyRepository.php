@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Models\Repository;
+namespace LeadStore\Framework\Models\Repository;
 
-use AvoRed\Framework\Models\Contracts\PropertyInterface;
-use AvoRed\Framework\Models\Database\Property;
+use LeadStore\Framework\Models\Contracts\PropertyInterface;
+use LeadStore\Framework\Models\Database\Property;
 
 class PropertyRepository implements PropertyInterface
 {
@@ -11,7 +11,7 @@ class PropertyRepository implements PropertyInterface
      * Find an Property by given Id
      *
      * @param $id
-     * @return \AvoRed\Framework\Models\Database\Property
+     * @return \LeadStore\Framework\Models\Database\Property
      */
     public function find($id)
     {
@@ -43,7 +43,7 @@ class PropertyRepository implements PropertyInterface
      * Create an Property an Return an Property Instance
      *
      * @param array $data
-     * @return \AvoRed\Framework\Models\Database\Property
+     * @return \LeadStore\Framework\Models\Database\Property
      */
     public function create($data)
     {

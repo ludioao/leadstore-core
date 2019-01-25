@@ -1,9 +1,9 @@
 <?php
 
-namespace AvoRed\Framework\Modules\Console;
+namespace LeadStore\Framework\Modules\Console;
 
 use Illuminate\Console\Command;
-use AvoRed\Framework\Modules\Facade as Module;
+use LeadStore\Framework\Modules\Facade as Module;
 use Illuminate\Database\Migrations\Migrator;
 use Symfony\Component\Console\Input\InputArgument;
 

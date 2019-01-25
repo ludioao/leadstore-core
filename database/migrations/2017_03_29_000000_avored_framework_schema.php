@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use AvoRed\Framework\Models\Database\OrderStatus;
-use AvoRed\Framework\Models\Database\Country;
-use AvoRed\Framework\Models\Database\SiteCurrency;
-use AvoRed\Framework\Models\Database\Configuration;
-use AvoRed\Framework\Models\Database\MenuGroup;
-use AvoRed\Framework\Models\Database\Menu;
+use LeadStore\Framework\Models\Database\OrderStatus;
+use LeadStore\Framework\Models\Database\Country;
+use LeadStore\Framework\Models\Database\SiteCurrency;
+use LeadStore\Framework\Models\Database\Configuration;
+use LeadStore\Framework\Models\Database\MenuGroup;
+use LeadStore\Framework\Models\Database\Menu;
 
 class AvoredFrameworkSchema extends Migration
 {

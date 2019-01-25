@@ -1,18 +1,18 @@
 <?php
 
-namespace AvoRed\Framework\System\Controllers;
+namespace LeadStore\Framework\System\Controllers;
 
-use AvoRed\Framework\System\DataGrid\StateDataGrid;
-use AvoRed\Framework\System\Requests\StateRequest;
-use AvoRed\Framework\Models\Database\State;
-use AvoRed\Framework\Models\Contracts\StateInterface;
-use AvoRed\Framework\Models\Contracts\CountryInterface;
+use LeadStore\Framework\System\DataGrid\StateDataGrid;
+use LeadStore\Framework\System\Requests\StateRequest;
+use LeadStore\Framework\Models\Database\State;
+use LeadStore\Framework\Models\Contracts\StateInterface;
+use LeadStore\Framework\Models\Contracts\CountryInterface;
 
 class StateController extends Controller
 {
     /**
      *
-     * @var \AvoRed\Framework\Models\Repository\StateRepository
+     * @var \LeadStore\Framework\Models\Repository\StateRepository
      */
     protected $repository;
 
@@ -49,7 +49,7 @@ class StateController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\StateRequest $request
+     * @param \LeadStore\Framework\System\Requests\StateRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -63,7 +63,7 @@ class StateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \AvoRed\Framework\Models\Database\State $state
+     * @param \LeadStore\Framework\Models\Database\State $state
      * @return \Illuminate\Http\Response
      */
     public function edit(State $state)
@@ -78,8 +78,8 @@ class StateController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \AvoRed\Framework\System\Requests\StateRequest $request
-     * @param \AvoRed\Framework\Models\Database\State $state
+     * @param \LeadStore\Framework\System\Requests\StateRequest $request
+     * @param \LeadStore\Framework\Models\Database\State $state
      * @return \Illuminate\Http\Response
      */
     public function update(StateRequest $request, State $state)
@@ -92,7 +92,7 @@ class StateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \AvoRed\Framework\Models\Database\State $state
+     * @param \LeadStore\Framework\Models\Database\State $state
      * @return \Illuminate\Http\Response
      */
     public function destroy(State $state)
@@ -104,7 +104,7 @@ class StateController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param \AvoRed\Framework\Models\Database\State $state
+     * @param \LeadStore\Framework\Models\Database\State $state
      * @return \Illuminate\Http\Response
      */
     public function show(State $state)

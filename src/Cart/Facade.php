@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Cart;
+namespace LeadStore\Framework\Cart;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 

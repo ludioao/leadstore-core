@@ -1,8 +1,8 @@
 <?php
 
-namespace AvoRed\Framework\System\DataGrid;
+namespace LeadStore\Framework\System\DataGrid;
 
-use AvoRed\Framework\DataGrid\Facade as DataGrid;
+use LeadStore\Framework\DataGrid\Facade as DataGrid;
 
 class RoleDataGrid
 {

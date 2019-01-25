@@ -1,6 +1,6 @@
 <?php
 
-namespace AvoRed\Framework\Models\Database;
+namespace LeadStore\Framework\Models\Database;
 
 class AttributeDropdownOption extends BaseModel
 {
@@ -14,7 +14,7 @@ class AttributeDropdownOption extends BaseModel
     /**
      * Attribute Dropdown Options belongs to one Product Attribute.
      *
-     * @return \AvoRed\Framework\Models\Database\Attribute
+     * @return \LeadStore\Framework\Models\Database\Attribute
      */
     public function attribute()
     {
