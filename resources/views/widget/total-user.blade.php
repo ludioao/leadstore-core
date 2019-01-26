@@ -1,10 +1,17 @@
 <div class="widget">
-    <div class="card mb-3 d-block" style="cursor: move;">
-        <div class="card-header">
-            <h5 class="card-title text-center">{{ __('avored-framework::lang.admin-dashboard-total-user-title') }}</h5>
-        </div>        
-        <div class="card-body">
-            <p class="card-text text-center">{{ $totalRegisteredUser }}</p>
-        </div>
-    </div>
+	<div class="dashboard-card" style="cursor: move;">
+		<div class="title">
+			Total de Clientes
+		</div>
+
+		<div class="data">
+			{{ $totalRegisteredUser }}
+
+			{{--<span class="progress">--}}
+			{{--<span class="icon graph-up-icon"></span>--}}
+			{{--0.0% Increased--}}
+			{{--</span>--}}
+		</div>
+	</div>
+
 </div>

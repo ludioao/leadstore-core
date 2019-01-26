@@ -31,7 +31,7 @@
 
     <div class="page-container">
         @include("avored-framework::layouts.nav")
-        <main class='main-content bgc-grey-100'>
+        <main class='main-content bgc-grey-100 dashboard'>
             <div id='mainContent'>
                 @include("avored-framework::layouts.notifications")
 

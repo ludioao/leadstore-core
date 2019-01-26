@@ -1,31 +1,36 @@
-<div class="widget">
-    <div class="card mb-3 d-block" style="cursor: move;">
-        <div class="card-header">
-            <h5 class="card-title text-center">{{ __('avored-framework::lang.admin-dashboard-recent-order-title') }}</h5>
-        </div>
-        <div class="card-body">
-            @if(null === $recentOrderData)
-                <p class="text-center">
-                    Não há registros de pedidos
-                </p>
-            @else
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Cliente</th>
-                            <th>Produtos</th>
-                            <th>Total</th>
-                        </tr>
-                        <tr>
-                            <td>{{ $recentOrderData['user'] }}</td>
-                            <td>{{ $recentOrderData['product_count'] }}</td>
-                            <td>{{ $recentOrderData['total_amount'] }}</td>
-                        </tr>
-                    </table>
-                </div>
 
-            @endif
+<div class="card">
+    <div class="card-title">
+        Último Pedido
+    </div>
+    <div class="card-info ">
 
-        </div>
+        @if(null === $recentOrderData)
+            <p class="text-center">
+                Não há registros de pedidos
+            </p>
+        @else
+
+            <ul>
+                <li>
+
+                    <div class="description">
+                        <div class="name">
+                            {!! $recentOrderData['user'] !!}
+                        </div>
+                        <div class="info">
+                            {!! $recentOrderData['product_count'] !!} produtos
+                                                                      &nbsp;.&nbsp;
+                                                                      Valor Total {!! $recentOrderData['total_amount'] !!}
+                        </div>
+                    </div>
+                    <span class="icon angle-right-icon"></span></li>
+            </ul>
+
+        @endif
+
+
+
+
     </div>
 </div>
