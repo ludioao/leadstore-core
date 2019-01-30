@@ -277,4 +277,20 @@ class ProductController extends Controller
         return view('avored-framework::product.show')
                 ->with('product', $product);
     }
+
+
+    public function changeFeatured($id)
+    {
+        $product = Product::find($id);
+        if ($product) {
+            $product->is_featured = !$product->is_featured;
+            $product->save();
+
+            return redirect()->back()
+                ->with('notificationText', 'Ação realizado com sucesso.');
+        }
+        return redirect()->back()
+            ->with('errorNotification', 'Falha ao atualizar!');
+    }
+
 }

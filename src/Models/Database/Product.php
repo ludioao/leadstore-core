@@ -2,13 +2,13 @@
 
 namespace LeadStore\Framework\Models\Database;
 
-use LeadStore\Framework\Models\Database\Traits\ProductAttribute;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use LeadStore\Framework\Models\Database\Traits\ProductAttribute;
 
 
 class Product extends BaseModel
@@ -21,7 +21,7 @@ class Product extends BaseModel
         'type', 'name', 'slug', 'sku',
         'description', 'status', 'in_stock', 'track_stock', 'price', 'regular_price', 'cost_price',
         'qty', 'is_taxable', 'meta_title', 'meta_description',
-        'weight', 'width', 'height', 'length',
+        'weight', 'width', 'height', 'length', 'is_featured',
     ];
 
     public static function getProductBySlug($slug)

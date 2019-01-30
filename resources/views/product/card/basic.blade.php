@@ -21,12 +21,16 @@
 </div>
 
 
+
 <div class="row">
-    <div class="col-6">
+    <div class="col-md-4">
         {!! Form::text('slug', 'Slug')->required() !!}
     </div>
-    <div class="col-6">
+    <div class="col-md-4">
         {!! Form::text('sku', 'SKU')->required() !!}
+    </div>
+    <div class="col-md-4">
+        @include('avored-framework::forms.select',['name' => 'is_featured','label' => 'Favorito', 'options' => ['1' => __('avored-framework::lang.enabled'),'0' => __('avored-framework::lang.disabled')]])
     </div>
 </div>
 

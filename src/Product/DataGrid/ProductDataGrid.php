@@ -14,6 +14,10 @@ class ProductDataGrid
 
         $dataGrid->model($model)
             ->column('id', ['sortable' => true])
+            ->linkColumn('is_featured', ['label' => 'Favorito'], function($model) {
+                $featuredIcon = $model->is_featured ? 'fa fa-star text-success' : 'fa fa-star-o text-danger';
+                return "<a href='" . route('admin.product.changeFeatured', $model->id) . "'><i class='$featuredIcon'></i></a>";
+            })
             ->column('sku', ['sortable' => true])
             ->linkColumn('image', [], function ($model) {
                 return "<img src='" . $model->image->smallUrl . "' style='max-height: 50px;' />";

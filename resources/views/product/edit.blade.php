@@ -7,7 +7,6 @@
                 <div class="h1">Editar Produto</div>
             </div>
         </div>
-    
 
         <?php
         $productCategories = $model->categories()->get()->pluck('id')->toArray();
@@ -117,14 +116,14 @@
         </div>
 
             <div class="form-group">
-                <button type="button" 
+                <button type="button"
                         :disabled='isSaveButtonDisabled'
-                        class="btn btn-primary" 
-                        name="save" 
+                        class="btn btn-primary"
+                        name="save"
                         onclick="jQuery('#product-save-form').submit()">
                     Salvar
                 </button>
-               
+
                 <button type="button"  class="btn" onclick="location='{{ route('admin.product.index') }}'">
                     Cancelar
                 </button>
