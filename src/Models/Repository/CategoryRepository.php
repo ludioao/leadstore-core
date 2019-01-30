@@ -91,7 +91,7 @@ class CategoryRepository implements CategoryInterface
 
         // Products
         $productIds = $category->products->pluck('id');
-        $products = Product::whereIn('id', $category->products->pluck('id'));
+        $products = Product::query();
 
         // Filters
         $methodFilters = [];
@@ -109,21 +109,22 @@ class CategoryRepository implements CategoryInterface
             }
         }
 
-        // Filters
         foreach ($methodFilters as $method => $values) {
-            $callback = function ($q) use ($values) {
-                $wheres = [];
-                foreach ($values as $value) {
-                    $propertyId = key($value);
-                    $value = $value[$propertyId];
-                    $wheres[] = "(property_id = {$propertyId} and value = '{$value}')";
-                }
-                if (count($wheres)) {
-                    $q->whereRaw(implode(" OR ", $wheres));
-                }
-            };
-            $products = $products->whereHas($method, $callback)
-                ->with([$method => $callback]);
+
+            foreach($values as $value)
+            {
+                $propertyId = key($value);
+                $value = $value[$propertyId];
+                $callback = function($q) use ($propertyId, $value) {
+                    $q->wherePropertyId($propertyId)
+                        ->whereValue($value);
+                };
+                $productIdProperties = Product::whereHas($method, $callback)
+                    ->with([$method => $callback])->pluck('id');
+
+                // Overrite
+                $productIds = $productIds->intersect($productIdProperties);
+            }
         }
 
 
@@ -147,6 +148,8 @@ class CategoryRepository implements CategoryInterface
             }
         }
 
+
+        $products = $products->whereIn('id', $productIds);
 
         $collect = Collection::make([]);
 
