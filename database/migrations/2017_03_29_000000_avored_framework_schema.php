@@ -9,6 +9,7 @@ use LeadStore\Framework\Models\Database\SiteCurrency;
 use LeadStore\Framework\Models\Database\Configuration;
 use LeadStore\Framework\Models\Database\MenuGroup;
 use LeadStore\Framework\Models\Database\Menu;
+use LeadStore\Framework\Models\Database\Page;
 
 class AvoredFrameworkSchema extends Migration
 {

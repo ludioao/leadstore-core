@@ -4,7 +4,6 @@ namespace LeadStore\Framework\Models\Repository;
 
 use LeadStore\Framework\Models\Contracts\CategoryInterface;
 use LeadStore\Framework\Models\Database\Category;
-use LeadStore\Framework\Models\Database\Product;
 use LeadStore\Framework\Models\Database\Property;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -149,9 +148,28 @@ class CategoryRepository implements CategoryInterface
         }
 
 
-        // TODO: ADD VARIATION ON SEARCH
+        $collect = Collection::make([]);
 
-        return $products->get();
+        foreach ($products->get() as $productArray) {
+            $product = Product::find($productArray->id);
+            if ($product->type == 'VARIABLE_PRODUCT') {
+                $collect->push(($product->getVariableMainProduct()));
+            } else {
+                $collect->push(Product::find($productArray->id));
+            }
+        }
+
+        return $collect->unique();
+//
+//        $collection = collect([]);
+//        foreach($products as $product)
+//        {
+//
+//            $collection->push($product);
+//        }
+//        // TODO: ADD VARIATION ON SEARCH
+//
+//        return $products->get();
     }
 
     /*
