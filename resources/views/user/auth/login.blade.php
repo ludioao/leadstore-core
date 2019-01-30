@@ -48,7 +48,7 @@
 
                         <avored-form-input
                             field-name="password"
-                            label="Password"
+                            label="Senha"
                             field-type="password"
                             error-text="{!! $errors->first('password') !!}"
                             v-on:change="changeModelValue"
