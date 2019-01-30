@@ -3,6 +3,8 @@
 namespace LeadStore\Framework\Models\Database;
 
 use LeadStore\Framework\Models\Database\Traits\OrderProduct;
+use LeadStore\Framework\Shipping\Facade as Shipping;
+use LeadStore\Framework\Payment\Facade as Payment;
 
 class Order extends BaseModel
 {
@@ -66,6 +68,24 @@ class Order extends BaseModel
     public function orderStatus()
     {
         return $this->belongsTo(OrderStatus::class);
+    }
+
+    public function getShippingNameAttribute()
+    {
+        $shipping = Shipping::get($this->shipping_option);
+        if ($shipping) {
+            return $shipping->name();
+        }
+        return $this->shipping_option;
+    }
+
+    public function getPaymentNameAttribute()
+    {
+        $payment = Payment::get($this->payment_option);
+        if ($payment) {
+            return $payment->name();
+        }
+        return $this->payment_option;
     }
 
     public function getShippingAddressAttribute()

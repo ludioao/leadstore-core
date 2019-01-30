@@ -39,6 +39,7 @@
 
                         <div class="form-group">
                             <input type="text"
+                                   placeholder="{!! $column->label() !!}"
                                    name="q[{{ $column->identifier() }}]"
                                    @if(
                                        null !== request()->get('q') &&

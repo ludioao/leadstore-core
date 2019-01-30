@@ -14,8 +14,8 @@ class OrderDataGrid
 
         $dataGrid->model($model)
                     ->column('id', ['label' => 'N. Pedido', 'sortable' => true])
-                    ->column('shipping_option', ['label' => 'Frete'])
-                    ->column('payment_option', ['label' => 'Pagamento'])
+                    ->column('shipping_name', ['label' => 'Frete'])
+                    ->column('payment_name', ['label' => 'Pagamento'])
                     ->linkColumn('order_status', ['label' => 'Status'], function ($model) {
                         return $model->orderStatus->name;
                     })

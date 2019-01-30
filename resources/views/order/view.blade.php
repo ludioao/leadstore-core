@@ -7,6 +7,8 @@
 				<div class='h2'>
 					{{  __('avored-framework::orders.order-details') }} (#{{ $order->id }})
 
+					{!! $order->shippingName !!}
+
 					@if($order->orderStatus->name === "Delivered")
 						<small><span class="badge badge-success">{{ $order->orderStatus->name }}</span></small>
 					@else
