@@ -12,6 +12,26 @@ $attributes['class'] = 'form-control';
 $attributes['id'] = $name;
 $attributes['name'] = $name;
 $attributes['value'] = $value;
+$preHtml = $posHtml = '';
+if (isset($prepend) || isset($append)) {
+    $preHtml .= '<div class="input-group"><label class="d-block w-100">'.$label.'</label>';
+    unset($label);
+}
+if (isset($append)) {
+    $posHtml .= '<div class="input-group-append">
+        <span class="input-group-text">'.$append.'</span>
+    </div></div>';
+}
+if (isset($prepend)) {
+    $preHtml .= '<div class="input-group-prepend">
+        <span class="input-group-text">'.$prepend.'</span>
+    </div>';
+    $posHtml = '</div>';
+}
+
+if (!isset($wrapClass)) {
+    $wrapClass = 'form-group';
+}
 if (isset($attributes)) {
     $attributes = array_merge($attributes, $attributes);
 }
@@ -31,6 +51,7 @@ foreach ($attributes as $attrKey => $attrValue) {
 ?>
 
 <div class="form-group">
+    {!! $preHtml !!}
     @if(isset($label))
         <label for="{{ $name }}">{{ $label }}</label>
     @endif
@@ -42,5 +63,6 @@ foreach ($attributes as $attrKey => $attrValue) {
         </div>
     @endif
 
-
+{!! $posHtml !!}
 </div>
+
