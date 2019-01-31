@@ -22,7 +22,7 @@ class ImageProvider extends ServiceProvider
     {
         $this->registerImageService();
 
-        $this->app->alias('image', 'LeadStore\Framework\Image\Manager');
+        $this->app->alias('imagemanager', 'LeadStore\Framework\Image\Manager');
     }
 
     /**
@@ -32,7 +32,7 @@ class ImageProvider extends ServiceProvider
      */
     protected function registerImageService()
     {
-        $this->app->singleton('image', function ($app) {
+        $this->app->singleton('imagemanager', function ($app) {
             return new Manager();
         });
     }
@@ -44,6 +44,6 @@ class ImageProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['image', 'LeadStore\Framework\Image\Manager'];
+        return ['imagemanager', 'LeadStore\Framework\Image\Manager'];
     }
 }

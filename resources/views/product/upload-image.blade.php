@@ -13,7 +13,7 @@
             <div class="action-buttons">
                 <button type="button"
                         class="btn is_main_image_button  selected-icon"
-                        title="Select as Main Image">
+                        title="Selecionar como Foto Principal">
                         <i class="ti-check-box"></i>
                 </button>
                 <button type="button" class="destroy-image btn btn-xs btn-default" title="Remove file" >

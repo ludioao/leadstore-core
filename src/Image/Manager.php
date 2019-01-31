@@ -4,14 +4,10 @@ namespace LeadStore\Framework\Image;
 
 use Illuminate\Support\Facades\File;
 use LeadStore\Framework\Image\Driver\Gd;
+use Intervention\Image\Facades\Image;
 
 class Manager
 {
-    /**
-     * Image Driver Class
-     * @var \LeadStore\Framework\Image\Driver\Gd
-     */
-    protected $driver;
 
     /**
      * DB Path for the Image or relative path
@@ -19,11 +15,6 @@ class Manager
      * @var string $dbPath
      */
     protected $dbPath;
-
-    public function __construct()
-    {
-        $this->driver = new Gd();
-    }
 
     /**
      * Upload Image and resize it.
@@ -36,7 +27,6 @@ class Manager
     public function upload($image, $path)
     {
         $this->dbPath = $image->store($path, 'avored');
-
         return $this;
     }
 
@@ -63,11 +53,20 @@ class Manager
             list($width, $height) = $widthHeight;
             $imagePath = storage_path('app/public/' . $path) . DIRECTORY_SEPARATOR . $sizeName . '-' . $name;
 
+
+            $newImage = Image::make(storage_path('app/public/'.$this->dbPath));
+            $newImage->resize($width, $height,  function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $newImage->resizeCanvas($width, $height, 'center', false, array(255, 255, 255, 1));
+            $newImage->save($imagePath, 100);
+
+/*
             $this->driver
                 ->path($this->dbPath)
                 ->make()
                 ->resize($width, $height)
-                ->saveImage($imagePath, 100);
+                ->saveImage($imagePath, 100);*/
         }
 
         return $this;

@@ -103,9 +103,9 @@ class Gd
 
         imagecopyresampled($this->imageResized, $this->image, 0, 0, 0, 0, $width, $height, $this->width, $this->height);
 
-        if ($crop === true) {
+        /*if ($crop === true) {
             $this->crop($width, $height, $newWidth, $newHeight);
-        }
+        } */
 
         return $this;
     }

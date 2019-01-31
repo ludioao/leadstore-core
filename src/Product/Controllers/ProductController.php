@@ -10,7 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use LeadStore\Framework\Models\Database\Product;
-use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\Image\Facades\ImageManager;
 use LeadStore\Framework\Product\Requests\ProductRequest;
 use LeadStore\Framework\Product\DataGrid\ProductDataGrid;
 use LeadStore\Framework\Models\Contracts\ProductInterface;
@@ -166,7 +166,18 @@ class ProductController extends Controller
             'image' => 'mimes:jpg,jpeg,png'
         ]);
 
-        if ($image = $this->repository->uploadImage($request))
+        try {
+            $image = $this->repository->uploadImage($request);
+            $tmp = $this->_getTmpString();
+            return view('avored-framework::product.upload-image')
+                ->with('image', $image)
+                ->with('tmp', $tmp);
+        }
+        catch(\Exception $e)
+        {
+            return response()->json(['error' => $e->getMessage()]);
+        }
+        /*if ($image = $this->repository->uploadImage($request))
         {
             $tmp = $this->_getTmpString();
             return view('avored-framework::product.upload-image')
@@ -174,7 +185,7 @@ class ProductController extends Controller
                 ->with('tmp', $tmp);
         }
 
-        return view()->make('Falha ao enviar imagem');
+        return view()->make('Falha ao enviar imagem');*/
     }
 
     /**

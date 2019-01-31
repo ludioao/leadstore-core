@@ -6,7 +6,7 @@ use Laravel\Passport\Client;
 use Illuminate\Support\Facades\Auth;
 use LeadStore\Framework\Models\Database\AdminUser as Model;
 use LeadStore\Framework\System\DataGrid\AdminUserDataGrid;
-use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\Image\Facades\ImageManager;
 use LeadStore\Framework\User\Requests\AdminUserRequest;
 use LeadStore\Framework\Models\Contracts\AdminUserInterface;
 use LeadStore\Framework\Models\Database\AdminUser;
@@ -87,7 +87,7 @@ class AdminUserController extends Controller
     {
         if (null !== $request->file('image')) {
             $path = $this->_getUserImageRelativePath();
-            $image = Image::upload($request->file('image'), $path)->makeSizes()->get();
+            $image = ImageManager::upload($request->file('image'), $path)->makeSizes()->get();
 
             $request->merge(['image_path' => $image->relativePath]);
         }

@@ -5,7 +5,7 @@ namespace LeadStore\Framework\Models\Repository;
 use LeadStore\Framework\Models\Database\Product;
 use LeadStore\Framework\Models\Contracts\ProductInterface;
 
-use LeadStore\Framework\Image\Facades\Image;
+use LeadStore\Framework\Image\Facades\ImageManager;
 use LeadStore\Framework\Models\Database\ProductAttributeIntegerValue;
 
 class ProductRepository implements ProductInterface
@@ -70,7 +70,7 @@ class ProductRepository implements ProductInterface
             $checkDirectory = 'uploads/catalog/images/' . implode('/', $tmpPath);
 
             $dbPath = $checkDirectory . '/' . $imageUpload->getClientOriginalName();
-            $image = Image::upload($imageUpload, $checkDirectory)->makeSizes()->get();
+            $image = ImageManager::upload($imageUpload, $checkDirectory)->makeSizes()->get();
 
             return $image;
         }
