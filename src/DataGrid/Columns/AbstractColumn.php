@@ -48,6 +48,7 @@ abstract class AbstractColumn implements ColumnContract
             $this->identifier = $identifier;
             $this->label = $options['label'] ?? title_case($identifier);
             $this->sortable = $options['sortable'] ?? false;
+            $this->canFilter = $options['canFilter'] ?? null;
         }
     }
 

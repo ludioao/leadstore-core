@@ -26,6 +26,7 @@ use LeadStore\Framework\Models\Database\ProductVariation;
 use LeadStore\Framework\Models\Contracts\CategoryFilterInterface;
 use LeadStore\Framework\Models\Database\Property;
 use LeadStore\Framework\Models\Database\ProductAttributeIntegerValue;
+use LeadStore\Framework\Models\Database\Attribute;
 
 
 trait ProductAttribute

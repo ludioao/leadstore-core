@@ -26,8 +26,9 @@
 
     <div class="avored-table-row filter">
         @foreach($dataGrid->columns as $column)
+            @if($column->canFilter())
             <div class="col avored-table-cell">
-                @if($column->canFilter())
+
                     <form method="get" action="{{ URL::full() }}">
 
                         @if(Request::get('asc'))
@@ -39,7 +40,7 @@
 
                         <div class="form-group">
                             <input type="text"
-                                   placeholder="{!! $column->label() !!}"
+                                   placeholder="Buscar por {!! $column->label() !!}"
                                    name="q[{{ $column->identifier() }}]"
                                    @if(
                                        null !== request()->get('q') &&
@@ -54,8 +55,9 @@
                             <button type="submit" class="d-none"></button>
                         </div>
                     </form>
-                @endif
             </div>
+
+            @endif
         @endforeach
     </div>
 
