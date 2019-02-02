@@ -52,7 +52,7 @@ trait ProductAttribute
         $siteCurrency = App::get(SiteCurrencyInterface::class);
         $model = $siteCurrency->findByCode($currentCurrencyCode);
 
-        return number_format($val * $model->conversion_rate, 2, ',', '.');
+        return number_format($val * $model->conversion_rate, 2);
     }
 
     /**
