@@ -52,7 +52,7 @@ trait ProductAttribute
         $siteCurrency = App::get(SiteCurrencyInterface::class);
         $model = $siteCurrency->findByCode($currentCurrencyCode);
 
-        return number_format($val * $model->conversion_rate, 2);
+        return number_format($val * $model->conversion_rate, 2, ',', '.');
     }
 
     /**
@@ -556,8 +556,9 @@ trait ProductAttribute
 
     public function getPercentageDiscountAttribute()
     {
-        $regularPrice = $this->regular_price;
-        $salePrice = $this->price;
+        $regularPrice = $this->attributes['regular_price'];
+        $salePrice = $this->attributes['price'];
+
         if ($regularPrice && $salePrice) {
             return (($regularPrice - $salePrice)*100) / $regularPrice;
         }

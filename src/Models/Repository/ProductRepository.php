@@ -96,7 +96,14 @@ class ProductRepository implements ProductInterface
                 ->where(['attribute_id' => $key, 'value' => $value])->pluck('product_id')->toArray();
         }
 
-        $intersecao = array_intersect(...$collections);
+        if (count($collections) > 1) {
+            $intersecao = array_intersect(...$collections);
+        }
+        else {
+            $intersecao = $collections;
+        }
+
+
         if (count($intersecao) > 0) {
             return $this->query()->select(['id', 'price', 'name', 'width', 'height', 'length', 'weight', 'slug', 'qty'])->find(reset($intersecao));
         }
