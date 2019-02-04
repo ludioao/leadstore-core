@@ -118,7 +118,6 @@ class ProductController extends Controller
     public function update(ProductRequest $request, Product $product)
     {
         try {
-            //$product = ProductModel::findorfail($id);
             $product->saveProduct($request->all());
 
             // verify if has image (for variation cases).
@@ -177,15 +176,6 @@ class ProductController extends Controller
         {
             return response()->json(['error' => $e->getMessage()]);
         }
-        /*if ($image = $this->repository->uploadImage($request))
-        {
-            $tmp = $this->_getTmpString();
-            return view('avored-framework::product.upload-image')
-                ->with('image', $image)
-                ->with('tmp', $tmp);
-        }
-
-        return view()->make('Falha ao enviar imagem');*/
     }
 
     /**
@@ -290,6 +280,12 @@ class ProductController extends Controller
     }
 
 
+    /**
+     * Change is_featured column
+     * @param $id
+     *
+     * @return mixed
+     */
     public function changeFeatured($id)
     {
         $product = Product::find($id);
@@ -298,7 +294,7 @@ class ProductController extends Controller
             $product->save();
 
             return redirect()->back()
-                ->with('notificationText', 'Ação realizado com sucesso.');
+                ->with('notificationText', 'Ação realizada com sucesso.');
         }
         return redirect()->back()
             ->with('errorNotification', 'Falha ao atualizar!');

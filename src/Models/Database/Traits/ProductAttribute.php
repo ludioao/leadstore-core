@@ -52,7 +52,7 @@ trait ProductAttribute
         $siteCurrency = App::get(SiteCurrencyInterface::class);
         $model = $siteCurrency->findByCode($currentCurrencyCode);
 
-        return number_format($val * $model->conversion_rate, 2);
+        return number_format($val * $model->conversion_rate, 2, '.', '');
     }
 
     /**
@@ -177,15 +177,19 @@ trait ProductAttribute
         $properties = isset($data['property']) ? $data['property'] : [];
 
         if (count($properties) > 0) {
+            $this->properties()->sync([]);
+
             foreach ($properties as $key => $property) {
+
                 foreach ($property as $propertyId => $propertyValue) {
                     $propertyModel = Property::findorfail($propertyId);
                     $propertyModel->attachProduct($this)
                         ->fill(['value' => $propertyValue])
                         ->save();
                     $syncProperty[] = $propertyId;
+                    $this->properties()->attach($propertyId);
                 }
-                $this->properties()->sync($syncProperty);
+                //$this->properties()->sync($syncProperty);
             }
         }
     }
