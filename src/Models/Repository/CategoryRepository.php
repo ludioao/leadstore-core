@@ -4,7 +4,9 @@ namespace LeadStore\Framework\Models\Repository;
 
 use LeadStore\Framework\Models\Contracts\CategoryInterface;
 use LeadStore\Framework\Models\Database\Category;
+use LeadStore\Framework\Models\Database\ProductPropertyIntegerValue;
 use LeadStore\Framework\Models\Database\Property;
+use LeadStore\Framework\Models\Database\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
@@ -86,15 +88,32 @@ class CategoryRepository implements CategoryInterface
     */
     public function getCategoryProductWithFilter($categoryId, $filters = [])
     {
+        //
+        $category = $this->find($categoryId);
+        $allCategories = collect($category->children);
+        $allCategories->push($category);
+        $categoriesIds = $allCategories->pluck('id')->toArray();
 
-        $category = Category::find($categoryId);
+        $products = Product::where('status', true);
+        if (!isset($filters['subCategory'])) {
+            $callback = function ($q) use ($categoriesIds) {
+                $q->whereIn('category_id', $categoriesIds);
+            };
+        } else {
+            $subCategory = $filters['subCategory'];
+            $callback = function($q) use ($subCategory) {
+               $q->whereIn('category_id', [$subCategory]);
+            };
+        }
 
-        // Products
-        $productIds = $category->products->pluck('id');
-        $products = Product::query();
+        $products = $products->whereHas('categories', $callback)
+            ->with(['categories' => $callback]);
+
+        $productIds = $products->pluck('id');
 
         // Filters
         $methodFilters = [];
+
 
         // Filters
         foreach ($filters as $type => $filterArray) {
@@ -109,6 +128,9 @@ class CategoryRepository implements CategoryInterface
             }
         }
 
+
+
+        // Filters
         foreach ($methodFilters as $method => $values) {
 
             foreach($values as $value)
@@ -136,10 +158,10 @@ class CategoryRepository implements CategoryInterface
                         $products->orderBy('name', 'ASC');
                         break;
                     case 'price':
-                        $products->orderBy('price', 'ASC');
+                        $products->orderBy('price', 'DESC');
                         break;
                     case 'price-desc':
-                        $products->orderBy('price', 'DESC');
+                        $products->orderBy('price', 'ASC');
                         break;
                     default:
                         $products->latest();
@@ -148,32 +170,34 @@ class CategoryRepository implements CategoryInterface
             }
         }
 
-
         $products = $products->whereIn('id', $productIds);
 
-        $collect = Collection::make([]);
+        $categories = $category->children;
 
-        foreach ($products->get() as $productArray) {
-            $product = Product::find($productArray->id);
-            if ($product->type == 'VARIABLE_PRODUCT') {
-                $collect->push(($product->getVariableMainProduct()));
-            } else {
-                $collect->push(Product::find($productArray->id));
-            }
-        }
-
-        return $collect->unique();
-//
-//        $collection = collect([]);
-//        foreach($products as $product)
-//        {
-//
-//            $collection->push($product);
-//        }
-//        // TODO: ADD VARIATION ON SEARCH
-//
-//        return $products->get();
+        return [$products->get(), $categories];
     }
+
+
+    /**
+     * @param $campaign
+     *
+     * @return array
+     */
+    public function getPropertyFilters($products)
+    {
+        $productIds = $products->where('status', true)->pluck('id');
+        $propertiesIds = \DB::table('product_property')->whereIn('product_id', $productIds)->distinct('property_id')->pluck('property_id');
+        $availableDropdownValues = ProductPropertyIntegerValue::whereIn('product_id', $productIds)->pluck('value');
+
+        $availableDropdownValuesCallback = function($q) use ($availableDropdownValues) {
+            $q->whereIn('id', $availableDropdownValues->unique()->toArray());
+        };
+        return Property::whereIn('id', $propertiesIds)
+            ->with(['propertyDropdownOptions' => $availableDropdownValuesCallback])
+            ->whereHas('propertyDropdownOptions', $availableDropdownValuesCallback)
+            ->get();
+    }
+
 
     /*
     * Paginate Category Page Product

@@ -99,6 +99,7 @@
                                     class="form-control"
                                     id="property-{{ $property->id }}">
 
+                                <option value=""></option>
                                 @foreach($property->propertyDropdownOptions as $option)
                                     <option
                                         value="{{ $option->id }}"

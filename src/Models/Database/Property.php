@@ -131,6 +131,10 @@ class Property extends BaseModel
      */
     public function getPropertyDataTable()
     {
+        if ($this->field_type == 'SELECT') {
+            return 'productIntegerProperties';
+        }
+
         $dataType = ucfirst(strtolower($this->data_type));
         $method = 'productProperty' . $dataType . 'Value';
         return $method;
@@ -138,6 +142,12 @@ class Property extends BaseModel
 
     public function getProductRelationship()
     {
+        if ($this->field_type == 'SELECT') {
+            return 'productIntegerProperties';
+        }
+
+        
+
         $dataType = ucfirst(strtolower($this->data_type));
         $method = 'product' . $dataType . 'Properties';
         return $method;
