@@ -10,6 +10,12 @@
 				<th>Valor do Frete</th>
 				<td>{{ $order->shipping_cost > 0 ? 'R$ ' . $order->shipping_cost : '-' }} </td>
 			</tr>
+			@if ($order->coupon_id)
+				<tr>
+					<th>Desconto (Cupom)</th>
+					<td>{!! $order->discount_total !!} ({!! \LeadStore\Discount\Models\Database\Coupon::find($order->coupon_id)->code !!}</td>
+				</tr>
+			@endif
 			<tr>
 				<th>Método de Pagamento</th>
 				<td>{{ $order->payment_option }}</td>
