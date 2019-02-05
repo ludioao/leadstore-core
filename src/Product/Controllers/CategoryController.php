@@ -2,6 +2,7 @@
 
 namespace LeadStore\Framework\Product\Controllers;
 
+use LeadStore\Framework\Image\Facades\ImageManager;
 use LeadStore\Framework\Models\Database\Category;
 use LeadStore\Framework\Product\Requests\CategoryRequest;
 use LeadStore\Framework\Models\Contracts\CategoryInterface;
@@ -59,6 +60,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
+        $this->extractImages($request);
         $this->repository->create($request->all());
 
         return redirect()->route('admin.category.index');
@@ -75,6 +77,36 @@ class CategoryController extends Controller
         return view('avored-framework::product.category.edit')->with('model', $category);
     }
 
+
+
+    /**
+     * @param $image
+     *
+     * @return array
+     */
+    private function _uploadImage($image)
+    {
+        $tmpPath = str_split(strtolower(str_random(3)));
+        $checkDirectory = '/uploads/categories/images/' . implode('/', $tmpPath);
+        $localImage = ImageManager::upload($image, $checkDirectory)->makeSizes()->get();
+        $symblink = config('avored-framework.symlink_storage_folder'). "/";
+
+        $relativePath = str_replace($symblink,'',$localImage->relativePath);
+        return [$relativePath, $localImage];
+    }
+
+    /**
+     * @param CampaignRequest $request
+     */
+    public function extractImages(CategoryRequest $request): void
+    {
+        $image = $request->file('banner_image');
+        if (null != $image) {
+            list($dbPath, $images) = $this->_uploadImage($image);
+            $request->merge(['banner_image_path' => $dbPath]);
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -84,6 +116,8 @@ class CategoryController extends Controller
      */
     public function update(CategoryRequest $request, Category $category)
     {
+        $this->extractImages($request);
+
         $category->update($request->all());
 
         return redirect()->route('admin.category.index');

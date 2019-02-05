@@ -1,6 +1,6 @@
 <avored-form-input
     field-name="name"
-    label="Nome da Categoria {{ __('avored-framework::product.category_name') }}"
+    label="Nome da {{ __('avored-framework::product.category_name') }}"
     field-value="{!! $model->name ?? "" !!}"
     error-text="{!! $errors->first('name') !!}"
     v-on:change="changeModelValue"
@@ -17,6 +17,7 @@
         {{-->--}}
 {{--</avored-form-input>--}}
 
+{!! Form::file('banner_image', 'Imagem do Banner') !!}
 
 <avored-form-select
     field-name="parent_id"

@@ -232,8 +232,8 @@ class CategoryRepository implements CategoryInterface
     {
         if (true === $empty) {
             $empty = new Category();
-            $empty->name = 'Please Select';
-            return Category::all()->prepend($empty);
+            $empty->name = 'Selecione';
+            return Category::whereNull('parent_id')->get()->prepend($empty);
         }
         return Category::all();
     }

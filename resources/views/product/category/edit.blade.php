@@ -6,15 +6,11 @@
         <div class="col-12">
             <div class="h1 mt-1">Editar {{ __('avored-framework::product.category_name') }}</div>
 
-            <form action="{{ route('admin.category.update', $model->id) }}" method="post">
+            {!! Form::open()->put()->multipart()->route('admin.category.update', [$model->id])  !!}
                 <div class="card mt-3 mb-3">
                     <div class="card-header">{{ __('avored-framework::lang.basic_details') }}</div>
                     <div class="card-body">
-
-                        @csrf()
-                        @method('put')
                         @include('avored-framework::product.category._fields')
-
                     </div>
                 </div>
 
@@ -46,7 +42,7 @@
                 <button type="submit"  class="btn n btn-primary  category-save-button">Editar {{ __('avored-framework::product.category_name') }}</button>
 
                 <a href="{{ route('admin.category.index') }}" class="btn btn-default">{{ __('avored-framework::lang.cancel') }}</a>
-            </form>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>

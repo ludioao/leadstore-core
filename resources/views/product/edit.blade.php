@@ -15,19 +15,38 @@
         {!! Form::open()->fill($model)->route('admin.product.update', [$model->id])->id('product-save-form')->multipart()->method('put') !!}
 
         <div class="row" id="product-save-accordion" data-children=".product-card">
-            <div class="col-12 mb-2 mt-2">
+            <div class="col-md-8">
                 <div class="card product-card  mb-2 mt-2">
                     <a data-toggle="collapse" data-parent="#product-save-accordion"
                        class="float-right" href="#basic">
-                    <div class="card-header">
-                        {{ __('avored-framework::lang.basic_details') }}
-                    </div>
+                        <div class="card-header">
+                            {{ __('avored-framework::lang.basic_details') }}
+                        </div>
                     </a>
                     <div class="card-body collapse show" id="basic">
                         @include('avored-framework::product.card.basic')
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card  mb-2 mt-2">
+                    <a data-toggle="collapse" data-parent="#product-save-accordion"
+                       class="float-right" href="#categoriesTab">
+                        <div class="card-header">
+                            Categorias
+                        </div>
+                    </a>
+                    <div class="card-body collapse show" id="categoriesTab">
+                        @if(!isset($productCategories))
+                            <?php $productCategories = []; ?>
+                        @endif
 
+                        @include('avored-framework::product.card.partials.categories')
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-2 mt-2">
                 <div class="card product-card mb-2 mt-2">
                     <a data-toggle="collapse" data-parent="#product-save-accordion"
                        class="float-right" href="#images">

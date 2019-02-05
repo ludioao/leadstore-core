@@ -11,7 +11,7 @@ class Category extends BaseModel
 
     use Sluggable;
 
-    protected $fillable = ['parent_id', 'name', 'slug', 'meta_title', 'meta_description'];
+    protected $fillable = ['parent_id', 'name', 'slug', 'meta_title', 'meta_description', 'banner_image_path'];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -26,6 +26,28 @@ class Category extends BaseModel
             ]
         ];
     }
+
+
+    private function getImage($val)
+    {
+        if (empty($val)) {
+            return null;
+        }
+        $symblink = config('avored-framework.symlink_storage_folder');
+        return $symblink . DIRECTORY_SEPARATOR . $val;
+    }
+
+    /**
+     * @param $val
+     *
+     * @return string
+     */
+    public function getBannerImagePathAttribute($val)
+    {
+        return $this->getImage($val);
+    }
+
+
 
     public function products()
     {

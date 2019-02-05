@@ -15,7 +15,7 @@ class ProductFieldsComposer
      */
     public function compose(View $view)
     {
-        $categoryOptions = Category::getCategoryOptions();
+        $categoryOptions = Category::with('children')->whereNull('parent_id')->get();
         $storageOptions = []; //Storage::pluck('name', 'id');
         $view->with('categoryOptions', $categoryOptions)
             ->with('storageOptions', $storageOptions);
