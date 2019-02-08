@@ -724,6 +724,14 @@ class AvoredFrameworkSchema extends Migration
                          'sort_order' => 600
                      ]);
 
+
+        Page::create(
+            ['name' => 'Home',
+             'slug' => 'home',
+             'content' => '',
+             'meta_title' => 'Página Inicial']
+        );
+
         $termPage = Page::create(
             ['name' => 'Termos & Condições',
              'slug' => 'term-condition',
