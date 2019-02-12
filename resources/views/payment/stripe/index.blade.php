@@ -1,52 +1,52 @@
 <div id="stripe-card-form-wrapper" class="mt-3 d-none">
 
 
-    <div class="col-md-12">
-        <label for="card-element">
-            Credit or debit card
-        </label>
-        <div id="card-element">
-            <!-- A Stripe Element will be inserted here. -->
-        </div>
+	<div class="col-md-12">
+		<label for="card-element">
+			Credit or debit card
+		</label>
+		<div id="card-element">
+			<!-- A Stripe Element will be inserted here. -->
+		</div>
 
-        <!-- Used to display form errors. -->
-        <div id="card-errors" role="alert"></div>
-    </div>
+		<!-- Used to display form errors. -->
+		<div id="card-errors" role="alert"></div>
+	</div>
 
 
 </div>
 
 
 <style>
-    .StripeElement {
-        background-color: white;
-        height: 40px;
-        padding: 10px 12px;
-        border-radius: 4px;
-        border: 1px solid transparent;
-        box-shadow: 0 1px 3px 0 #e6ebf1;
-        -webkit-transition: box-shadow 150ms ease;
-        transition: box-shadow 150ms ease;
-    }
+	.StripeElement {
+		background-color: white;
+		height: 40px;
+		padding: 10px 12px;
+		border-radius: 4px;
+		border: 1px solid transparent;
+		box-shadow: 0 1px 3px 0 #e6ebf1;
+		-webkit-transition: box-shadow 150ms ease;
+		transition: box-shadow 150ms ease;
+	}
 
-    .StripeElement--focus {
-        box-shadow: 0 1px 3px 0 #cfd7df;
-    }
+	.StripeElement--focus {
+		box-shadow: 0 1px 3px 0 #cfd7df;
+	}
 
-    .StripeElement--invalid {
-        border-color: #fa755a;
-    }
+	.StripeElement--invalid {
+		border-color: #fa755a;
+	}
 
-    .StripeElement--webkit-autofill {
-        background-color: #fefde5 !important;
-    }
+	.StripeElement--webkit-autofill {
+		background-color: #fefde5 !important;
+	}
 </style>
 
 @push('scripts')
 
-    <script src="https://js.stripe.com/v3/"></script>
+	<script src="https://js.stripe.com/v3/"></script>
 
-    <script>
+	<script>
         $(document).ready(function () {
 
             var stripe = Stripe('{{ $token }}');
@@ -90,7 +90,7 @@
             });
 
             jQuery('#stripe').bind('paymentProcessStart', function (e) {
-               
+
                 stripe.createToken(card).then(function (result) {
                     if (result.error) {
                         // Inform the customer that there was an error.
@@ -103,7 +103,7 @@
                         // Send the token to your server.
                         stripeTokenHandler(result.token);
                         jQuery("#place-order-button").trigger('paymentProcessEnd');
-                        
+
                     }
 
 
@@ -114,7 +114,7 @@
         function stripeTokenHandler(token) {
             // Insert the token ID into the form so it gets submitted to the server
             var formWrapper = document.getElementById('stripe-card-form-wrapper');
-            
+
             var hiddenInput = document.createElement('input');
             hiddenInput.setAttribute('type', 'hidden');
             hiddenInput.setAttribute('name', 'stripeToken');
@@ -123,5 +123,5 @@
 
         }
 
-    </script>
+	</script>
 @endpush

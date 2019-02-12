@@ -21,11 +21,9 @@
 						@if($productInfo->type == "VARIATION")
 							@foreach($order->orderProductVariation as $orderProductVariation)
 								<p>
-									{{ $orderProductVariation->attribute->name }}
-									:
+									{{ $orderProductVariation->attribute->name }}:
 									{{   $orderProductVariation->attributeDropdownOption->display_text }}
 								</p>
-
 							@endforeach
 						@endif
 

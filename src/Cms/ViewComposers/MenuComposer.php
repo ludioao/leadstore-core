@@ -37,7 +37,7 @@ class MenuComposer
     public function compose(View $view)
     {
         $frontMenus = MenuFacade::all();
-        $categories = $this->categoryRepository->all();
+        $categories = $this->categoryRepository->query()->whereNull('parent_id')->get();//all();
         //$menus = $this->menuRepository->parentsAll();
 
         $view->with('categories', $categories)

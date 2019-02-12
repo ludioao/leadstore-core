@@ -42,7 +42,7 @@ class MenuController extends Controller
         $menuGroups = $this->menuGroupRepository->all();
         if ($request->get('group_id') == 'new') {
             $menuGroup = new MenuGroup;
-            $menuGroup->name = 'New Group';
+            $menuGroup->name = 'Novo Grupo';
         } elseif ($request->get('group_id') > 0) {
             $menuGroup = $this->menuGroupRepository->find($request->get('group_id'));
         } else {
@@ -60,7 +60,7 @@ class MenuController extends Controller
 
     /**
      * Display a listing of the resource.
-     * 
+     *
      * @param \LeadStore\Framework\Cms\Requests\MenuRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -74,7 +74,7 @@ class MenuController extends Controller
         }
         $menuJson = $request->get('menu_json');
         $menuArray = json_decode($menuJson);
-        
+
         $this->repository->truncateAndCreateMenus($menuGroup, $menuArray);
 
         return redirect()->route('admin.menu.index')
