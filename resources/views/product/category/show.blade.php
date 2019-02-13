@@ -45,7 +45,7 @@
                                         title: '{{ __('avored-framework::lang.are-you-sure') }}',
                                         icon: 'warning',
                                         buttons: true,
-                                        text: 'Once deleted, you will not be able to recover this Category!',
+                                        text: 'Essa ação é irreversível, deseja continuar?',
                                     }).then((willDelete) => {
                                         if (willDelete) {
                                             jQuery(this).parents('form:first').submit();

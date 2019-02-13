@@ -46,6 +46,33 @@
         </div>
     </div>
 </div>
+
+
+
+<form method="post" action="{{ route('admin.category.destroy', $category->id)  }}">
+    @csrf()
+    @method('delete')
+    <button
+            onClick="event.preventDefault();
+                    swal({
+                    dangerMode: true,
+                    title: '{{ __('avored-framework::lang.are-you-sure') }}',
+                    icon: 'warning',
+                    buttons: true,
+                    text: 'Essa ação é irreversível, deseja continuar?',
+                    }).then((willDelete) => {
+                    if (willDelete) {
+                    jQuery(this).parents('form:first').submit();
+                    }
+                    });"
+            class="btn btn-danger" >
+        Excluir
+    </button>
+</form>
+
+
+
+
 @endsection
 
 @push('scripts')
