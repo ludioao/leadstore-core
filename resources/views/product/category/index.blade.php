@@ -7,14 +7,20 @@
             <ul>
                 @foreach($parentCategories as $category)
                     <li>
-                        {!! $category->name !!}
+                        <a href="{{ route('admin.category.edit', $category->id)  }}">
+                            {!! $category->name !!}
+                        </a>
                         @php
                             $children = $category->children;
                         @endphp
                         @if (count($children))
                             <ul>
                                 @foreach($children as $childCat)
-                                    <li>{!! $childCat->name !!}</li>
+                                    <li>
+                                        <a href="{{ route('admin.category.edit', $childCat->id)  }}">
+                                            {!! $childCat->name !!}
+                                        </a>
+                                    </li>
                                 @endforeach
                             </ul>
                         @endif
