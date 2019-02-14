@@ -18,7 +18,7 @@ class ProductDataGrid
                 $featuredIcon = $model->is_featured ? 'fa fa-star text-success' : 'fa fa-star-o text-danger';
                 return "<a href='" . route('admin.product.changeFeatured', $model->id) . "'><i class='$featuredIcon'></i></a>";
             })
-            ->column('sku', ['sortable' => true])
+            ->column('sku', ['sortable' => true, 'canFilter' => true])
             ->linkColumn('image', [], function ($model) {
                 return "<img src='" . $model->image->smallUrl . "' style='max-height: 50px;' />";
             })->column('name', ['label' => 'Nome', 'sortable' => true, 'canFilter' => true])
