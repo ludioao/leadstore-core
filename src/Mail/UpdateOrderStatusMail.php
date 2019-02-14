@@ -32,6 +32,8 @@ class UpdateOrderStatusMail extends Mailable
      */
     public function build()
     {
-        return $this->view('avored-framework::mail.update-order-status');
+        return $this
+            ->subject('Seu pedido foi atualizado')
+            ->view('avored-framework::mail.update-order-status');
     }
 }
