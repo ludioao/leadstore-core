@@ -83,25 +83,28 @@ class OrderService
      */
     public function getUser($request)
     {
-        if (Auth::guard()->check()) {
+        if (Auth::guard()->check() || Auth::guard('web')->check()) {
             return Auth::user();
         }
         $userData = $request->get('user');
 
         $user = User::whereEmail($userData['email'])->first();
 
-        if (null === $user) {
+        if ($user) {
+            throw new \Exception('Usuário já está registrado!');
+        }
+        else {
             $billingData = $request->get('billing');
             $userData = $request->get('user');
             $userData['password'] = bcrypt($userData['password']);
             $userData['first_name'] = $billingData['first_name'];
             $userData['last_name'] = $billingData['last_name'];
             $user = User::create($userData);
+            Auth::guard('web')->loginUsingId($user->id);
+            return $user;
         }
 
-        Auth::guard('web')->loginUsingId($user->id);
-
-        return $user;
+        return false;
     }
 
 
