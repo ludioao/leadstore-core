@@ -101,7 +101,8 @@ class OrderController extends Controller
         $order->update($request->all());
 
         $userEmail = $order->user->email;
-        $orderStatusTitle = $order->orderStatus->name;
+        $orderStatusTitle = __('orders.status-' . $order->orderStatus->id);
+
 
         $orderHistoryRepository = app(OrderHistoryInterface::class);
         $orderHistoryRepository->create(['order_id' => $order->id, 'order_status_id' => $request->get('order_status_id')]);

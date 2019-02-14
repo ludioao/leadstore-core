@@ -13,7 +13,7 @@
 			@if ($order->coupon_id)
 				<tr>
 					<th>Desconto (Cupom)</th>
-					<td>{!! $order->discount_total !!} ({!! \LeadStore\Discount\Models\Database\Coupon::find($order->coupon_id)->code !!}</td>
+					<td>{!! $order->discount_total !!} ({!! \LeadStore\Discount\Models\Database\Coupon::find($order->coupon_id)->code !!})</td>
 				</tr>
 			@endif
 			<tr>
