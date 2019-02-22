@@ -89,6 +89,16 @@ class OrderController extends Controller
         return $view;
     }
 
+
+    private function restoreStock($order)
+    {
+        foreach($order->products as $product)
+        {
+            $qtd = $product->qty + $product->pivot->qty;
+            $product->update(['qty' => $qtd]);
+        }
+    }
+
     /**
      * Change the Order Status
      *
@@ -98,6 +108,12 @@ class OrderController extends Controller
     public function updateStatus(Model $order, UpdateOrderStatusRequest $request)
     {
         //$order = Model::find($id);
+        $orderStatus = OrderStatus::find($request->get('order_status_id'));
+        if (in_array($orderStatus->name, ['Estoque Restaurado', 'Restore Stock']) || $orderStatus->id == "7")
+        {
+            $this->restoreStock($orderStatus);
+        }
+
         $order->update($request->all());
 
         $userEmail = $order->user->email;
