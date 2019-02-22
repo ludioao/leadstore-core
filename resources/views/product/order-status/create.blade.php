@@ -13,7 +13,7 @@
                     <form action="{{ route('admin.order-status.store') }}" method="post">
                         @csrf
 
-                        @include('avored-framework::product .order-status._fields')
+                        @include('avored-framework::product.order-status._fields')
 
                         <div class="form-group">
                             <button class="btn btn-primary" type="submit">
@@ -43,7 +43,7 @@
             model: {},
             autofocus:true,
             disabled: false
-           
+
         },
         methods: {
             changeModelValue: function(val,fieldName) {
