@@ -75,3 +75,21 @@ img {
 .select2-container .select2-selection--single {
   height: 35px !important;
 }
+
+
+@media print
+{
+  .page-container {
+    padding-left: 0;
+  }
+  .navbar,
+  .main-title-wrap .float-right,
+  .sidebar {
+    display: none
+  }
+  .main-content {
+    padding-top: 0;
+  }
+}
+
+
