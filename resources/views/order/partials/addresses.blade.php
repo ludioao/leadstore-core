@@ -6,6 +6,12 @@
 
 	<div class="card-body">
 		<div class="row">
+
+			<div class="col-md-12">
+				<h5>Cliente: {!! $order->user->first_name !!} {!! $order->user->last_name !!} </h5>
+				<strong>{!! $order->user->user_type == 'PF' ? 'CPF': 'CNPJ' !!}</strong>: {!! $order->user->document !!}
+			</div>
+
 			<div class="col-md-6">
 				<h4>{{  __('avored-framework::orders.shipping-address') }}</h4>
 
