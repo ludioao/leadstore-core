@@ -114,6 +114,7 @@ class AvoredFrameworkSchema extends Migration
             ['name' => 'Shipped', 'is_default' => 0],
             ['name' => 'Delivered', 'is_default' => 0],
             ['name' => 'Canceled', 'is_default' => 0],
+            ['name' => 'Restore Stock', 'is_default' => 0],
         ]);
 
         Schema::create('orders', function(Blueprint $table) {
