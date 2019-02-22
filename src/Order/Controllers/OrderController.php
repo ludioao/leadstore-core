@@ -111,7 +111,7 @@ class OrderController extends Controller
         $orderStatus = OrderStatus::find($request->get('order_status_id'));
         if (in_array($orderStatus->name, ['Estoque Restaurado', 'Restore Stock']) || $orderStatus->id == "7")
         {
-            $this->restoreStock($orderStatus);
+            $this->restoreStock($order);
         }
 
         $order->update($request->all());
