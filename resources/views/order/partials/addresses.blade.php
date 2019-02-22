@@ -12,11 +12,12 @@
 				<p>
 					{{ $order->shipping_address->first_name }} {{ $order->shipping_address->last_name }}
 					<br/>
-					{{ $order->shipping_address->address1 }}<br/>
+					{{ $order->shipping_address->address1 }}, {!! $order->shipping_address->address_number !!}<br/>
+					{{ $order->shipping_address->address_complement }} <br />
 					{{ $order->shipping_address->address2 }}<br/>
 					{{ $order->shipping_address->area }}<br/>
 					{{ $order->shipping_address->city }}<br/>
-					{{ $order->shipping_address->state }} {{ $order->shipping_address->country->name }}
+					{{ $order->shipping_address->state }}
 					<br/>
 					{{ $order->shipping_address->phone }}<br/>
 				</p>
@@ -27,11 +28,12 @@
 				<p>
 					{{ $order->billing_address->first_name }} {{ $order->shipping_address->last_name }}
 					<br/>
-					{{ $order->billing_address->address1 }}<br/>
-					{{ $order->billing_address->address2 }}<br/>
-					{{ $order->billing_address->area }}<br/>
-					{{ $order->billing_address->city }}<br/>
-					{{ $order->billing_address->state }} {{ $order->shipping_address->country->name }}
+					{{ $order->shipping_address->address1 }}, {!! $order->shipping_address->address_number !!}<br/>
+					{{ $order->shipping_address->address_complement }} <br />
+					{{ $order->billing_address->address2 }} <br/>
+					{{ $order->billing_address->area }} <br/>
+					{{ $order->billing_address->city }} <br/>
+					{{ $order->billing_address->state }}
 					<br/>
 					{{ $order->billing_address->phone }}<br/>
 				</p>
