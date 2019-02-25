@@ -5,6 +5,7 @@ namespace LeadStore\Framework\Models\Repository;
 use LeadStore\Framework\Models\Contracts\CategoryInterface;
 use LeadStore\Framework\Models\Database\Category;
 use LeadStore\Framework\Models\Database\ProductPropertyIntegerValue;
+use LeadStore\Framework\Models\Database\ProductPropertyVarcharValue;
 use LeadStore\Framework\Models\Database\Property;
 use LeadStore\Framework\Models\Database\Product;
 use Illuminate\Database\Eloquent\Model;
@@ -89,10 +90,15 @@ class CategoryRepository implements CategoryInterface
     public function getCategoryProductWithFilter($categoryId, $filters = [])
     {
         //
-        $category = $this->find($categoryId);
-        $allCategories = collect($category->children);
-        $allCategories->push($category);
-        $categoriesIds = $allCategories->pluck('id')->toArray();
+        if (null == $categoryId) {
+            $categoriesIds = Category::pluck('id')->toArray();
+        }
+        else {
+            $category = $this->find($categoryId);
+            $allCategories = collect($category->children);
+            $allCategories->push($category);
+            $categoriesIds = $allCategories->pluck('id')->toArray();
+        }
 
         $products = Product::where('status', true);
         if (!isset($filters['subCategory'])) {
@@ -172,7 +178,11 @@ class CategoryRepository implements CategoryInterface
 
         $products = $products->whereIn('id', $productIds);
 
-        $categories = $category->children;
+        if (null == $categoryId) {
+            $categories = Category::all();
+        } else {
+            $categories = $category->children;
+        }
 
         return [$products->get(), $categories];
     }
@@ -187,7 +197,7 @@ class CategoryRepository implements CategoryInterface
     {
         $productIds = $products->where('status', true)->pluck('id');
         $propertiesIds = \DB::table('product_property')->whereIn('product_id', $productIds)->distinct('property_id')->pluck('property_id');
-        $availableDropdownValues = ProductPropertyIntegerValue::whereIn('product_id', $productIds)->pluck('value');
+        $availableDropdownValues = ProductPropertyVarcharValue::whereIn('product_id', $productIds)->pluck('value');
 
         $availableDropdownValuesCallback = function($q) use ($availableDropdownValues) {
             $q->whereIn('id', $availableDropdownValues->unique()->toArray());
