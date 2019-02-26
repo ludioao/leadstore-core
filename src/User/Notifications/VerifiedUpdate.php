@@ -44,8 +44,15 @@ class VerifiedUpdate extends Notification
      */
     public function toMail($notifiable)
     {
+        $subject = "Conta ";
+        if ($this->verified) {
+            $subject .= "Aprovada";
+        } else {
+            $subject .= "Reprovada!";
+        }
         return (new MailMessage)
-            ->subject('Conta ' . $this->verified ? 'aprovada!' : 'inativada!')
+            ->greeting('Olá')
+            ->subject($subject)
             ->line('Você está recebendo este e-mail, por que sua conta foi atualizada em nosso sistema.')
             ;
     }
