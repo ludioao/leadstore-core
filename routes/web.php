@@ -31,6 +31,7 @@ Route::middleware(['web', 'admin.auth', 'permission'])
     Route::resource('page', 'Cms\Controllers\PageController');
     Route::resource('user-group', 'User\Controllers\UserGroupController');
     Route::resource('user', 'User\Controllers\UserController');
+    Route::get('user/verify/{id}', 'User\Controllers\UserController@verifyAccount')->name('user.verifyAccount');
     Route::resource('attribute', 'Product\Controllers\AttributeController');
     Route::resource('category', 'Product\Controllers\CategoryController');
     Route::resource('product', 'Product\Controllers\ProductController');

@@ -1,10 +1,12 @@
-
 @include('avored-framework::forms.text',['name' => 'first_name' ,'label' => __('avored-framework::user.first-name')])
 @include('avored-framework::forms.text',['name' => 'last_name' ,'label' => __('avored-framework::user.last-name')])
 
 @include('avored-framework::forms.text',['name' => 'email' ,'label' => __('avored-framework::user.email')])
 @include('avored-framework::forms.text',['name' => 'document' ,'label' => 'CPF/CNPJ'])
-@include('avored-framework::forms.text',['name' => 'rg' ,'label' => 'Documento RG'])
+
+@if ($model->user_type == 'PF')
+	@include('avored-framework::forms.text',['name' => 'rg' ,'label' => 'Documento RG'])
+@endif
 
 @if (!isset($model))
 
