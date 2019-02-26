@@ -3,6 +3,7 @@
 namespace LeadStore\Framework\User\Controllers;
 
 use Illuminate\Auth\Events\Verified;
+use LeadStore\Framework\Models\Database\Address;
 use LeadStore\Framework\Models\Database\User;
 use LeadStore\Framework\System\Controllers\Controller;
 use LeadStore\Framework\Models\Contracts\UserInterface;
@@ -54,10 +55,10 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if (empty($user->email_verified_at)) {
-            Mail::to($user->email)->send(new VerifiedUpdate(true));
-            $user->email_verified_at = Carbon::now();
+            $user->notify(new VerifiedUpdate(true));
+            $user->email_verified_at = \Carbon\Carbon::now();
         } else {
-            Mail::to($user->email)->send(new VerifiedUpdate(false));
+            $user->notify(new VerifiedUpdate(false));
             $user->email_verified_at = null;
         }
         $user->save();
@@ -130,8 +131,12 @@ class UserController extends Controller
 
         $userOrders = $orderRepository->query()->whereUserId($user->id);
         $dataGrid = new UserOrderDataGrid($userOrders);
+
+        $addresses = Address::whereUserId($user->id)->get();
+
         return view('avored-framework::user.user.show')
             ->with('user', $user)
+            ->with('addresses', $addresses)
             ->with('userOrderDataGrid', $dataGrid->dataGrid);
     }
 
