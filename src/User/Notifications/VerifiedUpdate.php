@@ -5,14 +5,14 @@ namespace LeadStore\Framework\User\Notifications;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ResetPassword extends Notification
+class VerifiedUpdate extends Notification
 {
     /**
      * The password reset token.
      *
      * @var string
      */
-    public $token;
+    public $verified;
 
     /**
      * Create a notification instance.
@@ -20,9 +20,9 @@ class ResetPassword extends Notification
      * @param  string $token
      * @return void
      */
-    public function __construct($token)
+    public function __construct($val)
     {
-        $this->token = $token;
+        $this->verified = $val;
     }
 
     /**
@@ -45,9 +45,8 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Recupere sua senha do administrador.')
-            ->line('Você está recebendo este e-mail, por que solicitaram uma nova senha.')
-            ->action('Recuperar senha', url('/admin/password/reset', $this->token))
-            ->line('Se não foi você que solicitou, ignore esta mensagem.');
+            ->subject('Conta ' . $this->verified ? 'aprovada!' : 'inativada!')
+            ->line('Você está recebendo este e-mail, por que sua conta foi atualizada em nosso sistema.')
+            ;
     }
 }

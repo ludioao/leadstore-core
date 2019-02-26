@@ -12,6 +12,12 @@
                         @csrf
                         @method('put')
 
+
+                            <a href="{!! route('admin.user.verifyAccount', $model->id) !!}">
+                                {!! empty($model->email_verified_at) ? 'Verificar' : 'Invalidar' !!} conta e notificar usuário.
+                            </a>
+
+
                         @include('avored-framework::user.user._fields')
 
                         <div class="mt-3 form-group">
