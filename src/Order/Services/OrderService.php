@@ -76,6 +76,7 @@ class OrderService
 
 
 
+
     /**
      * @param $request
      *
@@ -107,6 +108,34 @@ class OrderService
         return false;
     }
 
+
+    /**
+     * @param $data
+     */
+    public function getAddress($request)
+    {
+        $data = $request->all();
+
+        // existing address
+        if (!empty($data['id'])) {
+            $userAddress = auth()->user()->addresses()->find($data['id']);
+            if (!$userAddress) {
+                return false;
+            }
+            $userAddress->update($request->only(['postcode', 'address1', 'address2', 'address_complement', 'city', 'state', 'address_number', 'phone']));
+            return $userAddress;
+        }
+
+        // new address
+        $data['user_id'] = $request->user()->id;
+        $data['type'] = $request->has('use_different_shipping_address') ? 'SHIPPING' : 'BILLING';
+
+        if (empty($findSameAddress = $this->findAddress($data))) {
+            return Address::create($data);
+        }
+
+        return $findSameAddress;
+    }
 
     /**
      * @param Request $request
