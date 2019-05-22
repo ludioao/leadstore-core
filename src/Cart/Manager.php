@@ -105,7 +105,8 @@ class Manager
         $cartQty = $cartProduct ? $cartProduct->qty() : 0;
         $checkQty = $qty + $cartQty;
 
-        $productQty = $product->qty;
+        $productQty = (int) $product->qty;
+
         if ($productQty >= $checkQty) {
             return true;
         }
