@@ -29,7 +29,8 @@ class User extends Authenticatable
         'tax_no',
         'user_type',
         'document',
-        'rg'
+        'rg',
+        'registered_channel'
     ];
 
     /**
